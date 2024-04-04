@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actions</title>
+</head>
+<body>
+    <h1>Actions</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Action Name</th>
+                <!-- <th>Title</th> -->
+                <th>Price</th>
+                <th>Percentages</th>
+                <th>Overall Rating</th>
+                <th>Current Rating</th>
+                <th>Number of Reviews</th>
+                <th>Review ID</th>
+                <th>Other Reviews</th>
+                <th>Created At</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for action in actions %}
+            <tr>
+                <td>{{ action.action_name }}</td>
+                <!-- <td>{{ action.title }}</td> -->
+                <td>{{ action.price }}</td>
+                <td>{{ action.percentages }}</td>
+                <td>{{ action.overall_rating }}</td>
+                <td>{{ action.current_rating }}</td>
+                <td>{{ action.number_of_reviews }}</td>
+                <td>{{ action.review_id }}</td>
+                <td>{{ action.other_reviews }}</td>
+                <td>{{ action.created_at }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -5,11 +5,11 @@ scraping
 tagry
 product1_top
 product2/review_top
-product2/review_all
-product3/review_top
-product3/review_all
-product4/review_top
-product4/review_all
+product2/reviews_all
+product3/reviews_top
+product3/reviews_all
+product4/reviews_top
+product4/reviews_all
 product3
 product4
 r32_files

@@ -430,7 +430,7 @@ $Nav.declare('img.pixel', 'https://images-na.ssl-images-amazon.com/images/G/01/x
     </div>
     <div class="nav-fill">
       <div class="nav-search-field ">
-        <input type="text" id="twotabsearchtextbox" value="headset for zoom" name="field-keywords" autocomplete="off" placeholder="" class="nav-input nav-progressive-attribute" dir="auto" tabindex="0" aria-label="Search">
+        <input type="text" id="twotabsearchtextbox" value="" name="field-keywords" autocomplete="off" placeholder="" class="nav-input nav-progressive-attribute" dir="auto" tabindex="0" aria-label="Search">
       </div>
       <div id="nav-iss-attach"></div>
     </div>
@@ -1592,7 +1592,7 @@ window.$Nav && $Nav.declare('configComplete');
 <td class="aok-nowrap">
 
 <span class="a-size-base">
-  <a class="a-link-normal 5star" title="5 stars represent {{product.percentages[0]}}% of rating" href="/r/5/1">
+  <a class="a-link-normal 5star" title="5 stars represent {{product.percentages[0]}}% of rating" href="/r/{{current_product}}/5/1">
     5 star
   </a>
 </span>
@@ -1601,7 +1601,7 @@ window.$Nav && $Nav.declare('configComplete');
 </td>
 
 <td class="a-span10">
-<a class="a-link-normal" title="5 stars represent {{product.percentages[0]}}% of rating" href="/r/5/1">
+<a class="a-link-normal" title="5 stars represent {{product.percentages[0]}}% of rating" href="/r/{{current_product}}/5/1">
   <div class="a-meter" role="progressbar" aria-valuenow="{{product.percentages[0]}}%"><div class="a-meter-bar" style="width: {{product.percentages[0]}}%;"></div></div>
 </a>
 </td>
@@ -1609,7 +1609,7 @@ window.$Nav && $Nav.declare('configComplete');
 <td class="a-text-right a-nowrap">
 <span class="a-letter-space"></span>
 <span class="a-size-base">
-  <a class="a-link-normal" title="5 stars represent {{product.percentages[0]}}% of rating" href="/r/5/1">
+  <a class="a-link-normal" title="5 stars represent {{product.percentages[0]}}% of rating" href="/r/{{current_product}}/5/1">
     
     {{product.percentages[0]}}%
     
@@ -1660,7 +1660,7 @@ window.$Nav && $Nav.declare('configComplete');
 <td class="aok-nowrap">
 
 <span class="a-size-base">
-  <a class="a-link-normal 4star" title="4 stars represent {{product.percentages[1]}}% of rating" href="/r/4/1">
+  <a class="a-link-normal 4star" title="4 stars represent {{product.percentages[1]}}% of rating" href="/r/{{current_product}}/4/1">
     4 star
   </a>
 </span>
@@ -1669,7 +1669,7 @@ window.$Nav && $Nav.declare('configComplete');
 </td>
 
 <td class="a-span10">
-<a class="a-link-normal" title="4 stars represent {{product.percentages[1]}}% of rating" href="/r/4/1">
+<a class="a-link-normal" title="4 stars represent {{product.percentages[1]}}% of rating" href="/r/{{current_product}}/4/1">
   <div class="a-meter" role="progressbar" aria-valuenow="{{product.percentages[1]}}%"><div class="a-meter-bar" style="width: {{product.percentages[1]}}%;"></div></div>
 </a>
 </td>
@@ -1677,7 +1677,7 @@ window.$Nav && $Nav.declare('configComplete');
 <td class="a-text-right a-nowrap">
 <span class="a-letter-space"></span>
 <span class="a-size-base">
-  <a class="a-link-normal" title="4 stars represent 3% of rating" href="/r/4/1">
+  <a class="a-link-normal" title="4 stars represent 3% of rating" href="/r/{{current_product}}/4/1">
     
     {{product.percentages[1]}}%
     
@@ -1728,7 +1728,7 @@ window.$Nav && $Nav.declare('configComplete');
 <td class="aok-nowrap">
 
 <span class="a-size-base">
-  <a class="a-link-normal 3star" title="3 stars represent {{product.percentages[2]}}% of rating" href="/r/3/1">
+  <a class="a-link-normal 3star" title="3 stars represent {{product.percentages[2]}}% of rating" href="/r/{{current_product}}/3/1">
     3 star
   </a>
 </span>
@@ -1737,7 +1737,7 @@ window.$Nav && $Nav.declare('configComplete');
 </td>
 
 <td class="a-span10">
-<a class="a-link-normal" title="3 stars represent {{product.percentages[2]}}% of rating" href="/r/3/1">
+<a class="a-link-normal" title="3 stars represent {{product.percentages[2]}}% of rating" href="/r/{{current_product}}/3/1">
   <div class="a-meter" role="progressbar" aria-valuenow="{{product.percentages[2]}}%"><div class="a-meter-bar" style="width: {{product.percentages[2]}}%;"></div></div>
 </a>
 </td>
@@ -1745,7 +1745,7 @@ window.$Nav && $Nav.declare('configComplete');
 <td class="a-text-right a-nowrap">
 <span class="a-letter-space"></span>
 <span class="a-size-base">
-  <a class="a-link-normal" title="3 stars represent 2% of rating" href="/r/3/1">
+  <a class="a-link-normal" title="3 stars represent 2% of rating" href="/r/{{current_product}}/3/1">
     
     {{product.percentages[2]}}%
     
@@ -1796,7 +1796,7 @@ window.$Nav && $Nav.declare('configComplete');
 <td class="aok-nowrap">
 
 <span class="a-size-base">
-  <a class="a-link-normal 2star" title="2 stars represent {{product.percentages[3]}}% of rating" href="/r/2/1">
+  <a class="a-link-normal 2star" title="2 stars represent {{product.percentages[3]}}% of rating" href="/r/{{current_product}}/2/1">
     2 star
   </a>
 </span>
@@ -1805,7 +1805,7 @@ window.$Nav && $Nav.declare('configComplete');
 </td>
 
 <td class="a-span10">
-<a class="a-link-normal" title="2 stars represent {{product.percentages[3]}}% of rating" href="/r/2/1">
+<a class="a-link-normal" title="2 stars represent {{product.percentages[3]}}% of rating" href="/r/{{current_product}}/2/1">
   <div class="a-meter" role="progressbar" aria-valuenow="{{product.percentages[3]}}%"><div class="a-meter-bar" style="width: {{product.percentages[3]}}%;"></div></div>
 </a>
 </td>
@@ -1813,7 +1813,7 @@ window.$Nav && $Nav.declare('configComplete');
 <td class="a-text-right a-nowrap">
 <span class="a-letter-space"></span>
 <span class="a-size-base">
-  <a class="a-link-normal" title="2 stars represent {{product.percentages[3]}}% of rating" href="/r/2/1">
+  <a class="a-link-normal" title="2 stars represent {{product.percentages[3]}}% of rating" href="/r/{{current_product}}/2/1">
     
     {{product.percentages[3]}}%
     
@@ -1864,7 +1864,7 @@ window.$Nav && $Nav.declare('configComplete');
 <td class="aok-nowrap">
 
 <span class="a-size-base">
-  <a class="a-link-normal 1star" title="1 stars represent {{product.percentages[4]}}% of rating" href="/r/1/1">
+  <a class="a-link-normal 1star" title="1 stars represent {{product.percentages[4]}}% of rating" href="/r/{{current_product}}/1/1">
     1 star
   </a>
 </span>
@@ -1873,7 +1873,7 @@ window.$Nav && $Nav.declare('configComplete');
 </td>
 
 <td class="a-span10">
-<a class="a-link-normal" title="1 stars represent {{product.percentages[4]}}% of rating" href="/r/1/1">
+<a class="a-link-normal" title="1 stars represent {{product.percentages[4]}}% of rating" href="/r/{{current_product}}/1/1">
   <div class="a-meter" role="progressbar" aria-valuenow="{{product.percentages[4]}}%"><div class="a-meter-bar" style="width: {{product.percentages[4]}}%;"></div></div>
 </a>
 </td>
@@ -1881,7 +1881,7 @@ window.$Nav && $Nav.declare('configComplete');
 <td class="a-text-right a-nowrap">
 <span class="a-letter-space"></span>
 <span class="a-size-base">
-  <a class="a-link-normal" title="1 stars represent {{product.percentages[4]}}% of rating" href="/r/1/1">
+  <a class="a-link-normal" title="1 stars represent {{product.percentages[4]}}% of rating" href="/r/{{current_product}}/1/1">
     
     {{product.percentages[4]}}%
     
@@ -1895,7 +1895,7 @@ window.$Nav && $Nav.declare('configComplete');
 
 </tbody></table>
 </span></div></div></div><div aria-live="polite" class="a-row a-expander-container a-spacing-top-small a-expander-inline-container"><div aria-expanded="false" class="a-expander-content a-expander-inline-content a-expander-inner" style="display:none">To calculate the overall star rating and percentage breakdown by star, we don’t use a simple average. Instead, our system considers things like how recent a review is and if the reviewer bought the item on Amazon. It also analyzes reviews to verify trustworthiness.</div></div></span>
-</div><div class="a-fixed-left-grid-col a-col-right" style="padding-left:10%;float:left;"><div class="a-fixed-left-grid"><div class="a-fixed-left-grid-inner" style="padding-left:70px"><div class="a-fixed-left-grid-col product-info a-col-right" style="padding-left:2%;float:left;"><a onClick="saveAction('Clicked on Product Title. Moved from Review page to Product page')" data-hook="product-link" class="a-link-normal" href="../../main">
+</div><div class="a-fixed-left-grid-col a-col-right" style="padding-left:10%;float:left;"><div class="a-fixed-left-grid"><div class="a-fixed-left-grid-inner" style="padding-left:70px"><div class="a-fixed-left-grid-col product-info a-col-right" style="padding-left:2%;float:left;"><a onClick="saveAction('Clicked on Product Title. Moved from Review page to Product page')" data-hook="product-link" class="a-link-normal" href="../../../main/{{current_product}}">
 <b>{{product.company}}</b><br>{{product.title}}</a></div></div></div></div></div></div><div class="a-fixed-left-grid ratings-solicitation"><div class="a-fixed-left-grid-inner" style="padding-left:250px"><div class="a-fixed-left-grid-col a-col-right" style="padding-left:2%;float:left;"></div></div></div></div></div></div><noscript>
   <div class="a-section a-spacing-large a-spacing-top-mini a-text-center"><div class="a-box a-alert a-alert-warning reviews-no-js-warning"><div class="a-box-inner a-alert-container"><i class="a-icon a-icon-alert"></i><div class="a-alert-content">This page works best with JavaScript. Disabling it will result in some disabled or missing features. You can still see all customer reviews for the product.</div></div></div></div></noscript>
 </div><br><br>
@@ -2011,23 +2011,38 @@ From the United States
           </a>
         </span>
       </div>
-      <div class="a-row a-spacing-small review-data">
-        <span data-hook="review-body" class="a-size-base review-text review-text-content blurred comment-image-{{ review.id }}" id="comment-text-{{ review.id }}">
-          <span onclick="callFlaskAPI('{{review.id}}')">
-            {{ review.Body }}
+      {% if review_clicked_records[review.id] %}
+        <div class="a-row a-spacing-small review-data">
+          <span data-hook="review-body" class="a-size-base review-text review-text-content comment-image-{{ review.id }}" id="comment-text-{{ review.id }}">
+            <span onclick="callFlaskAPI('{{review.id}}')">
+              {{ review.Body }}
+            </span>
           </span>
-        </span>
-      </div>
+        </div>
+      {% else %}
+        <div class="a-row a-spacing-small review-data">
+          <span data-hook="review-body" class="a-size-base review-text review-text-content blurred comment-image-{{ review.id }}" id="comment-text-{{ review.id }}">
+            <span onclick="callFlaskAPI('{{review.id}}')">
+              {{ review.Body }}
+            </span>
+          </span>
+        </div>
+      {% endif %}
+      
 
 
 
       {% if review.image_urls %}
         {% for image_url in review.image_urls %}
-
-        <div id="R2TSE34G4VO9BZ_imageSection_main" class="a-section a-spacing-medium review-image-container blurred comment-image-{{ review.id }}"><div class="review-image-tile-section" data-reviewid="R2TSE34G4VO9BZ">
-          <span onclick="callFlaskAPI('{{review.id}}')" class="a-declarative"  id="R2TSE34G4VO9BZ-0" data-csa-c-id="e9bkbq-8z3bvz-a2zss0-ddh195"><a href="javascript:void(0)" role="button" class="a-popover-trigger a-declarative"><img alt="Customer image" src="./r32_files/{{image_url}}" data-hook="review-image-tile" class="review-image-tile" height="88" width="100%"><i class="a-icon a-icon-popover"></i></a></span></div>
-        </div>
-
+          {% if review_clicked_records[review.id] %}
+            <div id="R2TSE34G4VO9BZ_imageSection_main" class="a-section a-spacing-medium review-image-container comment-image-{{ review.id }}"><div class="review-image-tile-section" data-reviewid="R2TSE34G4VO9BZ">
+              <span onclick="callFlaskAPI('{{review.id}}')" class="a-declarative"  id="R2TSE34G4VO9BZ-0" data-csa-c-id="e9bkbq-8z3bvz-a2zss0-ddh195"><a href="javascript:void(0)" role="button" class="a-popover-trigger a-declarative"><img alt="Customer image" src="./r32_files/{{image_url}}" data-hook="review-image-tile" class="review-image-tile" height="88" width="100%"><i class="a-icon a-icon-popover"></i></a></span></div>
+            </div>
+          {% else %}
+            <div id="R2TSE34G4VO9BZ_imageSection_main" class="a-section a-spacing-medium review-image-container blurred comment-image-{{ review.id }}"><div class="review-image-tile-section" data-reviewid="R2TSE34G4VO9BZ">
+              <span onclick="callFlaskAPI('{{review.id}}')" class="a-declarative"  id="R2TSE34G4VO9BZ-0" data-csa-c-id="e9bkbq-8z3bvz-a2zss0-ddh195"><a href="javascript:void(0)" role="button" class="a-popover-trigger a-declarative"><img alt="Customer image" src="./r32_files/{{image_url}}" data-hook="review-image-tile" class="review-image-tile" height="88" width="100%"><i class="a-icon a-icon-popover"></i></a></span></div>
+            </div>
+          {% endif %}
         {% endfor %}
       {% endif %}
 
@@ -2118,9 +2133,9 @@ From the United States
 
 {% if page>1 %}
   {% if rate!=0 %}
-    <a href="/r/{{ rate }}/{{ page-1 }}" onClick="saveAction('Clicked on Previous Page. Moved from {{page}} to {{page-1}}')">
+    <a href="/r/{{current_product}}/{{ rate }}/{{ page-1 }}" onClick="saveAction('Clicked on Previous Page. Moved from {{page}} to {{page-1}}')">
   {% else %}
-    <a href="/t/{{ rate }}/{{ page-1 }}" onClick="saveAction('Clicked on Previous Page. Moved from {{page}} to {{page-1}}')">
+    <a href="/t/{{current_product}}/{{ rate }}/{{ page-1 }}" onClick="saveAction('Clicked on Previous Page. Moved from {{page}} to {{page-1}}')">
   {% endif %}
 {% else %}
 <a href="#">
@@ -2131,9 +2146,9 @@ From the United States
 
 {% if page<number_of_pages %}
   {% if rate!=0 %}
-    <a href="/r/{{ rate }}/{{ page+1 }}" onClick="saveAction('Clicked on Next Page. Moved from {{page}} to {{ page+1 }}')">
+    <a href="/r/{{current_product}}/{{ rate }}/{{ page+1 }}" onClick="saveAction('Clicked on Next Page. Moved from {{page}} to {{ page+1 }}')">
   {% else %}
-    <a href="/t/{{ rate }}/{{ page+1 }}" onClick="saveAction('Clicked on Next Page. Moved from {{page}} to {{ page+1 }}')">
+    <a href="/t/{{current_product}}/{{ rate }}/{{ page+1 }}" onClick="saveAction('Clicked on Next Page. Moved from {{page}} to {{ page+1 }}')">
   {% endif %}
 {% else %}
 <a href="#">
@@ -3096,7 +3111,7 @@ if (window.ue && window.ue.uels) {
 
 
             // Make a POST request to your Flask API endpoint
-            fetch('http://127.0.0.1:5000/add_action', {
+            fetch('http://127.0.0.1:5000/{{current_product}}/add_action', {
                 method: 'POST',
                 body: formData
             })
@@ -3164,7 +3179,7 @@ if (window.ue && window.ue.uels) {
             formData.append('current_rating', {{rate}});
 
             // Make a POST request to your Flask API endpoint
-            fetch('http://127.0.0.1:5000/add_action', {
+            fetch('http://127.0.0.1:5000/{{current_product}}/add_action', {
                 method: 'POST',
                 body: formData
             })

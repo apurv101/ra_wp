@@ -1,0 +1,1360 @@
+[
+    {
+        "id": 0,
+        "Reviewer": "Erin G.",
+        "Rating": "2.0 out of 5 stars",
+        "Title": "Confusing",
+        "Date": "Reviewed in the United States on February 21, 2024",
+        "Body": "This story was hard to follow with so many characters and different plot lines. Not an enjoyable read.",
+        "Number": 2
+    },
+    {
+        "id": 1,
+        "Reviewer": "maryann",
+        "Rating": "2.0 out of 5 stars",
+        "Title": "Not bad but not that good",
+        "Date": "Reviewed in the United States on February 21, 2024",
+        "Body": "Could have gotten it done in a lot less pages. Could have been written better.",
+        "Number": 2
+    },
+    {
+        "id": 2,
+        "Reviewer": "RonBAmazon Customer",
+        "Rating": "2.0 out of 5 stars",
+        "Title": "Beware reader. Hell awaits.",
+        "Date": "Reviewed in the United States on October 19, 2023",
+        "Body": "For a well respected author to lead the reader into a well researched(he wrote G-d instead of God for the Jews here, an observant Jew would not write god\u2019s name), into a hell for one blameless character and the trusting reader is a betrayal of faith. We all are aware of tragedy in life and today\u2019s news is evidence thereof. There is nothing to learn from senseless pain. Perhaps, shine some light on distant hope.",
+        "Number": 2
+    },
+    {
+        "id": 3,
+        "Reviewer": "Livonia Shopper",
+        "Rating": "2.0 out of 5 stars",
+        "Title": "Over rated",
+        "Date": "Reviewed in the United States on December 28, 2023",
+        "Body": "This book was hard to read in many ways. Hard to keep track of the multitude of characters, hard to understand the slang and timbre of the dialogue, and hard on one\u2019s psyche as this sad, often violent, story progressed.",
+        "Number": 2
+    },
+    {
+        "id": 4,
+        "Reviewer": "Linnea Kuckelheim",
+        "Rating": "2.0 out of 5 stars",
+        "Title": "Lots of stuff I did not understand",
+        "Date": "Reviewed in the United States on December 30, 2023",
+        "Body": "It was a lot of Jewish customs and thing I did not know about or understand. No, it was not educational because nothing was explained. I got about half way through and gave up!",
+        "Number": 2
+    },
+    {
+        "id": 5,
+        "Reviewer": "Kay",
+        "Rating": "2.0 out of 5 stars",
+        "Title": "A challenge to start",
+        "Date": "Reviewed in the United States on February 14, 2024",
+        "Body": "Too many random story lines",
+        "Number": 2
+    },
+    {
+        "id": 6,
+        "Reviewer": "Laurie H",
+        "Rating": "2.0 out of 5 stars",
+        "Title": "Damaged Product",
+        "Date": "Reviewed in the United States on January 21, 2024",
+        "Body": "Delivery packaging arrived good and intact - book cover and book spine horribly torn",
+        "Number": 2,
+        "image_urls": [
+            "61t+tKNkPyL._SY88.jpg"
+        ]
+    },
+    {
+        "id": 7,
+        "Reviewer": "Kelly says",
+        "Rating": "2.0 out of 5 stars",
+        "Title": "not sure why, but I like this book",
+        "Date": "Reviewed in the United States on January 2, 2024",
+        "Body": "Eventually, everything turned out to be just fine.  Lots of people in it.  Entry to the black and Jewish experiences in the 30s.",
+        "Number": 2
+    },
+    {
+        "id": 8,
+        "Reviewer": "Irene in New York",
+        "Rating": "2.0 out of 5 stars",
+        "Title": "Too Hard to Follow",
+        "Date": "Reviewed in the United States on January 9, 2024",
+        "Body": "Too many names and characters to follow.  I lost interest quickly and gave it to the thrift shop.",
+        "Number": 2
+    },
+    {
+        "id": 9,
+        "Reviewer": "Claudia Kane",
+        "Rating": "2.0 out of 5 stars",
+        "Title": "I tried really hard to get involved in this read...",
+        "Date": "Reviewed in the United States on October 30, 2023",
+        "Body": "While there were some well developed characters and an interesting storyline, I had a hard time wanting to read on. Knowing it had such high reviews I figured it must pick up but sadly I just couldn't love this book.  I did finish it and was glad once it was done.",
+        "Number": 2
+    },
+    {
+        "id": 10,
+        "Reviewer": "Krystyna",
+        "Rating": "4.0 out of 5 stars",
+        "Title": "Great Read!",
+        "Date": "Reviewed in the United States on March 27, 2024",
+        "Body": "Thoroughly enjoyed the book.  Well written and vivid story about the life and struggles of the blacks as well as the immigrants that came and shaped America.  Heart warming to see that there is much good and kindness in people, unfortunately mixed in with evil.",
+        "Number": 4
+    },
+    {
+        "id": 11,
+        "Reviewer": "fjcinss",
+        "Rating": "4.0 out of 5 stars",
+        "Title": "Pottstown, PA and immigrants",
+        "Date": "Reviewed in the United States on March 10, 2024",
+        "Body": "A story about the Black and Jewish communities in working class Pennsylvania prior to WW II.  Chronicles the tough lives and treatment of these two minority groups.Somewhat reinforces age old stereotypes but manages to highlight the good things that existed during this time.  A good read but does not have longing for a sequel.",
+        "Number": 4
+    },
+    {
+        "id": 12,
+        "Reviewer": "MarnP",
+        "Rating": "4.0 out of 5 stars",
+        "Title": "Melting Pot",
+        "Date": "Reviewed in the United States on March 25, 2024",
+        "Body": "Tough read but also had so many human, lovely people. Showed through interesting characters the development of a community through the wide range of immigrants / cultures that come together.",
+        "Number": 4
+    },
+    {
+        "id": 13,
+        "Reviewer": "Bruce Hartney",
+        "Rating": "4.0 out of 5 stars",
+        "Title": "Resolving differences",
+        "Date": "Reviewed in the United States on March 21, 2024",
+        "Body": "Interesting involvement of the Jews and African Americans in the 1930s.  A little suspense as to the body found in the well. Loose ends tied up too quickly.",
+        "Number": 4
+    },
+    {
+        "id": 14,
+        "Reviewer": "Marcia",
+        "Rating": "4.0 out of 5 stars",
+        "Title": "Complex Novel",
+        "Date": "Reviewed in the United States on February 8, 2024",
+        "Body": "I am glad I read this book, as it had a lot to offer and think about. However, I am not a fan of this author's writing style. He uses long, long sentences which although gramatically correct, were annoying.  I thought the book dragged at the beginning, but picked up in the second section and held my interest.Some parts of the book were and sweet and heartwarming  and other parts were too intense for my liking. Also, there a LOT of characters in this book, but I did think the cultural differences examined,  helped shape deeper understanding of people.",
+        "Number": 4
+    },
+    {
+        "id": 15,
+        "Reviewer": "Curleysue",
+        "Rating": "4.0 out of 5 stars",
+        "Title": "I hung in there!",
+        "Date": "Reviewed in the United States on January 6, 2024",
+        "Body": "This book was slow starting for me and I almost put it aside several times. But I hung in there and finished it. What a beautiful ending! Well worth the struggle to arrive at such a heart wrenching ending!All of the characters and their nationalities were a bit confusing but The descriptions of the characters were so lifelike that I pictured them in my mind and how they walked and talked.One thing I noticed, over and over, was Mr McBrides use of compound sentences. At first I thought the sentences and descriptions were run-on, but as I would reread them, they were very much grammatically in order. Just a little quirk of mine but to me it was noticeable.The description and interaction between Dodo and Monkey Pants was my favorite part. The finger touching competition was so little-boyish!And beautiful!Highly recommend this book - hang in there if you become overwhelmed with characters and the roles they play. It\u2019s all worth it in the glorious end!",
+        "Number": 4
+    },
+    {
+        "id": 16,
+        "Reviewer": "Aaron G. Thomas",
+        "Rating": "4.0 out of 5 stars",
+        "Title": "like me some McBride",
+        "Date": "Reviewed in the United States on March 4, 2024",
+        "Body": "Mostly brilliant, only occasionally drifting into modern, critical riffs. Enjoyed the mingling of narratives: newly arrived Jews in Pennsylvania, the seeds of the Klan, the capacity of love and compassion to transcend wide expanses of difference.",
+        "Number": 4
+    },
+    {
+        "id": 17,
+        "Reviewer": "Lois F. Withers",
+        "Rating": "4.0 out of 5 stars",
+        "Title": "interesting story",
+        "Date": "Reviewed in the United States on February 17, 2024",
+        "Body": "I had a hard time getting through parts of this book because it jumped around a lot.  The story wasn\u2019t always easy to follow.  The ending made it worth reading.I did enjoy the characters in this book.  Read this if you want to learn more about how the blacks and Jewish tolerated each other, both living in close proximity to each other and just starting out.  Both groups wanting to have enough to live and more if they could but the disparities are real.",
+        "Number": 4
+    },
+    {
+        "id": 18,
+        "Reviewer": "Ronald Goldberg",
+        "Rating": "4.0 out of 5 stars",
+        "Title": "Interesting story with multiracial components from the 1839s.",
+        "Date": "Reviewed in the United States on March 21, 2024",
+        "Body": "Interesting but a little stretched to link all the elements. It dies keep your interest. Gives some insight into race and religion interaction in that era.",
+        "Number": 4
+    },
+    {
+        "id": 19,
+        "Reviewer": "mary",
+        "Rating": "4.0 out of 5 stars",
+        "Title": "A different navigation through what it was like",
+        "Date": "Reviewed in the United States on March 10, 2024",
+        "Body": "This book was a lesson to me in Jewish culture\u2026a mixing pot of cultures and races.  Set in the 1930\u2019s, a poor town, with lively characters and mystery.",
+        "Number": 4
+    },
+    {
+        "id": 20,
+        "Reviewer": "Jess",
+        "Rating": "4.0 out of 5 stars",
+        "Title": "Everyone needs a Monkey Pants",
+        "Date": "Reviewed in the United States on March 5, 2024",
+        "Body": "Though thought provoking, the book takes a while to settle into its story. Truly grabs the attention of the reader about half way through the book, so patience is needed. I hung in there and truly enjoyed the second half!",
+        "Number": 4
+    },
+    {
+        "id": 21,
+        "Reviewer": "Nancy Devlin",
+        "Rating": "4.0 out of 5 stars",
+        "Title": "a very interesting book",
+        "Date": "Reviewed in the United States on January 24, 2024",
+        "Body": "I loved the diversity of the characters. I learned of how jewish immigrants and blacks lived side by side in Pottstown - for the most part peacefully. They were from different worlds but their poor lot in life made them comrades of sorts. It was the whites that worked tirelessly to keep these people down. But regardless of their struggles, they had deep friendships and great loves like all people dream of.This was a good book. Most of it about the lives of these people and how they fared. And, how saving some resulted in finally achieving a better life - and forever love.",
+        "Number": 4
+    },
+    {
+        "id": 22,
+        "Reviewer": "Marita J. Krivda",
+        "Rating": "4.0 out of 5 stars",
+        "Title": "McBride",
+        "Date": "Reviewed in the United States on March 24, 2024",
+        "Body": "Well written.",
+        "Number": 4
+    },
+    {
+        "id": 23,
+        "Reviewer": "Margot",
+        "Rating": "4.0 out of 5 stars",
+        "Title": "Worth the time",
+        "Date": "Reviewed in the United States on February 29, 2024",
+        "Body": "If you can hang in through the first 1/3, you\u2019ll end up loving this twisting and bumpy and surprising and heartbreaking tale of people. All kinds of people- with all kinds of stories and it\u2019s just beautiful. And messy. And worth the read.",
+        "Number": 4
+    },
+    {
+        "id": 24,
+        "Reviewer": "M Dodds",
+        "Rating": "4.0 out of 5 stars",
+        "Title": "Heartfelt story",
+        "Date": "Reviewed in the United States on December 9, 2023",
+        "Body": "This book starts out as a mystery but morphs into a story about neighbors and community in an immigrant and black neighborhood.  Chicken Hill was where Moshe and Chiba Ludlow ran the Heaven and Earth Grocery Store. They lived and worked there among blacks and European immigrants. When the state came looking for a deaf black child to put him into an institution, the residents banded together to keep the boy safe.I enjoyed this book. It was inventive and uplifting. The characters are original and complex. There are so many backstories to each side character that it becomes complicated to keep track of all of them.  I felt like the plot sometimes got lost in all the backstories.  If you enjoy historical fiction and an original story this book is for you!",
+        "Number": 4
+    },
+    {
+        "id": 25,
+        "Reviewer": "Karen Briscoe",
+        "Rating": "4.0 out of 5 stars",
+        "Title": "Book club recommendation",
+        "Date": "Reviewed in the United States on March 4, 2024",
+        "Body": "This was one of the book club reads that I just couldn't get into.  My rule of thumb is 100 pages and I just made it to 45.  There are tons of positive reviews though so maybe that means more.",
+        "Number": 4
+    },
+    {
+        "id": 26,
+        "Reviewer": "JBF",
+        "Rating": "4.0 out of 5 stars",
+        "Title": "worth it",
+        "Date": "Reviewed in the United States on February 14, 2024",
+        "Body": "The first 3/4s of this book are pleasant, but not much is happening. In the remaining pages, however, all the threads come together. Worth it to enjoy the pros and the set up.",
+        "Number": 4
+    },
+    {
+        "id": 27,
+        "Reviewer": "Erick",
+        "Rating": "4.0 out of 5 stars",
+        "Title": "Enjoyed",
+        "Date": "Reviewed in the United States on February 2, 2024",
+        "Body": "We read this The Heaven and Earth Grocery Store for my book group.  The characters were enjoyable (I especially liked Shonna) and the plot had a lot of twists and turns, which made it interesting, but also a bit difficult to put together the pieces and keep track of events and see connections in places.  The issues that it dealt with made for an interesting book group discussion.  The author did a good job of enriching the story with insights from multiple cultures and subcultures.  I liked it, but didn't love it.  Enjoyable.",
+        "Number": 4
+    },
+    {
+        "id": 28,
+        "Reviewer": "TWCapeCod",
+        "Rating": "4.0 out of 5 stars",
+        "Title": "Not very good",
+        "Date": "Reviewed in the United States on December 7, 2023",
+        "Body": "I did not find most of the characters in this book very interesting or sympathetic. I think I did find weird things like Africa-Americans hearing the drums of their ancestors on the Amazon. The Amazon? And loose ends like . . . SPOILER ALERT: Near the middle of the book a piece of paper with a presumably important message on it is never read and is lost; it's mentioned at least once more but never read nor found nor is its significance explained. The end is implausible. How did Nate, carrying a man, get out of the tunnel and make a train within minutes? And did Nate really leave an innocent man to explain a dead body? This is not a very good book, but might have been with better editing",
+        "Number": 4
+    },
+    {
+        "id": 29,
+        "Reviewer": "Jean McCarthy",
+        "Rating": "4.0 out of 5 stars",
+        "Title": "McBride covers the ethnic bases with affection and authenticity.",
+        "Date": "Reviewed in the United States on February 24, 2024",
+        "Body": "A melange of ethnic biases shown with humor and love in Pottstown, PA, at an earlier time.The characters are vivid and relatable; dialogue is well done.  This fast- paced novel deserves your attention.",
+        "Number": 4
+    },
+    {
+        "id": 30,
+        "Reviewer": "Cynthia G. Allen",
+        "Rating": "2.0 out of 5 stars",
+        "Title": "Sorry, this book was so boring",
+        "Date": "Reviewed in the United States on January 4, 2024",
+        "Body": "I read and read waiting to start enjoying this book, as it had a lot of glorious reviews. By 25% into it, I gave up. So many characters I couldn\u2019t remember who they were anymore. So confusing. I kept trying to figure out the story but nothing grabbed me. There are too many wonderful books out there to waste time with a clunker.",
+        "Number": 2
+    },
+    {
+        "id": 31,
+        "Reviewer": "Cheryl",
+        "Rating": "2.0 out of 5 stars",
+        "Title": "perplexed",
+        "Date": "Reviewed in the United States on March 19, 2024",
+        "Body": "Too wordy, long and confusing., Was recommended by good friend but obviously we have different tastes. Don\u2019t waste your time.",
+        "Number": 2
+    },
+    {
+        "id": 32,
+        "Reviewer": "Allison Smith",
+        "Rating": "2.0 out of 5 stars",
+        "Title": "Such A Disappointment",
+        "Date": "Reviewed in the United States on March 4, 2024",
+        "Body": "It was truly difficult to finish this book. Run on sentences, poor character and plot development\u2026pretty much a waste of my time. I vow to never read another book by this author.",
+        "Number": 2
+    },
+    {
+        "id": 33,
+        "Reviewer": "J. D. Gile",
+        "Rating": "2.0 out of 5 stars",
+        "Title": "Not My Book of the Year",
+        "Date": "Reviewed in the United States on January 28, 2024",
+        "Body": "A good editor might have shaped this book into something more coherent. Absent a ruthless red pen, the book rambled and meandered. There were a few compelling characters \u2013 perhaps Monkey Pants the most memorable \u2013 but I had trouble keeping the vast cast and numerous plot lines straight.",
+        "Number": 2
+    },
+    {
+        "id": 34,
+        "Reviewer": "Carol W.",
+        "Rating": "2.0 out of 5 stars",
+        "Title": "The Heaven Earth Grocery Story",
+        "Date": "Reviewed in the United States on January 26, 2024",
+        "Body": "As someone who was born in Pottstown in 1945 some of this seemed contrived.Pottstown was not destroyed by Hurricane Agnes. Only the part south of the Schuykill River.  My father\u2019s Sunday school class helped people clean up there oil covered houses. BE ACCURATE!",
+        "Number": 2
+    },
+    {
+        "id": 35,
+        "Reviewer": "M. Donovan",
+        "Rating": "2.0 out of 5 stars",
+        "Title": "Torn cover",
+        "Date": "Reviewed in the United States on January 17, 2024",
+        "Body": "Received book on time. It came in same box with second item  Unfortunately, the book jacket was torn  Book was okay but don,t like not having protective cover  combining a book with large cat litter container was not a good idea",
+        "Number": 2
+    },
+    {
+        "id": 36,
+        "Reviewer": "65faith",
+        "Rating": "2.0 out of 5 stars",
+        "Title": "Difficult to read",
+        "Date": "Reviewed in the United States on March 14, 2024",
+        "Body": "The dialogue and descriptions change too often.  I was not impressed.",
+        "Number": 2
+    },
+    {
+        "id": 37,
+        "Reviewer": "Leona C. DuBois",
+        "Rating": "2.0 out of 5 stars",
+        "Title": "great ending but\u2026.",
+        "Date": "Reviewed in the United States on January 29, 2024",
+        "Body": "I had a hard time time with this book.  Too many characters and too much detail about them.  I felt it was all over the place until page 290, when it kicked in.  It had a great ending.",
+        "Number": 2
+    },
+    {
+        "id": 38,
+        "Reviewer": "akduck",
+        "Rating": "2.0 out of 5 stars",
+        "Title": "Meandering mish mash",
+        "Date": "Reviewed in the United States on January 25, 2024",
+        "Body": "The book fails to deliver a cogent narrative. Honestly, I got bored and lost among the seemingly endless and unconnected irrelevant details that worked as deviations from what I guess originally may have been an idea for a story.",
+        "Number": 2
+    },
+    {
+        "id": 39,
+        "Reviewer": "Guitarzan",
+        "Rating": "2.0 out of 5 stars",
+        "Title": "Great characters, cluttered story",
+        "Date": "Reviewed in the United States on December 6, 2023",
+        "Body": "This book has so much to like: unique and believable characters, a marvelous setting, multiple poignant story lines and a deep, nuanced understanding of racial and ethnic dynamics. But the story becomes so cluttered that in the end it doesn't work -- at least not for me. I wanted to love it. I'm sad that I could not.",
+        "Number": 2
+    },
+    {
+        "id": 40,
+        "Reviewer": "Deb",
+        "Rating": "5.0 out of 5 stars",
+        "Title": "One of the very best books I've read.",
+        "Date": "Reviewed in the United States on March 30, 2024",
+        "Body": "I recommended this for my bookclub because I absolutely loved it. The story is based on the author's ancestry. Everyone in the book club loved it as well. I also recommend viewing the NPR podcast interview of Mr Mcbride. He is a charming and down to earth person!!!PS You can never go wrong with a book by James McBride.",
+        "Number": 5
+    },
+    {
+        "id": 41,
+        "Reviewer": "Laurie",
+        "Rating": "5.0 out of 5 stars",
+        "Title": "shining star of a book",
+        "Date": "Reviewed in the United States on April 3, 2024",
+        "Body": "Sometimes i had to stop reading because the fate of characters like Chona and Dodo was so sad.  But by the end the tragedy was lessened and the epilogue left me soothed and uplifted.  I also liked the comic elements, like the cornet band.",
+        "Number": 5
+    },
+    {
+        "id": 42,
+        "Reviewer": "GBFresh",
+        "Rating": "5.0 out of 5 stars",
+        "Title": "Fantastic- So glad I read this book.",
+        "Date": "Reviewed in the United States on March 24, 2024",
+        "Body": "After finishing the first chapter I was unsure if I wanted to keep reading, so glad I did. In a very short time I was completely enveloped in the town and the main characters.Wrapped within the story are so many stark truths about life, love and injustice. I leave these book striving to be kinder and more aware of the struggles around me.",
+        "Number": 5
+    },
+    {
+        "id": 43,
+        "Reviewer": "Kindle Customer",
+        "Rating": "5.0 out of 5 stars",
+        "Title": "Thanks for Heaven and Earth",
+        "Date": "Reviewed in the United States on March 23, 2024",
+        "Body": "This was a great story.  I enjoyed all the characters. Each with their own ideas about how to survive their lives on chicken hill .. I found it so interesting how just a few people.quietly did their thing, and looked beyond color, or creed, just to be human beingsWell done. Mr.McBride.",
+        "Number": 5
+    },
+    {
+        "id": 44,
+        "Reviewer": "Jennifer O Viereck",
+        "Rating": "5.0 out of 5 stars",
+        "Title": "You know its good when 2 days later you're still there.",
+        "Date": "Reviewed in the United States on March 23, 2024",
+        "Body": "I loved the detailed in depth character development for everyone. I feel like I know them, could pick them each out in the grocery or on the street. There were so many little gems of cultural depth and timeless philosophy in a rich historic context. I bookmarked more spots to revisit than I ever have before.",
+        "Number": 5
+    },
+    {
+        "id": 45,
+        "Reviewer": "Kindle Customer",
+        "Rating": "5.0 out of 5 stars",
+        "Title": "The Ending Beauty",
+        "Date": "Reviewed in the United States on March 26, 2024",
+        "Body": "This novel had everything.  The unique characters, their  mind blowing back stories, the unusual reactions to each other kept you turning pages.  The story line may take place during the 20th century, but it's relevant to the 21st.Read Mr McBride's novel, it's worth your time.Goldie",
+        "Number": 5
+    },
+    {
+        "id": 46,
+        "Reviewer": "Paul R. Cook",
+        "Rating": "5.0 out of 5 stars",
+        "Title": "Great story",
+        "Date": "Reviewed in the United States on March 20, 2024",
+        "Body": "I enjoyed the story of  the tough life back in the 1920s for much of the Jewish and black Americans.  And how through love and cooperation a young boys life was saved.  It is different than most of the books I have read lately and was an inspiration.  I recommend it to all who have compassion for their fellow man.",
+        "Number": 5
+    },
+    {
+        "id": 47,
+        "Reviewer": "Amazon Customer",
+        "Rating": "5.0 out of 5 stars",
+        "Title": "A True Masterpiece",
+        "Date": "Reviewed in the United States on March 19, 2024",
+        "Body": "This novel had me from the first page.  The style , dialogue and story took me on an amazing journey.  I had no personal frame of reference for the events in this story but I was totally engrossed at every twist and turn.  I will long remember many of these characters.",
+        "Number": 5
+    },
+    {
+        "id": 48,
+        "Reviewer": "Henry True",
+        "Rating": "5.0 out of 5 stars",
+        "Title": "Great Reading!",
+        "Date": "Reviewed in the United States on March 11, 2024",
+        "Body": "Yarn about a mixed black & Jewish community living on the fringe of a predominately white Pennsylvania town in the 1930s. Draws you in and keeps you turning the pages to see what happens next. Reminded me of a Charles Dickens novel woven together with many characters who show up, seemingly play their role and go away only to reappear later on to tie something together. Masterful story telling. Wonderfully enjoyable read.",
+        "Number": 5
+    },
+    {
+        "id": 49,
+        "Reviewer": "eli2",
+        "Rating": "5.0 out of 5 stars",
+        "Title": "Rich Lives",
+        "Date": "Reviewed in the United States on March 15, 2024",
+        "Body": "The grocery store is the center of everyone\u2019s life and though they were each poor financially they were rich with friends, family.  Their lives didn\u2019t seem like much when they were living them, but as so often happens, in retrospect they shone with love.  They were rich in friendships and relatives who were there when needed\u2026helping.",
+        "Number": 5
+    },
+    {
+        "id": 50,
+        "Reviewer": "Books R 4 Me",
+        "Rating": "1.0 out of 5 stars",
+        "Title": "Not good!",
+        "Date": "Reviewed in the United States on January 2, 2024",
+        "Body": "I rarely dislike a book but this was so hard to finish. It did not hold my attention at all, characters were not interesting, and it was just plain boring. I kept hoping it would get better, but it didn\u2019t.  His other books were better than this drivel.",
+        "Number": 1
+    },
+    {
+        "id": 51,
+        "Reviewer": "R. Williamson",
+        "Rating": "1.0 out of 5 stars",
+        "Title": "Uninteresting",
+        "Date": "Reviewed in the United States on March 7, 2024",
+        "Body": "Was unable to really get started.  Not interesting.  Rarely do I stop reading so early.",
+        "Number": 1
+    },
+    {
+        "id": 52,
+        "Reviewer": "Angela",
+        "Rating": "1.0 out of 5 stars",
+        "Title": "A gifted writer.",
+        "Date": "Reviewed in the United States on March 18, 2024",
+        "Body": "Not happy with the subject matter.0",
+        "Number": 1
+    },
+    {
+        "id": 53,
+        "Reviewer": "Becky Worthen",
+        "Rating": "1.0 out of 5 stars",
+        "Title": "The heaven & earth grocery store",
+        "Date": "Reviewed in the United States on January 30, 2024",
+        "Body": "Each chapter was like a new story line. Lost interest. Didn't know where the story was going. Did  it care enough to finish it. Very disappointing.",
+        "Number": 1
+    },
+    {
+        "id": 54,
+        "Reviewer": "Golfer",
+        "Rating": "1.0 out of 5 stars",
+        "Title": "Wow, why did I buy this?",
+        "Date": "Reviewed in the United States on September 17, 2023",
+        "Body": "I tried to get into this book, and kept on keeping on, thinking I could eventually understand who the characters were and what their purpose was.  I've read several exceptional books recently, Demon Copperhead and Cutting for Stone, for example, so I believe I can an recognize and appreciate good writing.  This book is NOT good writing!  Wish I had focused more on the reviews here that used the word disjointed to describe it, because I can't come up with a better adjective than that.  Wish I had my $14.99 back!",
+        "Number": 1
+    },
+    {
+        "id": 55,
+        "Reviewer": "Diane Lander-Simon",
+        "Rating": "1.0 out of 5 stars",
+        "Title": "I Can\u2019t Even\u2026",
+        "Date": "Reviewed in the United States on December 2, 2023",
+        "Body": "I\u2019m sorry but I hate the n word.  Despise it. I am crushed by all the anti- semitism. Especially when a war is on in Gaza. The child sex abuse. No. Just no. The violence. This book was just too much for me. It broke me. Reading it at Thanksgiving time was brutal. You could call it a good book but reading it was a penance. Good luck to you.",
+        "Number": 1
+    },
+    {
+        "id": 56,
+        "Reviewer": "Christine",
+        "Rating": "1.0 out of 5 stars",
+        "Title": "Pages not cut properly",
+        "Date": "Reviewed in the United States on January 4, 2024",
+        "Body": "I love books, but dislike receiving damaged or imperfect books.  Too much of a hassle to return and wait for replacement.  Better off going to a book store to pick up your own!",
+        "Number": 1,
+        "image_urls": [
+            "61AD+NOW1hL._SY88.jpg",
+            "71IsfML3o7L._SY88.jpg",
+            "71JXbNROX1L._SY88.jpg"
+        ]
+    },
+    {
+        "id": 57,
+        "Reviewer": "Dana",
+        "Rating": "1.0 out of 5 stars",
+        "Title": "A dull, meandering, book without a punch",
+        "Date": "Reviewed in the United States on March 6, 2024",
+        "Body": "Gave it a hundred pages before I gave up.",
+        "Number": 1
+    },
+    {
+        "id": 58,
+        "Reviewer": "michele nosie",
+        "Rating": "1.0 out of 5 stars",
+        "Title": "condition",
+        "Date": "Reviewed in the United States on February 22, 2024",
+        "Body": "Water damaged pages on a NEW bood",
+        "Number": 1
+    },
+    {
+        "id": 59,
+        "Reviewer": "L. Lopez",
+        "Rating": "1.0 out of 5 stars",
+        "Title": "Language is Upsetting",
+        "Date": "Reviewed in the United States on November 25, 2023",
+        "Body": "I can\u2019t tolerate the \u201cn\u201d word being used throughout this book.  If it is written, it is read.  If it is read, it is learned.  This word just needs to end-go away in whatever context or reason it is used.  Shame on Amazon for making this their book of the year.",
+        "Number": 1
+    },
+    {
+        "id": 60,
+        "Reviewer": "Marion B. McGovern",
+        "Rating": "3.0 out of 5 stars",
+        "Title": "over hyped perhaps.",
+        "Date": "Reviewed in the United States on February 6, 2024",
+        "Body": "There was so much chatter about this book, but for me it didn\u2019t live up to it. The story meandered , and although some passages were lovely, I was bored\u2026",
+        "Number": 3
+    },
+    {
+        "id": 61,
+        "Reviewer": "Deborah Mlinar",
+        "Rating": "3.0 out of 5 stars",
+        "Title": "not my favorite",
+        "Date": "Reviewed in the United States on March 8, 2024",
+        "Body": "I can honestly say, that this ling, long, over-embellished book left so much story untold! Not a fan. Also felt much of the  Ebonics used left me feeling a bit insensed.",
+        "Number": 3
+    },
+    {
+        "id": 62,
+        "Reviewer": "Dadannac",
+        "Rating": "3.0 out of 5 stars",
+        "Title": "Really wanted to love this book",
+        "Date": "Reviewed in the United States on January 6, 2024",
+        "Body": "There was much to like here\u2014excellent writing, strong and vivid characters, great insight into Jewish immigrants and their religion and culture, empathy for the Black experience in America etc.  Unfortunately, the story never really grabbed me.  The pacing was a bit slow and tedious. The author really rushed the ending and failed to draw out the drama and suspense that the rest of the book had carefully and painstakingly laid the foundation for. Not as good as the critical reviews that tempted me to want to read this.",
+        "Number": 3
+    },
+    {
+        "id": 63,
+        "Reviewer": "Andy Kraber",
+        "Rating": "3.0 out of 5 stars",
+        "Title": "It was pretty boring.",
+        "Date": "Reviewed in the United States on March 6, 2024",
+        "Body": "It ended well which was a saving grace as it was a bit on the boring side for me took me two tries to get it read.",
+        "Number": 3
+    },
+    {
+        "id": 64,
+        "Reviewer": "SB",
+        "Rating": "3.0 out of 5 stars",
+        "Title": "disjointed",
+        "Date": "Reviewed in the United States on March 7, 2024",
+        "Body": "No direction , story lines all over the place . I really didn\u2019t like this book . I was disappointed in it .",
+        "Number": 3
+    },
+    {
+        "id": 65,
+        "Reviewer": "Jo Ann Warner",
+        "Rating": "3.0 out of 5 stars",
+        "Title": "a moving story",
+        "Date": "Reviewed in the United States on March 4, 2024",
+        "Body": "It had too much violence and suffering for me to say that it was an enjoyable read. Nevertheless, the story was gripping.",
+        "Number": 3
+    },
+    {
+        "id": 66,
+        "Reviewer": "courtney",
+        "Rating": "3.0 out of 5 stars",
+        "Title": "intriguing",
+        "Date": "Reviewed in the United States on January 18, 2024",
+        "Body": "Well written and from a different perspective than most books I\u2019ve read. Some of the Jewish terminology made it a bit hard to understand. Novel starts slow but by the middle it builds and the story that unfolds is like nothing you\u2019ve ever read and is a page turner. Do not be deceived by the description, the murder mystery actually has very little to do with the book. Overall I would recommend, but it\u2019s not for everyone. Deep discussions to follow.",
+        "Number": 3
+    },
+    {
+        "id": 67,
+        "Reviewer": "Fred",
+        "Rating": "3.0 out of 5 stars",
+        "Title": "Slow start",
+        "Date": "Reviewed in the United States on February 13, 2024",
+        "Body": "Not sure who decided to name this the best book of the year. I struggled through it .",
+        "Number": 3
+    },
+    {
+        "id": 68,
+        "Reviewer": "Kathleen",
+        "Rating": "3.0 out of 5 stars",
+        "Title": "Good story but unfortunate writing",
+        "Date": "Reviewed in the United States on January 22, 2024",
+        "Body": "The author tells a good story but the writing is too much. Too many run on sentences, too much description and he keeps describing characters over and over with the exact same description.  The run on sentences might be an ode to James Joyce but I find his writing too much too. I felt the characters were great and the story very interesting but could have been told with less.",
+        "Number": 3
+    },
+    {
+        "id": 69,
+        "Reviewer": "Toni Shapiro",
+        "Rating": "3.0 out of 5 stars",
+        "Title": "Great writing",
+        "Date": "Reviewed in the United States on January 20, 2024",
+        "Body": "James McBride is an amazing storyteller. I enjoyed all of the different characters and the plot line. Sometimes I got a little lost in the side stories. I was very familiar with what happened to the character called Dodo from reading other stories from this time in history. I think anyone who is interested in race relations or immigration or what it was like in the south in the 20s and 30s should read this book.",
+        "Number": 3
+    },
+    {
+        "id": 70,
+        "Reviewer": "Glenarm",
+        "Rating": "3.0 out of 5 stars",
+        "Title": "A Very Complicated Book\u2026",
+        "Date": "Reviewed in the United States on February 10, 2024",
+        "Body": "A book that wanders from fascinating character to fascinating character. Every now and then there is a hint there may be a plot involved. Unfortunately, not often enough. I gave up at around 62%. If I was too impatient then hopefully someone can guide me back to the book. Hate giving up on a book but read enough to know that torturing yourself with a book that just doesn\u2019t grab ya is too frustrating.",
+        "Number": 3
+    },
+    {
+        "id": 71,
+        "Reviewer": "Chariot",
+        "Rating": "3.0 out of 5 stars",
+        "Title": "Popular on best lists, but finding it difficult to continue reading.",
+        "Date": "Reviewed in the United States on March 14, 2024",
+        "Body": "Having a difficult time continuing to read this book - have no idea where the story is going to take the reader.",
+        "Number": 3
+    },
+    {
+        "id": 72,
+        "Reviewer": "Paula",
+        "Rating": "3.0 out of 5 stars",
+        "Title": "Not what I expected",
+        "Date": "Reviewed in the United States on March 9, 2024",
+        "Body": "It took a long time (100+ pages) to get into the story, but when I did I couldn't put it down.",
+        "Number": 3
+    },
+    {
+        "id": 73,
+        "Reviewer": "Mec",
+        "Rating": "3.0 out of 5 stars",
+        "Title": "A misleading title  for a long rambling book",
+        "Date": "Reviewed in the United States on January 4, 2024",
+        "Body": "If you like tangential wandering novels, then this is the book for you!  It is supposedly a mystery novel.  The author introduces a dead body in the first chapter and then rambles on for another 300 + pages before getting back to the body.  The book really isn't about the grocery store named in the title, rather it's about a long cast of characters, black, Jewish, Polish,  and how they rescue a young deaf black boy after he is wrongly accused of a crime.  Reading it is like listening to your mentally failing uncle introduce a topic and then rattle on with sidebar stories.  There is a nice subplot about love and kindness but that doesn't make the book worth reading.",
+        "Number": 3
+    },
+    {
+        "id": 74,
+        "Reviewer": "Going for Joy",
+        "Rating": "3.0 out of 5 stars",
+        "Title": "Hard to \"get into\"",
+        "Date": "Reviewed in the United States on February 26, 2024",
+        "Body": "I'm trying to love this book but it just isn't grabbing me. The deaf boy has just been introduced. As a former teacher of deaf students, I can say the portrayal of the boy is not accurate at all. I'm going to keep reading for now but I can't say I expect it to pick up.",
+        "Number": 3
+    },
+    {
+        "id": 75,
+        "Reviewer": "Ana Paula P",
+        "Rating": "3.0 out of 5 stars",
+        "Title": "Audiobook",
+        "Date": "Reviewed in the United States on February 14, 2024",
+        "Body": "I can give a rate for the history, but the man's voice, which tells the history in the audiobook is not energetic, does not change when has two different characters talking, it is hard to follow who is talking, if it is a conversation or only the storyteller",
+        "Number": 3
+    },
+    {
+        "id": 76,
+        "Reviewer": "patricia whitney",
+        "Rating": "3.0 out of 5 stars",
+        "Title": "It\u2019s a hard book to get into",
+        "Date": "Reviewed in the United States on March 24, 2024",
+        "Body": "I did not like the writing style of the author.",
+        "Number": 3
+    },
+    {
+        "id": 77,
+        "Reviewer": "Shelly Gibson",
+        "Rating": "3.0 out of 5 stars",
+        "Title": "Overrated",
+        "Date": "Reviewed in the United States on February 10, 2024",
+        "Body": "Book club book.  I don\u2019t get the hype.  It was okay.  Not the best book I\u2019ve read.  Way over blown, i wouldn\u2019t waste my time reading if you are looking for something to read casually.",
+        "Number": 3
+    },
+    {
+        "id": 78,
+        "Reviewer": "emily mclain",
+        "Rating": "3.0 out of 5 stars",
+        "Title": "Not the most interesting book",
+        "Date": "Reviewed in the United States on February 10, 2024",
+        "Body": "I always finish any book that I start.  However, this might be the exception.  Somehow I just couldn\u2019t get into this one  I\u2019ve only read about 60pages so there is hope that it will get better",
+        "Number": 3
+    },
+    {
+        "id": 79,
+        "Reviewer": "Amazon Customer",
+        "Rating": "3.0 out of 5 stars",
+        "Title": "not what I thought",
+        "Date": "Reviewed in the United States on February 14, 2024",
+        "Body": "I am a reader and bought this book because the 'description' sounded like it would be pretty good. I was disappointed...couldn't pin point exactly what the problem was, a bit confusing and a bit strange. Those are just my thoughts.",
+        "Number": 3
+    },
+    {
+        "id": 80,
+        "Reviewer": "sarah Stowell",
+        "Rating": "1.0 out of 5 stars",
+        "Title": "Story is good... BUT... The book delivered to me from Amazon came with 30+ missing pages!",
+        "Date": "Reviewed in the United States on February 23, 2024",
+        "Body": "I ordered this book and upon reading it, a month later, after the return policy allowed returns, I found three chapters literally missing from the book.  There was not sign of foul play.  The pages are not there.  Curiously, this book also has two paper jackets on it.  So weird.  And frustrating.  And no opportunity to get a refund???",
+        "Number": 1
+    },
+    {
+        "id": 81,
+        "Reviewer": "Amazon Customer",
+        "Rating": "1.0 out of 5 stars",
+        "Title": "I returned the book after 3 chapters",
+        "Date": "Reviewed in the United States on January 18, 2024",
+        "Body": "I like that Amazon accepts returns in Kindle. I read 2 chapters of gibberish and then went to Reviews on Amazon, another thing I like in general. The 1 star ratings despite many 5 stars told me that the book doesn't have a plot you can turn the page for, etc. In addition, I so often find that books recommended by NYTimes aren't for me. They like the avant garde. I want a good read.",
+        "Number": 1
+    },
+    {
+        "id": 82,
+        "Reviewer": "Sunny Thomas",
+        "Rating": "1.0 out of 5 stars",
+        "Title": "Tedious, rambling, endless use of annoying metaphores  . . .  don't get \"best seller\"",
+        "Date": "Reviewed in the United States on February 23, 2024",
+        "Body": "Finding this book just work to plough through . . . ugh. How in the world this got to be a best selling novel is hard to understand. At 70% per Kindle and will force myself to finish but cannot recommend despite all the raves.",
+        "Number": 1
+    },
+    {
+        "id": 83,
+        "Reviewer": "Joanne",
+        "Rating": "1.0 out of 5 stars",
+        "Title": "Too Much Information",
+        "Date": "Reviewed in the United States on February 25, 2024",
+        "Body": "I was looking forward to reading this book that had received such a high rating only to be disappointed by the inclusion of unnecessary events and characters. There was a story to be told but  it could have been in 250 pages.",
+        "Number": 1
+    },
+    {
+        "id": 84,
+        "Reviewer": "Mauiishome",
+        "Rating": "1.0 out of 5 stars",
+        "Title": "Disappointing",
+        "Date": "Reviewed in the United States on November 14, 2023",
+        "Body": "I struggled to finish this book, hoping along the way that I would suddenly start really enjoying the book.  At the end of one chapter, I thought, \u201cNow that was well written and engaging.\u201d  That was the only chapter that made me feel positive about the experience.  I was not interested in most of the characters.  I thought the story was weak - a mystery?  Really?  I cannot recommend this book.  I felt I had to finish it to discuss at my book club, but I really wish I had not spent my time reading it.",
+        "Number": 1
+    },
+    {
+        "id": 85,
+        "Reviewer": "James D.",
+        "Rating": "1.0 out of 5 stars",
+        "Title": "Unreadably bad.",
+        "Date": "Reviewed in the United States on March 2, 2024",
+        "Body": "I can't spend one more minute of my life reading this book. I made it to page 61 and now, even if a story of any kind develops, I no longer care.",
+        "Number": 1
+    },
+    {
+        "id": 86,
+        "Reviewer": "J. Tingey",
+        "Rating": "1.0 out of 5 stars",
+        "Title": "If you have trouble sleeping then buy this book",
+        "Date": "Reviewed in the United States on January 27, 2024",
+        "Body": "Had an interesting hook but then it went from bad, to worse, and ended with awful. Characters were boring and took around 200 pages for an exciting event to happen. I hate abandoning books but I finally had to stop because I just didn\u2019t care what was going on anymore and I was forcing myself to read.",
+        "Number": 1
+    },
+    {
+        "id": 87,
+        "Reviewer": "VCS",
+        "Rating": "1.0 out of 5 stars",
+        "Title": "Aimless and boring",
+        "Date": "Reviewed in the United States on January 8, 2024",
+        "Body": "I fell for all the buzz around this book. I\u2019ve read some very good books this year - eg., Demon Copperhead and Lessons in Chemistry and was hoping this would be as good as all the hype. I just couldn\u2019t get into this book. I can\u2019t even say what or who it\u2019s about. Is there a main character? A main plot? Who am I supposed to care about? I wouldn\u2019t recommend it.",
+        "Number": 1
+    },
+    {
+        "id": 88,
+        "Reviewer": "adlib",
+        "Rating": "1.0 out of 5 stars",
+        "Title": "Yuk",
+        "Date": "Reviewed in the United States on January 29, 2024",
+        "Body": "My first review was censored by the algorithm because I attempted to convey to others useful information that I wish I had known before wasting my money and time on this book and author.  Welcome to the new feudalism.",
+        "Number": 1
+    },
+    {
+        "id": 89,
+        "Reviewer": "dotsy62",
+        "Rating": "1.0 out of 5 stars",
+        "Title": "not for me.",
+        "Date": "Reviewed in the United States on March 18, 2024",
+        "Body": "I thought it was boring.",
+        "Number": 1
+    },
+    {
+        "id": 90,
+        "Reviewer": "Maria J. Woolf",
+        "Rating": "5.0 out of 5 stars",
+        "Title": "what an incredible read!",
+        "Date": "Reviewed in the United States on March 26, 2024",
+        "Body": "I don\u2019t know when it was that I realize that I couldn\u2019t put the book down!  I thought it a bit confusing keeping track of the characters, quite a few were introduced all at once.  After that, it was just plain compelling!",
+        "Number": 5
+    },
+    {
+        "id": 91,
+        "Reviewer": "H Hernandez",
+        "Rating": "5.0 out of 5 stars",
+        "Title": "so worth it!",
+        "Date": "Reviewed in the United States on March 31, 2024",
+        "Body": "I work at a bookstore. This book has been on the top 10 bestsellers for weeks now.  It is there for good reason.  Absolutely loved it!",
+        "Number": 5
+    },
+    {
+        "id": 92,
+        "Reviewer": "Lis",
+        "Rating": "5.0 out of 5 stars",
+        "Title": "one of my favorites!",
+        "Date": "Reviewed in the United States on March 27, 2024",
+        "Body": "I couldn\u2019t wait to learn about each new character\u2026their strengths and vulnerabilities\u2026 and the roll they each would play in the wonderful plot put together masterfully by James McBride.  This book was hard to put down\u2014 a true gem.",
+        "Number": 5
+    },
+    {
+        "id": 93,
+        "Reviewer": "Kindle Customer",
+        "Rating": "5.0 out of 5 stars",
+        "Title": "Heart wrenching and gripping.",
+        "Date": "Reviewed in the United States on March 27, 2024",
+        "Body": "Great story just mysterious enough to hold your interest until the very end.  Sad but likely accurate insight into institutions in the early 20th century and the horrors they held.",
+        "Number": 5
+    },
+    {
+        "id": 94,
+        "Reviewer": "jeanie",
+        "Rating": "5.0 out of 5 stars",
+        "Title": "I love this book.",
+        "Date": "Reviewed in the United States on March 22, 2024",
+        "Body": "Integrity,  kindness, fortitude.Living one's own faith, despiteInequalities,  racism,  sheer evil, is how a Jewish woman, crippled from birth and her loving husband, run their small Heaven& Earth Grocery Store catering to their black patrons with humor, love, and respect.",
+        "Number": 5
+    },
+    {
+        "id": 95,
+        "Reviewer": "Holly Fassbender",
+        "Rating": "5.0 out of 5 stars",
+        "Title": "Remarkable book",
+        "Date": "Reviewed in the United States on April 2, 2024",
+        "Body": "One of the best, most moving books I\u2019ve read.  A view of lives I had no idea about. A must read",
+        "Number": 5
+    },
+    {
+        "id": 96,
+        "Reviewer": "Celeste Klinger",
+        "Rating": "5.0 out of 5 stars",
+        "Title": "My favorite book in 2024 so far",
+        "Date": "Reviewed in the United States on March 16, 2024",
+        "Body": "Wow, the intricate and fine details and how it all meshed together is simply amazing! I got asked several times what the book was about, but all I could do was hand the book over for my friends and family to read. I've never felt so resolved with the best possible closure! *Oops, no spoilers!*",
+        "Number": 5
+    },
+    {
+        "id": 97,
+        "Reviewer": "David J. Johnson",
+        "Rating": "5.0 out of 5 stars",
+        "Title": "True Friends",
+        "Date": "Reviewed in the United States on March 18, 2024",
+        "Body": "Refreshing and inspirational. Even back then the races mixed and took care of each other in the face of racism. Hard to read in places but needed to understand the whole picture.",
+        "Number": 5
+    },
+    {
+        "id": 98,
+        "Reviewer": "Pat Zito",
+        "Rating": "5.0 out of 5 stars",
+        "Title": "Wonderfully written novel of racism on many levels.",
+        "Date": "Reviewed in the United States on March 24, 2024",
+        "Body": "James Mcbride is a wonderful story teller and depicts life for African Americans in the north after leaving the south; and, the Jews settling in a small town in Pa. where racism dominates their life.",
+        "Number": 5
+    },
+    {
+        "id": 99,
+        "Reviewer": "Amazon Customer",
+        "Rating": "5.0 out of 5 stars",
+        "Title": "an amazing book",
+        "Date": "Reviewed in the United States on March 18, 2024",
+        "Body": "This book speaks to the type of people that will save this world; it speaks to compassion and love of your fellow man. If more people would only follow the principles laid forth, the world would be a better place.",
+        "Number": 5
+    },
+    {
+        "id": 100,
+        "Reviewer": "Ritakin",
+        "Rating": "1.0 out of 5 stars",
+        "Title": "Artificial and Unbelievable",
+        "Date": "Reviewed in the United States on February 15, 2024",
+        "Body": "I know it takes a lot of talent to write a novel. At the craft level, McBride sometimes flashes that talent. But the story didn't sound convincing. If that sounds like a contradiction it's because talented people can do bad work.I simply didn't believe that these communities existed as the writer depicted them. I could see how characters like Chona or Addie could exist. All the others sounded artificial and their stories sounded convoluted. I also didn't buy the dialogue. When I got to the end I simply didn't care.At my age, 64, I'm much more conscious of what a commitment of time a book is. I will be much more discerning in the future and try not to buy into the hype that surrounds new releases. The thing is I really enjoyed The Good Lord Bird by this author. But this effort, as well as Deacon King Kong, did not work for me.",
+        "Number": 1
+    },
+    {
+        "id": 101,
+        "Reviewer": "DTD",
+        "Rating": "1.0 out of 5 stars",
+        "Title": "What is the Heaven and Earth Grocery Store?",
+        "Date": "Reviewed in the United States on March 9, 2024",
+        "Body": "Did not enjoy this novel...a collection of many characters of various ethnicities that was hard to follow; a number of tangential interruptions of the main plot; an excess of mile-long sentences which in some cases fill half a page.Why the H & E Grocery store? There is only one event that occurs there.Devote a page at the beginning of the novel labeled \"Dramatis Personae\" which identifies the many characters. Why interrupt the plot flow by relating something questionably related to that part of the story?Take a breath from reading the lengthy prose. Much can be said tersely.Suggested title: Chicken Hill. Pottstown. Nate Love. The Evil Doc.",
+        "Number": 1
+    },
+    {
+        "id": 102,
+        "Reviewer": "Harry N Reisig",
+        "Rating": "1.0 out of 5 stars",
+        "Title": "Cultural misappropriation",
+        "Date": "Reviewed in the United States on March 20, 2024",
+        "Body": "I've read and appreciated other writing by McBride, but here he shows a tone deaf ear to the the nuances of Jewish culture, writing in cliches that don't click, such as when he writes they \"kosher eggs\" (unless they're from some unusual creature, normal chicken or duck eggs are kosher and it didn't need to be said) \" gefilte fish and challah bread\". Or referring to the Holy Mishnah Rabbah, which is not scripture. I couldn't get past his poor depictions of Jewish life and put it down.",
+        "Number": 1
+    },
+    {
+        "id": 103,
+        "Reviewer": "CAP",
+        "Rating": "1.0 out of 5 stars",
+        "Title": "Unpolished!",
+        "Date": "Reviewed in the United States on March 30, 2024",
+        "Body": "I had a bad feeling about this book right from the start. I did not trust all the hype. I eventually bought it because it was advertised as a Barack Obama favorite, and I have a high opinion of Barack Obama. Barack was very polished. The novel was not polished at all; meandering, too many characters, disjointed, didn't really have much to say despite some deep and sensitive subject matter. The story could be good, but it needs an awful lot of polish!",
+        "Number": 1
+    },
+    {
+        "id": 104,
+        "Reviewer": "Judith",
+        "Rating": "1.0 out of 5 stars",
+        "Title": "Rambling",
+        "Date": "Reviewed in the United States on February 24, 2024",
+        "Body": "I'm in the minority, but it wasn't worth my time to read, which I did to the very end. Problems: too many characters (I started highlighting and taking notes!); so many unfinished story points (How did Monkey Pants end up there? Why's he named that? How'd he get that marble? Why was his arm the only thing left?); What exactly happened to Chona?  Nate II's end was nice to read, but it took far too long to get there. Especially odd was the rant that included hot dogs and cell phones was dropped in from nowhere- very odd. A good editor may have made a big difference.",
+        "Number": 1
+    },
+    {
+        "id": 105,
+        "Reviewer": "CFR Reviews",
+        "Rating": "1.0 out of 5 stars",
+        "Title": "Drab boring and hard to get into",
+        "Date": "Reviewed in the United States on January 12, 2024",
+        "Body": "Sometimes basing a purchase recommendation off of a novel being a NYT bestseller is not always a viable way to choose a book. This book has a lot of hype and the whole time I read it, it felt like a book I would have been forced to read in high school. I could not get into it at all. I did not connect to any of the characters. I found it very boring, to be perfectly honest. However, many others clearly enjoyed it, so it might still be for you! I'd recommend reading a sample or checking it out at your local library first.",
+        "Number": 1
+    },
+    {
+        "id": 106,
+        "Reviewer": "Elvyra",
+        "Rating": "1.0 out of 5 stars",
+        "Title": "4U perhaps, not 4 me",
+        "Date": "Reviewed in the United States on March 17, 2024",
+        "Body": "If you are drawn to read about the harm a power structure populated with self-righteous bigots can wreak on the lives of decent, respectful people striving to live peaceful and productive lives, this may be the book for you.  In my opinion, the story is not cohesive and the writing is mediocre, at best.",
+        "Number": 1
+    },
+    {
+        "id": 107,
+        "Reviewer": "recreader",
+        "Rating": "1.0 out of 5 stars",
+        "Title": "Terrible",
+        "Date": "Reviewed in the United States on March 7, 2024",
+        "Body": "This book is like a bad movie: You hang in there thinking it will get better, but it doesn\u2019t! There are way too many characters introduced in this book.  They are useless and irrelevant. There are about 6 characters that are important. Along with useless characters, the author goes on & on about useless history throughout this book. Where is the minus sign? I would give this a Minus one star!",
+        "Number": 1
+    },
+    {
+        "id": 108,
+        "Reviewer": "marilyn young",
+        "Rating": "1.0 out of 5 stars",
+        "Title": "lost in words",
+        "Date": "Reviewed in the United States on March 18, 2024",
+        "Body": "The whole premise of the book is noble but too many words got in the way.  Found myself turning pages to trim the repetitious fat.  Only after finishing the book and reading theEpilogue was I able to fully digest it",
+        "Number": 1
+    },
+    {
+        "id": 109,
+        "Reviewer": "CaliforniaGirl",
+        "Rating": "1.0 out of 5 stars",
+        "Title": "Mostly awful read",
+        "Date": "Reviewed in the United States on February 2, 2024",
+        "Body": "What a jumbled mess!  It was torture to read this entire book.  Very disturbing and some really disgusting parts.  Only a couple likable characters.  I can\u2019t remember a book I disliked as much as this one.  I had to force myself to even finish it for one of the book clubs I\u2019m in.  The ONLY part that wasn\u2019t awful was the very end.  Definitely not worth the 375 prior pages!  Two thumbs way down.  YUCK.",
+        "Number": 1
+    },
+    {
+        "id": 110,
+        "Reviewer": "Ann S. Epstein",
+        "Rating": "3.0 out of 5 stars",
+        "Title": "Cluttered",
+        "Date": "Reviewed in the United States on November 5, 2023",
+        "Body": "The Heaven and Earth Grocery Store by James McBride is the story of pre-WWII Chicken Hill, a poor area in Pottstown, Pennsylvania inhabited by Jews and Negroes. Among the \u201cgood\u201d Jews are Chona, the generous proprietress of the title establishment, and her open-minded husband, Moshe, a theater entrepreneur. Among the \u201cgood\u201d Negroes are Nate, a hard-working man with a past, and his good-hearted and loyal wife Addie, who have taken in Dodo, their bright but deaf orphaned nephew who the State wants to cart off to an \u201ceducational\u201d mental institution. The town itself harbors many \u201cbad\u201d bigots, most notably the despised but powerful Doc Roberts. The collusion of Negroes and Jews to save Dodo drives the story, but what should be a propulsive tale is instead a novel cluttered with less-than-minor characters, confusing plot fragments, and digressions that merely show off the author\u2019s wit. McBride needs an editor with the chutzpah to tell him to cut three-quarters of the self-indulgent prose. As a novelist myself (see my Amazon author page www.amazon.com/author/asewovenwords), I\u2019ve learned that at least ninety-percent of the fascinating (to me) information I discover in my research should remain in my notes. Facts serve fiction when they further character and plot. Otherwise, they belong in engaging nonfiction tracts. The Heaven & Earth Grocery Store is somewhat redeemed by the touching Epilogue, but it doesn\u2019t justify the hours spent reading what precedes it. If you enjoyed McBride\u2019s Deacon King Kong, you\u2019ll probably like The Heaven & Earth Grocery Store. If, like me, you were irritated by the former, I expect you\u2019ll be impatient with his latest book too.",
+        "Number": 3
+    },
+    {
+        "id": 111,
+        "Reviewer": "Elise from Connecticut",
+        "Rating": "3.0 out of 5 stars",
+        "Title": "beautiful depiction of this difficult era and harsh racism",
+        "Date": "Reviewed in the United States on March 7, 2024",
+        "Body": "I enjoyed the story and the historical referencing. Sometimes I felt I needed to skip through the lengthy narrative details in order to stay interested in the plot. It is difficult to be reminded of how terribly harsh and cruel life could be for minorities during us era. Beautiful depiction of the strength, loyalty, and survival of these brave people and founding forefathers and mothers.",
+        "Number": 3
+    },
+    {
+        "id": 112,
+        "Reviewer": "mwmama",
+        "Rating": "3.0 out of 5 stars",
+        "Title": "couldn't finish it",
+        "Date": "Reviewed in the United States on March 15, 2024",
+        "Body": "I was surprised by my dislike of this acclaimed book. The characters are larger-than-life hyperboles which gets old.  A woman doesn't just have a nice smile, it lights up the whole eastern seaboard.  Stuff like that.  I pushed to about the halfway mark, then realized I had just lost interest.",
+        "Number": 3
+    },
+    {
+        "id": 113,
+        "Reviewer": "C Burk",
+        "Rating": "3.0 out of 5 stars",
+        "Title": "A good read. Very slow first half of the book.",
+        "Date": "Reviewed in the United States on March 11, 2024",
+        "Body": "Many characters and lots of back stories. This story takes quite a while to \u201cpull you\u201d in, but once there will hold you and keep you turning the pages as quickly as possible. I am disappointed with some loose ends of characters.",
+        "Number": 3
+    },
+    {
+        "id": 114,
+        "Reviewer": "Jerry Funk",
+        "Rating": "3.0 out of 5 stars",
+        "Title": "Good book BUT...",
+        "Date": "Reviewed in the United States on March 23, 2024",
+        "Body": "Overall, I enjoyed the book, but I thought the ending was abrupt as if the author just wanted to finish it. Disappointed, and left wondering if reading it was worth the effort. Certainly not the book of the month!",
+        "Number": 3
+    },
+    {
+        "id": 115,
+        "Reviewer": "Cassandra Arnold",
+        "Rating": "3.0 out of 5 stars",
+        "Title": "Very Verbose...",
+        "Date": "Reviewed in the United States on March 31, 2024",
+        "Body": "Could have been more succinct and more character development of the women. The connection between the opening chapter and the rest of the story was completely lost.",
+        "Number": 3
+    },
+    {
+        "id": 116,
+        "Reviewer": "Kindle kkp",
+        "Rating": "3.0 out of 5 stars",
+        "Title": "Overlong",
+        "Date": "Reviewed in the United States on March 15, 2024",
+        "Body": "The is a good story.  The staggering lengths of many descriptions are it frequently tedious.  I read an earlier work by this author and it's the way he writes!",
+        "Number": 3
+    },
+    {
+        "id": 117,
+        "Reviewer": "Donna Bolden",
+        "Rating": "3.0 out of 5 stars",
+        "Title": "Too WORDY!",
+        "Date": "Reviewed in the United States on February 27, 2024",
+        "Body": "I was very disappointed with this novel.  The storyline took far too long to develop! The book only picked up in the last parts! It dragged on with a lot of unnecessary details.  It had the potential to be a good story but the author took far too long to tie things together.  We read this as our most recent book club selection & everyone opted out after the FIRST part! So much anticipation - this book fell short of all my expectations!",
+        "Number": 3
+    },
+    {
+        "id": 118,
+        "Reviewer": "Mary Fenlon",
+        "Rating": "3.0 out of 5 stars",
+        "Title": "Good story",
+        "Date": "Reviewed in the United States on February 12, 2024",
+        "Body": "This was a good story but a bit confusing. I would give it 3 1/2 stars if that were an option. I enjoyed reading to figure out how everything ties together, but often backtracked to remember who the characters weee, since there were many jumping around. I kept thinking this would be a good movie, so I could have a better visual of the characters.I was confused at the end, unsure of how Malachi fit into all of it, but I may not have made all the connections.",
+        "Number": 3
+    },
+    {
+        "id": 119,
+        "Reviewer": "Ros",
+        "Rating": "3.0 out of 5 stars",
+        "Title": "good story",
+        "Date": "Reviewed in the United States on March 25, 2024",
+        "Body": "I nearly gave up on this book several times, the story was good in the end but just took too long to tell. Lots of long sentences.",
+        "Number": 3
+    },
+    {
+        "id": 120,
+        "Reviewer": "Lynne",
+        "Rating": "5.0 out of 5 stars",
+        "Title": "a joyful story of love",
+        "Date": "Reviewed in the United States on March 21, 2024",
+        "Body": "McBride\u2019s storytelling is superb! Colorful, heartfelt, and playful.  His characters are well developed and intertwined with an element of love for all.What a pleasure to read. Thank you!",
+        "Number": 5
+    },
+    {
+        "id": 121,
+        "Reviewer": "switterbug/Betsey Van Horn",
+        "Rating": "5.0 out of 5 stars",
+        "Title": "It does move heaven and earth for the reader",
+        "Date": "Reviewed in the United States on August 26, 2023",
+        "Body": "James McBride is an accomplished saxophonist/jazz musician. I knew that going into the book. (Oh, digression--did you know that he also played with the band, The Remainders? That\u2019s a band with other writers like Amy Tan, Dave Barry, Barbara Kingsolver, Stephen King, Maya Angelou and several others who played for charity and fundraising). Anyway, I mention his musicianship because I see it all over the pages of The Heaven and Earth Grocery Store.This is the first book I\u2019ve read by McBride (definitely more to come), so pardon my schoolgirlish, giggly first crush for the way that his writing lifts me up, how his words and characters opened my heart, only to break it, and then put it back together in a most absolute and tender way. James McBride is a kind, gentle soul, and his writing reflects this\u2014his ability to bring the world together in a novel. He honors humanity. We are all connected, and this author compels that naturally from his characters. Now, how great is that, yeah?I want to put this in your hands and promise you a magnificent reading experience. It starts off in a shaggy dog kind of way, with an ensemble of characters, several who possess whimsical names like Fatty, Big Soap, Monkey Pants, Dodo. And their names fit flawlessly to their nature. The story starts with a 1972 prologue\u2014a human skeleton is found in an old abandoned well, and then the body of the story begins in 1936 in Pottstown, Pennsylvania, a place called Chicken Hill, where Jews, immigrants, and Black folks lived side by side, sometimes in harmony, other times in discord, but here\u2019s the thing\u2014the goodness of people, the kindness of their hearts\u2014that is what ultimately rises to the top.For the story to unfold, there has to be some sinister aspects, too\u2014aren\u2019t we still fighting the fight of ignorance, bigotry, corruption, meanness? But, in the McBride world, well, we also follow the long stretch of yarn as it wends around this way and that, through streets and backyards, dirt roads, onto hills and a shul and a church, through tunnels and a dance hall. And The Heaven and Earth Grocery Store.I don\u2019t need to rehash the plot, but there are a few fun facts about this book worth mentioning in a review. Such as, there are an abundance of characters introduced early on, and then again later on, before the plot actually launches. That\u2019s the shaggy part. We don\u2019t get to the plot too quickly\u2014instead, Mcbride takes his time, builds the characters. They are already leaping off the pages by the time the plot rolls in.There are subplots, too, but in the end, they all weave their chords and come together. McBride may slow your roll at first, but it\u2019s a winning bonanza of breadth and depth, from the smallest detail to the broadest design. Scenes that seem initially inconsequential become key notes later on.Early on, we meet the arresting Jewess, Chona. Chona is an unforgettable female protagonist\u2014I\u2019m keeping her in my journal of best. female. characters. ever. She is handicapped with a limp\u2014but her limp doesn\u2019t stop her strength of purpose, her fierce dignity, her bounteous benevolence, her gentle grace, and her consummate integrity. You will fall in love with her, just like Moshe, the theater and dance hall owner, did. Moshe and Chona dared to welcome change and inclusivity to their part of the world.At this time, in the 1930s, Black people were almost exclusively cast in menial jobs. But Moshe books Black jazz bands to play at his theater, and successfully includes all tribes together at the dance hall, who \u201cfrolicked and laughed, dancing as if they were birds enjoying flight for the first time.\u201d Chona runs the grocery store, and extends credit to anyone who can\u2019t afford to pay; she rarely keeps a record of their debt. The Heaven and Earth Grocery Store may lose money, but it is rich in goodwill and kindness.Back to this being like a musical book\u2014a jazzy book. Jazz music conjures that raspy, soulful, edgy flavor, blended from a mix of cultures and harmonies. McBride embraces those diverse, insistent, zingy, soul-stirring rhythms and blues into the narrative threads of his novel. I can hear the swing and the chase, the boogie and the blues, the sounds that go everywhere at once and jelly roll the story within a complex set of fusion and feelings. It\u2019s also just a damned good story!The narrative pulls you here and there, up and down, and when you meet Dodo, the sweet and barely teenaged deaf kid, your protective instincts will wrap yourself around him and never want to let him go. And, when Dodo meets Monkey Pants\u2014well, this right there\u2014the heart of the novel that will break you in pieces.At times, I had a wellspring of tears\u2014not just for joy or anguish. Sure, comedy and tragedy fill these pages. But McBride\u2019s natural humanity and gentle nature is the colossal, phenomenal heart of the book. The author steps aside, he doesn\u2019t ever intrude. The core of the narrative are the characters. Their cacophony becomes a coda for living large.This tale made me want to be better, to do better, to open my eyes to all the missed connections, to fix the broken chords and forge new ones, and seek eternally to strengthen them. We are humanity, we are the essential substance to add love to the world, one modest good deed at a time. That is The Heaven and Earth Grocery Store.",
+        "Number": 5
+    },
+    {
+        "id": 122,
+        "Reviewer": "DJ",
+        "Rating": "5.0 out of 5 stars",
+        "Title": "Brilliant story -- lives up to all the accolades!",
+        "Date": "Reviewed in the United States on January 23, 2024",
+        "Body": "\u201cMoshe had few friends. Most of Pottstown\u2019s Jews had left Chicken Hill by then. Nate was a friend, but he was a Negro, so there was that space between them.\u201d (p62)This is a brilliantly written, extraordinary story: at once sad and hopeful, tragic and humorous. It absolutely lives up to all the accolades.Despite \u201cthe skeleton in the well\u201d mentioned in the first line of the book, this isn\u2019t a conventional who-done-it. Yes, the mystery of the skeleton hovers quietly over the story, but it\u2019s largely in the background in a narrative about the difficult lives of a diverse group of small-town, lower-class folks trying to get by. Prejudice and discrimination mix with accommodation and friendship, suspicions and mistrust bump up against shared experience and the best of humanity. And the dialog \u2013 oh the dialog! \u201cSo he balled up his fist\u2026and I mean that white boy reached back and sent that big fist of his rambling through four or five states before it said hello to Fatty. It started in Mississippi, gone up through the Carolinas, stopped for coffee in Virginia, picked up steam coming outta Maryland\u2026and boom! He liked to part Fatty from this world.\u201d Or this: \u201cBernice had the kind of face that would make a man wire home for money.\u201d And this: \u201c\u2026it\u2019s not technically illegal. But we gotta do it at night.\u201dUltimately this book is an invitation to appreciate the value of empathy and respect. It\u2019s a powerful reminder that we\u2019re all in this together. And yes \u2013 it\u2019s a delight to read.",
+        "Number": 5
+    },
+    {
+        "id": 123,
+        "Reviewer": "Brigid Wolff",
+        "Rating": "5.0 out of 5 stars",
+        "Title": "beautifully written",
+        "Date": "Reviewed in the United States on April 1, 2024",
+        "Body": "Great characters and portrait of the essence of a community in a time period in America that mirrors our own.",
+        "Number": 5
+    },
+    {
+        "id": 124,
+        "Reviewer": "MCK",
+        "Rating": "5.0 out of 5 stars",
+        "Title": "Great book!",
+        "Date": "Reviewed in the United States on March 23, 2024",
+        "Body": "This novel transports you to a 1920s and 1930s Jewish and Black neighborhood.  It could have been written by a world reknown comedian plus history teacher, plus a person from the era's witness protection program, if they had one. Amusing, fast and unbelivable quick and witty dialogue; loveable characters strongly drawn. It is possible to have misty eyes on the last page. Don't miss this 5 star book. I found it amazing!",
+        "Number": 5
+    },
+    {
+        "id": 125,
+        "Reviewer": "Mr&Mrs",
+        "Rating": "5.0 out of 5 stars",
+        "Title": "Character-Driven, Slice-of-Life Tale; the Ending Pushed It to a 5 for Me",
+        "Date": "Reviewed in the United States on March 12, 2024",
+        "Body": "There are numerous characters in this book, and some of them are the strong ones who drive the story. One bit of advice I have is do not get bogged down trying to keep a list of who everybody is in this 385 (print edition) book because that will ruin the reading experience. Readers will not have any trouble remembering the major important characters of Chicken Hill, a rural area of immigrants - Blacks, Jews from various countries, and poor immigrant Whites. Chona is the polio-crippled daughter of a rabbi whom  Romanian-Jew Moshe finds attractive and full of humor, and it is Chona who runs the Heaven &Earth Grocery Store. Often, she extends credit so that her neighbors can eat, knowing that it is unlikely they can ever repay her in full.This is definitely a character-driven story; many pages are primarily dialogue. This is not a book that everyone will love because it might seem a bit slow in this day and age of thrillers. There are many flawed characters, but the difference between good guys and bad guys is whether a character exhibits any concern for others. (using \"guys\" as a generic human being, as in west coast people who say \"you guys\" meaning persons of any gender being spoken to).  I would say that this is a book about humanity, about the importance of talking to people of other cultures and religions, trying to understand, and- above all- learning to get along for the betterment of our planet.At the end of chapter 7, a 10-year-old Black boy named Dodo is introduced. For me, Dodo's experiences are what made the book a five star. i don't want to say any more, but it is powerful.",
+        "Number": 5
+    },
+    {
+        "id": 126,
+        "Reviewer": "Minerva",
+        "Rating": "5.0 out of 5 stars",
+        "Title": "Read More than Once",
+        "Date": "Reviewed in the United States on March 27, 2024",
+        "Body": "One appreciates the telling of this novel. McBride is a master storyteller. Reading this novel makes one confident in the research and passion that went into its\u2019 creation. The infusion of different peoples and cultures offers stories within stories. One ends at a much different place from the beginning. This is such a work of art another reader must experience it without this reader offering specific details. Must digest before the next read. As an aside, McBride\u2019s last two novels are perfect as well.",
+        "Number": 5
+    },
+    {
+        "id": 127,
+        "Reviewer": "James Weaver",
+        "Rating": "5.0 out of 5 stars",
+        "Title": "Number of book reviews rate this highly.",
+        "Date": "Reviewed in the United States on April 2, 2024",
+        "Body": "A number of characters and stories about Potsdam, Pennsylvania.  Some are very sad, you soon find yourself immersed with each one.  Negros, Jews, Whites, all living together with their very poor economic condition in a small and very polluted \u201cChicken Hill\u201d community. Each character you feel that you know, however briefly they appear in the story.",
+        "Number": 5
+    },
+    {
+        "id": 128,
+        "Reviewer": "tigner",
+        "Rating": "5.0 out of 5 stars",
+        "Title": "The Heaven & Earth Grocery Store, a great novel that was hard to put down",
+        "Date": "Reviewed in the United States on March 5, 2024",
+        "Body": "Author James McBride has written another great book. After listening to a review on NPR, I was intrigued by this novel, The Heaven & Earth Grocery Store, and decided to check it out. The storyline is based on a segregated community of Blacks, Jews, and Italians, where everything revolves around a grocery store. This is the first novel i read from McBride. The book kept me wanting more. This is the best book I have read this year! (I have read 10 at the time of this review).  McBride's ability to weave in mystical magic or folklore spices up his storylines, giving readers the impression that the stories could be true. I have since read another book by McBride,  Deacon King Kong. It too is an awesome read. I will be reading more of McBride's novels",
+        "Number": 5
+    },
+    {
+        "id": 129,
+        "Reviewer": "Christine",
+        "Rating": "5.0 out of 5 stars",
+        "Title": "Writing in vibrant color",
+        "Date": "Reviewed in the United States on March 25, 2024",
+        "Body": "If there is such a thing as writing in color, this book is it. Every single character, theme, and background was described with so much vibrancy and detail - you understood where everyone came from, what their circumstances were, and how they were weaved into this remarkable story of people from all different backgrounds, race, and ethnicities coming together for 1 purpose. You feel all the emotions while reading this book. Truly brilliant writing.",
+        "Number": 5
+    },
+    {
+        "id": 130,
+        "Reviewer": "Kabrina Mccabe",
+        "Rating": "2.0 out of 5 stars",
+        "Title": "Uncaptivating",
+        "Date": "Reviewed in the United States on February 24, 2024",
+        "Body": "I really wanted to love this book. The outline of the story itself had promise. The characters in and of themselves were interesting but the book was droll with over descriptions of minute and boring details that made me put it down with boredom over and over for near a month\u2026\u202662% of the way through this book before I found it somewhat enjoyable and slightly motivating to read and even then the end seemed abrupt and disjointed. I do not recommend.",
+        "Number": 2
+    },
+    {
+        "id": 131,
+        "Reviewer": "Denise A",
+        "Rating": "2.0 out of 5 stars",
+        "Title": "too many distractions",
+        "Date": "Reviewed in the United States on March 22, 2024",
+        "Body": "Ok so I was grabbed at the beginning with the promise of uncovering the mystery of the skeleton, confused as to why the heck there were so many characters and what they meant to the story, wondering why there were so many side roads and ended up with a story that could have been great but failed due to trying to incorporate wayyyy toooo much",
+        "Number": 2
+    },
+    {
+        "id": 132,
+        "Reviewer": "Candace Auger",
+        "Rating": "2.0 out of 5 stars",
+        "Title": "Multiple short stories",
+        "Date": "Reviewed in the United States on March 10, 2024",
+        "Body": "I\u2019m not a fan of the way the author tells his story . He writes about multiple characters ( of which there are a lot ) with a different story with each chapter tying all the characters with their stories together for the last story at the end ! Kinda wordy for me !",
+        "Number": 2
+    },
+    {
+        "id": 133,
+        "Reviewer": "Leslie Binkley",
+        "Rating": "2.0 out of 5 stars",
+        "Title": "Not my cup of tea",
+        "Date": "Reviewed in the United States on April 1, 2024",
+        "Body": "Read this for my book club. Dull, boring and long. It never engaged me except for finding out what happened to Dodo. Meandered and so many back stories to follow. Guess there was a point bu I missed it !",
+        "Number": 2
+    },
+    {
+        "id": 134,
+        "Reviewer": "Kathy",
+        "Rating": "2.0 out of 5 stars",
+        "Title": "yikes",
+        "Date": "Reviewed in the United States on April 1, 2024",
+        "Body": "Just couldn\u2019t get into it.  Tried to return it but no go.No interest in the time frame  or the characters tho I understand the theme: friendship; love of neighbor in spite of color or creed.",
+        "Number": 2
+    },
+    {
+        "id": 135,
+        "Reviewer": "Missy Slim",
+        "Rating": "2.0 out of 5 stars",
+        "Title": "Not a page turner",
+        "Date": "Reviewed in the United States on December 15, 2023",
+        "Body": "This book was on everyone\u2019s list of top reads for 2023, but I just don\u2019t get it. Yes, I enjoyed the characters and the writing, but there is no plot, no twists, nothing unexpected, and no reason to continue turning the pages because nothing happens.  And the thing that happened in the first chapter was never even resolved. So what little mystery there might\u2019ve been, remains a mystery, not even a very interesting mystery.  So, if you like a story with a beginning, middle and end, this book will leave you feeling unfulfilled.",
+        "Number": 2
+    },
+    {
+        "id": 136,
+        "Reviewer": "N Humes",
+        "Rating": "2.0 out of 5 stars",
+        "Title": "Disjointed",
+        "Date": "Reviewed in the United States on January 29, 2024",
+        "Body": "This book was very disjointed and confusing. I had read one hundred pages and my interest was not piqued. The author jumped around from character to character. Just as I thought it was getting interesting, the next chapter changed. I believe if the story had flowed a little more smoothly I might have enjoyed it.",
+        "Number": 2
+    },
+    {
+        "id": 137,
+        "Reviewer": "Renee",
+        "Rating": "2.0 out of 5 stars",
+        "Title": "And this is why people say, you can't please everyone.",
+        "Date": "Reviewed in the United States on March 6, 2024",
+        "Body": "A long hard read- all the rambles- near impossible to feel connected & stay engaged.  The author was so busy writing about things that didn't matter the point was lost so many times.",
+        "Number": 2
+    },
+    {
+        "id": 138,
+        "Reviewer": "nancy d. smith",
+        "Rating": "2.0 out of 5 stars",
+        "Title": "Difficult storyline",
+        "Date": "Reviewed in the United States on March 17, 2024",
+        "Body": "Difficult to follow the story for the first half of the book. It got better for the second half.. the dialects and all the nicknames of the characters were also sometimes hard to follow",
+        "Number": 2
+    },
+    {
+        "id": 139,
+        "Reviewer": "Nancy",
+        "Rating": "2.0 out of 5 stars",
+        "Title": "Hard to keep up with storyline",
+        "Date": "Reviewed in the United States on March 5, 2024",
+        "Body": "I struggled to keep up as this book seemed to lurch from storyline to storyline. If it hadn\u2019t been a book club read would have stopped reading at about page 50",
+        "Number": 2
+    },
+    {
+        "id": 140,
+        "Reviewer": "Erika Tunson",
+        "Rating": "4.0 out of 5 stars",
+        "Title": "4.5 Stars for The Heaven and Earth Grocery Store (if I could give a half)!",
+        "Date": "Reviewed in the United States on January 25, 2024",
+        "Body": "The Heaven & Earth Grocery Store poignant look at relationships, redemption, racism and the American dream. The author, James McBride introduces us to a series of characters living in Pottstown, Pennsylvania and surrounding areas, focusing on the residents of a community called Chicken Hill in the 1930s.  Chicken Hill is home to Pottstown\u2019s Jewish immigrants, Blacks coming from the South during The Great Migration and immigrants from other European countries. The Heaven & Earth grocery store is owned by a Jewish couple, Chona and Moshe and serves the residents of Chicken Hill. The novel is mostly centered around a 12 year old deaf boy named Dodo, but each character introduced (and there are a lot) also has a story. I gave 4.5 stars because the book has a slow start and it is hard to keep the characters straight, but stick with it! As the book progresses and there is an incident involving Dodo, the characters and their stories begin to connect and the result is an emotional, touching, sometimes infuriating, engrossing story. McBride tells the story in an interesting way with complex dialogue and character development through flashbacks and memories that explain how and why they are the way they are as the events with Dodo begin to unfold and every character is involved or becomes involved in some way. I both read and sometimes listened to The Heaven & Earth Grocery Store and enjoyed both.",
+        "Number": 4
+    },
+    {
+        "id": 141,
+        "Reviewer": "C. Perez",
+        "Rating": "4.0 out of 5 stars",
+        "Title": "Assured, Propulsive, Scathing writing",
+        "Date": "Reviewed in the United States on January 26, 2024",
+        "Body": "In the neighborhood of Chicken Hill, Pottstown, Pennsylvania, in June 1972, police found a skeleton, wearing a gold chain with a mezuzah, at the bottom of a well, next to a lot that had been torn down a day earlier to make way for a new neighborhood. They visited the home of the only Jew left on Chicken Hill, on account of the mezuzah; his home stood on the site that almost half a century earlier had been the local synagogue. Because of this, he was deemed a suspect, though he would never face charges. He skipped town almost immediately, and days later the neighborhood was reduced to rubble by a devastating hurricane.Forty-seven years earlier, in 1925, young theater-manager Moshe Ludlow bet the little money he had saved on hiring a famous musical act to play at his small venue. Jews from all over the Northeast came to dance and frolic. Moshe recovered his investment many times over. He married Chona Yakov, the brilliant daughter of the local rabbi, and settled in Chicken Hill, which was then a vibrant community home to Blacks and Jews. As years went by, most affluent Jews moved downtown. Chona refused to move out. Moshe and Chona owned a two-story building that housed the neighborhood\u2019s only store on the first floor, The Heaven & Earth Grocery Store, and their home on the second floor. The store was a losing business on account of Chona\u2019s kindness, but it was a regular hangout spot and neighbors loved it.Over the next twelve years, Chicken Hill, and the world at large, undergo seismic changes\u2014the local KKK chapter gains popularity, Nazism rises in Europe, and America\u2019s immigrants begin to question their new way of life. Among all these social changes, Chicken Hill\u2019s inhabitants undergo personal upheavals as well, but their sense of community remains strong despite the adversities that come their way.The Heaven & Earth Grocery Store is a novel in three parts and an epilogue, told by an omniscient narrator, about the ups and downs of a community between the years 1925-1936, in an ever-changing world. It touches on several themes, such as racial politics, inequality, sexual violence, disability, sense of community and belonging, friendship, and karmic justice.The first thing that struck me as I settled into the story was McBride\u2019s assured, propulsive, scathing writing. Despite being an ensemble kind of story, each individual character shines thoroughly, so the reader gets to know each character\u2019s motivations, inner life, idiosyncrasies. I haven\u2019t been that crazy about an ensemble cast of characters as I was with these. The curmudgeons in the story are some of the most sympathetic people in it.The Heaven\u2026 is by no means a happy novel; there are weighty issues and sadness overload, but they are treated so compassionately and so beautifully that the reader will root for these underdogs.",
+        "Number": 4
+    },
+    {
+        "id": 142,
+        "Reviewer": "fizzleswim",
+        "Rating": "4.0 out of 5 stars",
+        "Title": "Great for a Book Club",
+        "Date": "Reviewed in the United States on January 5, 2024",
+        "Body": "This is a well written book with a good story . The beginning chapters were rough. They didn't flow well as the cadence was off and therefore the story felt  like it stumbled along . It needed better descriptions of physical characteristics of  the people and places in the novel . It also desperately needed humor.  The book is grimly compelling. There are many profound and memorable moments in this book.1930's America was not the promised land of easy living for immigrants and it still isn't today.The book does a decent job of portraying life for people who are not male WASP in 1930's Pennsylvania.It takes place in a community on the outskirts of the main town. The people of the Hill, who are viewed as \" less than \" by  the mainstream WASP town people, are vibrant and hardworking people who are important to the town even if the town does not acknowledge that.The community on the Hill is diverse. Their are many different types of Jewish people, \"Disabled\" ,Blacks, Germans, Italian , and Latino people living there all tied together by Chona, Moshe, The Heaven and Earth Grocery Store and the Theater.Chona, \"Dodo\", and \" Monkey Pants \" are what keeps the story hopeful and compelling.The book does have the underlying message of \"White Privilege\" makes it almost impossible for anyone other than able bodied male WASP to arrive at their full potential and that  immigrants lives are hard. At times the reader feels like this is just a message on continuous repeat. Although on the surface the message of book is that is that if you are not  Male, White, Anglo Saxon Protestant like the original founders of the United States Constitution life is hard, it is really a book about community and how we can all make life better for one another if we stay united and work together.It's a good \" book club\" read but needs humor.",
+        "Number": 4
+    },
+    {
+        "id": 143,
+        "Reviewer": "Tustin, CA",
+        "Rating": "4.0 out of 5 stars",
+        "Title": "Good read .... until its anticlimactic finish",
+        "Date": "Reviewed in the United States on February 21, 2024",
+        "Body": "The writing flowed easily enough, that I was able to finish the book in 4 sittings.  I found myself slowing down my reading in order to keep pace with all the characters introduced in the book.  Perhaps the author might have restructured his storyline so that there were not too many characters, principal and incidental, for the reader to track.  In the end though, the book left significant loose ends about what would have happened next in the lives of the principal characters.  Ultimately, I felt let down as a reader.  It seems that the author wanted to convey that as difficult and fraught life is, there is basic goodness and redemption that sprinkles the person at different points in his/her life.  While the book indeed dwelled on the characters' difficulties and fraught lives, the author (for me) failed to also narrate redemption in its proper context.  There was a summarized, indirect reference to some level of victory in the end, but its emotional impact was far too downplayed to a brief, hurried epilogue. The ending failed to make me smile, which I suspect is what the author would have hoped for his reader.  Because I felt that the author failed to explore (or narrate) what would have happened to the characters after the \"climax\", the book did not give me a sense of closure; the story felt like it was not on balance.  I could not say that this was one of the best books that I have read.  But by no means is this work uninteresting.",
+        "Number": 4
+    },
+    {
+        "id": 144,
+        "Reviewer": "Melanie Supan Groseta",
+        "Rating": "4.0 out of 5 stars",
+        "Title": "Hauntingly Soulful",
+        "Date": "Reviewed in the United States on January 26, 2024",
+        "Body": "My favorite section of this book was the author\u2019s acknowledgment of Sy Friend, the retired director of The Variety Club Camp for Handicapped Children in Worchester, Pennsylvania, an apparent beacon of love and humanity in the world.I had known nothing of Pottstown, Pennsylvania, with its Jewish immigrant families in the late twenties and early thirties and its African-Americans who had moved to the northern states from the south.  I learned about tallits, jook joints and the prevalence of dance halls for entertainment during that era prior to the Second World War.  I got an in-depth snapshot into the way people lived and engaged each other in the struggling neighborhood of Chicken Hill. I learned about the informal segregation of class, religious culture and race in small-town Pennsylvania and the ominous presence of the Ku Klux Klan and its annual march that was pretty much tolerated quietly by all.I enjoyed meeting the various primary characters---the heartful Chona, (the pivotal owner of the Heaven and Earth grocery store,) her husband, Moshe, the silent Nate, his loving wife, Addie, the mysterious Bernice, and the deaf boy, Dodo. They were colorful, soulful people, whose lives enriched the satellite community of Chicken Hill.The plotline of the novel was intriguing and satisfyingly redemptive.  Even though the writing itself felt at times cumbersome and verbose, with lengthy, run-on sentences and digressions about minor characters, this was a haunting book.  Speaking to its subtle and not-so-subtle intolerance for \u201cthe other\u201d lacing the streets of America, the small acts of love and courage penetrated deeply into my psyche and are not to be forgotten.",
+        "Number": 4
+    },
+    {
+        "id": 145,
+        "Reviewer": "#EmptyNestReader",
+        "Rating": "4.0 out of 5 stars",
+        "Title": "a story of poverty and friendship",
+        "Date": "Reviewed in the United States on February 10, 2024",
+        "Body": "The story starts with a little history from the 1930s in Pottstown, Pennsylvania an impoverished community consisting primarily of poor Blacks and immigrant Jews known as Chicken Hill. Like everywhere, the people in this community have their secrets - secrets kept from neighbors and from friends, from the authorities and by the authorities.In present day 1970s, while working on some city water pipes a skeleton is discovered at the bottom of a well. Who this person is and how he got there is the basis of this interesting novel. It is only when the truth about the dead man is discovered and the involvement of the white citizens is revealed that the secret is fully disclosed.A novel full of fascinating characters with equally fascinating (and fitting) names like- Monkey Pants, Dodo and Big Soap. Friendship with the lead female character, Chona, is a prize valued by everyone. Chona inherited the Heaven and Earth Grocery Store from her father.Although there is sadness in the lives of the people of Pottstown and in their struggles to get by, there is also love and humor and camaraderie, as they do what they can to support one another. \u2b50\ufe0f\u2b50\ufe0f\u2b50\ufe0f\u2b50\ufe0f",
+        "Number": 4
+    },
+    {
+        "id": 146,
+        "Reviewer": "the googler",
+        "Rating": "4.0 out of 5 stars",
+        "Title": "it's raw, but edible!",
+        "Date": "Reviewed in the United States on March 18, 2024",
+        "Body": "the heaven and earth grocery store doesn't hold anything back with the narrative it wants to tell. it's raw, uncomfortable at times, but it doesn't sugarcoat anything which i appreciate. as much as i enjoyed reading the book, some of the perspective hopping threw me for a loop. i would recommend taking notes so you don't lose track like i did. i bought this book for a school project, and i left the project still theorizing and rereading it. mcbride hit the nail on the head with this one! would absolutely recommend and read again.",
+        "Number": 4
+    },
+    {
+        "id": 147,
+        "Reviewer": "Dave Schwinghammer",
+        "Rating": "4.0 out of 5 stars",
+        "Title": "Heart-Warming at Times, Puzzling in Others",
+        "Date": "Reviewed in the United States on October 27, 2023",
+        "Body": "HEAVEN AND EARTH GROCERY STORE gives us a slice of a Jewish/black neighborhood in Pottsfield, Pennsylvania called Chicken Hill.From the title of the novel and the synopsis we expect this to feature a grocery store run by Chona and Moshe Ludlow, but there are numerous other characters who sometimes steal the show. Moshe runs a theater in the neighborhood that often caters to the black element. His right-hand man is Nate Timblin, a black man who seems to be a saint. Nate becomes a central character when a young deaf black boy is sent to a hospital/asylum for something he didn\u2019t do. Chona was assaulted during what appeared to be an epileptic fit by Dr. Roberts who had been rejected by her. Dodo, the black boy, came to her rescue, but her hospitalization and ultimate demise was blamed on Dodo.It was then a veritable phalanx of characters enter the story. There\u2019s Paper a beautiful black woman who functions as a newspaper, hence her nickname. There are Fatty and Big Soap, a black man with a thing for Paper, and his not too bright partner. They plot to get Dodo out of the asylum. Nate is integral in the plan and actually carries it out.But not before the climax of the story when Nate confronts the other villain (besides Dr. Roberts) who is known as \u201cThe Son of Man\u201d at the asylum. He\u2019s an orderly there but no one has the guts to confront this child abuser (Would the whole staff ignore a child abuser?). Poor Dodo is about to become a victim when the action swings in his favor. While at the asylum, Dodo is placed in a bed near a boy with cerebral palsy whom Dodo calls \u201cMonkey Pants\u201d. Monkey Pants can only communicate with one finger, using a form of Morse Code when he \u201ctalks\u201d to Dodo. Author McBride has a facility with these minor characters, Monkey Pants being the most original. Monkey pants also has an original way to deal with TSOM when he tries to assault Dodo. Too original. He can only use one finger.I had a problem with the climax scene. The Egg Man shows up at the hospital to deliver eggs and coffee to his multiple customers at the sprawling institution, only to be confronted by the villain, The Son of Man. They get into a tussle, Nate coming to the rescue as TSOM abuses the Egg Man with a sock loaded with lead. Author McBride needs this guy to be there but there\u2019s no reason for TSOM to be there other than for Nate to rescue The Egg Man and get him to take him to find Dodo. That\u2019s called author intrusion and McBride does it more than once. McBride also needs TSOM to be there to reveal nice guy Nate\u2019s lurid background.",
+        "Number": 4
+    },
+    {
+        "id": 148,
+        "Reviewer": "Robert J. Hartwig",
+        "Rating": "4.0 out of 5 stars",
+        "Title": "Our Book Club Selection",
+        "Date": "Reviewed in the United States on March 27, 2024",
+        "Body": "We had a lively discussion around this book which everyone enjoyed.  Discussion revolved around characters, the sense of time and place created by the portrayal of Pottstown in the 1930s, ethnic rivalries and coalitions, and the good and evil in human nature. Negative impressions involved the very large number of characters, some with unresolved outcomes, and the somewhat contrived ending and Dodo's rescue.",
+        "Number": 4
+    },
+    {
+        "id": 149,
+        "Reviewer": "Claudia L. Einertson",
+        "Rating": "4.0 out of 5 stars",
+        "Title": "Love One Another",
+        "Date": "Reviewed in the United States on March 30, 2024",
+        "Body": "People are people, people! To me, this is yet another assurance that we people are mostly all alike. It also shows that some beings just shine with goodness. There is some deep and abiding love included. This world is composed of one family. Let\u2019s all love one another, family!",
+        "Number": 4
+    }
+]

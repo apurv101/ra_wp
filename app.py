@@ -5,12 +5,19 @@ from flask_migrate import Migrate
 from datetime import datetime, timezone
 import pytz
 import random
+from dotenv import load_dotenv
+load_dotenv()
+
 app = Flask(__name__)
 CORS(app)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://apoorvagarwal@localhost/ra_db_1'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DB_PATH')
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 import json
+import os
+
+ROOT_DIR = os.getenv('ROOT_DIR')
+
 
 
 random_orders = {}
@@ -239,7 +246,7 @@ def serve_downloaded_page(current_product):
 @app.route('/main/main_files/<path:filename>')
 def serve_main_files(filename):
     # Replace '/path/to/your/downloaded/page/main_files' with the actual path where the 'main_files' directory is stored
-    static_directory = '/Users/apoorvagarwal/Desktop/ra_project/main_files'
+    static_directory = f'{ROOT_DIR}/main_files'
     return send_from_directory(static_directory, filename)
 
 
@@ -265,7 +272,7 @@ def serve_reviews_top(current_product, page):
 @app.route('/r/<string:current_product>/<int:x>/r32_files/<path:filename>')
 @app.route('/t/<string:current_product>/<int:x>/r32_files/<path:filename>')
 def serve_review_files1(filename,current_product,x):
-    static_directory = '/Users/apoorvagarwal/Desktop/ra_project/r32_files'
+    static_directory = f'{ROOT_DIR}/r32_files'
     return send_from_directory(static_directory, filename)
 
 

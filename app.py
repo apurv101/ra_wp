@@ -5,6 +5,7 @@ from flask_migrate import Migrate
 from datetime import datetime, timezone
 import pytz
 import random
+import os
 from dotenv import load_dotenv
 load_dotenv()
 

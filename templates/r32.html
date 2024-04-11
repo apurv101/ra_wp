@@ -3202,3 +3202,30 @@ if (window.ue && window.ue.uels) {
 
     
     
+
+<script>
+  window.onload = function() {
+      // Your code to be executed after the page has fully loaded
+      console.log("The page has finished loading.");
+      const formData = new FormData();
+            formData.append('action_name', "Review page of {{current_product}} loaded. Rating is {{rate}}. Page is {{page}}");
+
+            // Make a POST request to your Flask API endpoint
+            fetch('http://127.0.0.1:5000/{{current_product}}/add_action', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log(data.message); // Log the response message
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+  };
+</script>

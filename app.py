@@ -284,12 +284,13 @@ def add_action(current_product):
         new_product_data.pop(key, None)
 
     action_name = request.form.get('action_name')
-    current_rating = int(request.form.get('current_rating'))
-    review_id = int(request.form.get('review_id'))
+    
     # print("!"*800)
     # print(current_product)
     # print(review_id)
     if action_name == "Clicked on a Review":
+        current_rating = int(request.form.get('current_rating')) or None
+        review_id = int(request.form.get('review_id')) or None
         if current_rating != 0:
             all_review_read_data[current_product][review_id] = 1
         else:

@@ -26,6 +26,7 @@
 <link rel="dns-prefetch" href="https://images-na.ssl-images-amazon.com/">
 <link rel="dns-prefetch" href="https://m.media-amazon.com/">
 <link rel="dns-prefetch" href="https://completion.amazon.com/">
+
 <script type="text/javascript">
 window.ue_ihb = (window.ue_ihb || window.ueinit || 0) + 1;
 if (window.ue_ihb === 1) {
@@ -11107,7 +11108,7 @@ word-break: break-word;
 
 
 
-<div class="newborne">
+<div class="newborne" onmouseover="saveAction('Hovered on Ratings')">
   <a>
       <i class="a-icon a-icon-star a-star-4"><span class="a-icon-alt">{{product.overall_rating}} out of 5 stars</span></i>
     </a><a>
@@ -17674,38 +17675,6 @@ if (window.ue && window.ue.uels) {
 <table id="histogramTable" class="a-normal a-align-center a-spacing-base">
   
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-
-    
     <tbody><tr data-reftag="" data-reviews-state-param="{&quot;filterByStar&quot;:&quot;five_star&quot;, &quot;pageNumber&quot;:&quot;1&quot;}" aria-label="5 stars represent 70% of rating" class="a-histogram-row a-align-center">
 
       <td class="aok-nowrap">
@@ -18387,3 +18356,31 @@ if (window.ue && window.ue.uels) {
 
         }
     </script>
+
+
+<script>
+  window.onload = function() {
+      // Your code to be executed after the page has fully loaded
+      console.log("The page has finished loading.");
+      const formData = new FormData();
+            formData.append('action_name', "Home page of {{current_product}} loaded");
+
+            // Make a POST request to your Flask API endpoint
+            fetch('http://127.0.0.1:5000/{{current_product}}/add_action', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log(data.message); // Log the response message
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+  };
+</script>

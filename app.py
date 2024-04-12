@@ -231,6 +231,9 @@ def get_top_reviews(current_product):
         top_review_data = json.load(file)
     return top_review_data
     
+@app.route('/')
+def index():
+    return 'test'
 
 @app.route('/main/<string:current_product>')
 def serve_downloaded_page(current_product):

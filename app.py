@@ -8,6 +8,8 @@ import random
 import os
 import platform
 from flask_cors import CORS
+from dotenv import load_dotenv
+load_dotenv()
 
 
 
@@ -18,7 +20,8 @@ app = Flask(__name__)
 
 CORS(app, resources={r"*": {"origins": "*"}})
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://apoorvagarwal@localhost/ra_db_1"
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("SQLALCHEMY_DATABASE_URI")
+
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 import json

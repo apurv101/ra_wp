@@ -73,6 +73,7 @@ class Response(db.Model):
 
 class Action(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    lab_id = db.Column(db.String(80), nullable=False)
     product = db.Column(db.String(80))
     action_name = db.Column(db.String(80))
     title = db.Column(db.String(80))
@@ -266,20 +267,28 @@ def serve_main_files(filename):
 
 @app.route('/r/<string:current_product>/<int:rate>/<int:page>')
 def serve_reviews1(current_product, rate, page):
+    lab_id = request.args.get('id')
+    print("#"*100)
+    print(request.args.get('id'))
+    if lab_id is None:
+        return redirect(url_for('index'))
     product_data = get_all_info(current_product)
     review_data = get_all_reviews(current_product)
     filtered_reviews = [review for review in review_data if review.get('Number') == rate][(page-1)*number_of_reviews_per_page: (page)*number_of_reviews_per_page]
     randomized_filtered_reviews = [filtered_reviews[i] for i in random_orders[len(filtered_reviews)]]
-    return render_template('r32.html', current_product=current_product, review_clicked_records=all_review_read_data[current_product], reviews=randomized_filtered_reviews, rate=rate, page=page, product=product_data, number_of_pages=number_of_pages, list_of_review_ids = ','.join([str(r["id"]) for r in randomized_filtered_reviews]))
+    return render_template('r32.html', current_product=current_product, lab_id=lab_id, review_clicked_records=all_review_read_data[current_product], reviews=randomized_filtered_reviews, rate=rate, page=page, product=product_data, number_of_pages=number_of_pages, list_of_review_ids = ','.join([str(r["id"]) for r in randomized_filtered_reviews]))
 
 
 @app.route('/t/<string:current_product>/0/<int:page>')
 def serve_reviews_top(current_product, page):
+    lab_id = request.args.get('id')
+    if lab_id is None:
+        return redirect(url_for('index'))
     product_data = get_all_info(current_product)
     top_review_data = get_top_reviews(current_product)
     filtered_reviews = [review for review in top_review_data][(page-1)*number_of_reviews_per_page: (page)*number_of_reviews_per_page]
     randomized_filtered_reviews = [filtered_reviews[i] for i in random_orders[len(filtered_reviews)]]
-    return render_template('r32.html', current_product=current_product, review_clicked_records=top_review_read_data[current_product], reviews=randomized_filtered_reviews, rate=0, page=page, product=product_data, number_of_pages=number_of_pages, list_of_review_ids = ','.join([str(r["id"]) for r in randomized_filtered_reviews]))
+    return render_template('r32.html', current_product=current_product, lab_id=lab_id,  review_clicked_records=top_review_read_data[current_product], reviews=randomized_filtered_reviews, rate=0, page=page, product=product_data, number_of_pages=number_of_pages, list_of_review_ids = ','.join([str(r["id"]) for r in randomized_filtered_reviews]))
 
 
 @app.route('/r32_files/<path:filename>')
@@ -305,8 +314,11 @@ def add_action(current_product):
         new_product_data.pop(key, None)
 
     action_name = request.form.get('action_name')
-    
-    # print("!"*800)
+    lab_id = request.form.get('lab_id')
+    print(action_name)
+    print(lab_id)
+
+    # print("!"*8s00)
     # print(current_product)
     # print(review_id)
     if action_name == "Clicked on a Review":
@@ -322,6 +334,7 @@ def add_action(current_product):
     action = Action(
         action_name=request.form.get('action_name'),
         review_id = request.form.get('review_id') or None,
+        lab_id = request.form.get('lab_id'),
         other_reviews = request.form.get('other_reviews') or None,
         current_rating = request.form.get('current_rating') or None,
         **new_product_data

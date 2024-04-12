@@ -3113,7 +3113,7 @@ if (window.ue && window.ue.uels) {
 
 
             // Make a POST request to your Flask API endpoint
-            fetch('http://127.0.0.1:5000/{{current_product}}/add_action', {
+            fetch('/{{current_product}}/add_action', {
                 method: 'POST',
                 body: formData
             })

@@ -11,13 +11,13 @@ load_dotenv()
 
 app = Flask(__name__)
 CORS(app)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DB_PATH')
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://apoorvagarwal@localhost/ra_db_1"
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 import json
 import os
 
-ROOT_DIR = os.getenv('ROOT_DIR')
+ROOT_DIR = "/Users/apoorvagarwal/Desktop/ra_project"
 
 
 

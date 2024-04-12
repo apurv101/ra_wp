@@ -6,6 +6,8 @@ from datetime import datetime, timezone
 import pytz
 import random
 import os
+import platform
+
 
 from pathlib import Path
 THIS_FOLDER = Path(__file__).parent.resolve()
@@ -323,8 +325,9 @@ def add_action(current_product):
     return jsonify({'message': 'Action added successfully'}), 201
 
 
-
-# if __name__ == '__main__':
-#     app.run(debug=True)
+if platform.system() == "Darwin":
+    print("The operating system is macOS.")
+    if __name__ == '__main__':
+        app.run(debug=True)
 
 

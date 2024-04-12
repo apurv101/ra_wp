@@ -16,7 +16,7 @@ THIS_FOLDER = Path(__file__).parent.resolve()
 
 app = Flask(__name__)
 
-CORS(app, resources={r"*": {"origins": "https://sanghaklee.pythonanywhere.com"}})
+CORS(app, resources={r"*": {"origins": "*"}})
 
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://apoorvagarwal@localhost/ra_db_1"
 db = SQLAlchemy(app)

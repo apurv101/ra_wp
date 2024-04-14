@@ -9,12 +9,13 @@ import os
 import platform
 from flask_cors import CORS
 from dotenv import load_dotenv
-load_dotenv()
+
 
 
 
 from pathlib import Path
 THIS_FOLDER = Path(__file__).parent.resolve()
+load_dotenv(os.path.join(THIS_FOLDER, '.env'))
 
 app = Flask(__name__)
 

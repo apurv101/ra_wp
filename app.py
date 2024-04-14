@@ -9,7 +9,7 @@ import os
 import platform
 from flask_cors import CORS
 from dotenv import load_dotenv
-
+import csv
 
 
 
@@ -28,7 +28,12 @@ migrate = Migrate(app, db)
 import json
 import os
 
-# ROOT_DIR = "/Users/apoorvagarwal/Desktop/ra_project"
+
+
+### Randomization
+
+
+
 
 
 
@@ -91,6 +96,206 @@ class Action(db.Model):
     created_at = db.Column(db.DateTime, default=datetime.now(pytz.timezone('America/Denver')))
 
 
+class Distribution(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    lab_id = db.Column(db.String(80), nullable=False, unique=True)
+    product_1_ar = db.Column(db.String(255), nullable=False)
+    product_2_ar = db.Column(db.String(255), nullable=False)
+    product_3_ar = db.Column(db.String(255), nullable=False)
+    product_4_ar = db.Column(db.String(255), nullable=False)
+    product_1_tr = db.Column(db.String(255), nullable=False)
+    product_2_tr = db.Column(db.String(255), nullable=False)
+    product_3_tr = db.Column(db.String(255), nullable=False)
+    product_4_tr = db.Column(db.String(255), nullable=False)
+    rating_scale_product_1_2 = db.Column(db.Boolean, default=True)
+    rating_scale_product_3_4 = db.Column(db.Boolean, default=True)
+    volume_product_1_2 = db.Column(db.Boolean, default=True)
+    volume_product_3_4 = db.Column(db.Boolean, default=True)
+    number_of_reviews_product_1 = db.Column(db.Integer)
+    number_of_reviews_product_2 = db.Column(db.Integer)
+    number_of_reviews_product_3 = db.Column(db.Integer)
+    number_of_reviews_product_4 = db.Column(db.Integer)
+    overall_rating_product_1 = db.Column(db.Numeric(10, 1))
+    overall_rating_product_2 = db.Column(db.Numeric(10, 1))
+    overall_rating_product_3 = db.Column(db.Numeric(10, 1))
+    overall_rating_product_4 = db.Column(db.Numeric(10, 1))
+    star_1_per_product_1 = db.Column(db.Integer)
+    star_2_per_product_1 = db.Column(db.Integer)
+    star_3_per_product_1 = db.Column(db.Integer)
+    star_4_per_product_1 = db.Column(db.Integer)
+    star_5_per_product_1 = db.Column(db.Integer)
+    star_1_per_product_2 = db.Column(db.Integer)
+    star_2_per_product_2 = db.Column(db.Integer)
+    star_3_per_product_2 = db.Column(db.Integer)
+    star_4_per_product_2 = db.Column(db.Integer)
+    star_5_per_product_2 = db.Column(db.Integer)
+    star_1_per_product_3 = db.Column(db.Integer)
+    star_2_per_product_3 = db.Column(db.Integer)
+    star_3_per_product_3 = db.Column(db.Integer)
+    star_4_per_product_3 = db.Column(db.Integer)
+    star_5_per_product_3 = db.Column(db.Integer)
+    star_1_per_product_4 = db.Column(db.Integer)
+    star_2_per_product_4 = db.Column(db.Integer)
+    star_3_per_product_4 = db.Column(db.Integer)
+    star_4_per_product_4 = db.Column(db.Integer)
+    star_5_per_product_4 = db.Column(db.Integer)
+    price_product_1 = db.Column(db.Numeric(10, 2))
+    price_product_2 = db.Column(db.Numeric(10, 2))
+    price_product_3 = db.Column(db.Numeric(10, 2))
+    price_product_4 = db.Column(db.Numeric(10, 2))
+
+
+
+
+high_dist = []
+low_dist = []
+with open(f'distn_high.csv', 'r') as file:
+    reader = csv.reader(file)
+    for row in reader:
+        high_dist.append(row)
+with open(f'{THIS_FOLDER}/distn_low.csv', 'r') as file:
+    reader = csv.reader(file)
+    for row in reader:
+        low_dist.append(row)
+
+
+
+
+def get_distributions(lab_id):
+    ### Check if lab_id in distrubtion
+    distribution_entry = Distribution.query.filter_by(lab_id=lab_id).first()
+    if distribution_entry:
+        return distribution_entry
+    else:
+        rating_scale_product_1_2 = random.choice([0, 1])
+        rating_scale_product_3_4 = random.choice([0, 1])
+        volume_product_1_2 = random.choice([0, 1])
+        volume_product_3_4 = random.choice([0, 1])
+
+        if rating_scale_product_1_2:
+            dist_1 = random.choice(high_dist)
+            _, star_1_per_product_1, star_2_per_product_1, star_3_per_product_1, star_4_per_product_1, star_5_per_product_1, overall_rating_product_1, _ = dist_1
+            dist_2 = random.choice(high_dist)
+            _, star_1_per_product_2, star_2_per_product_2, star_3_per_product_2, star_4_per_product_2, star_5_per_product_2, overall_rating_product_2, _ = dist_2
+        else:
+            dist_1 = random.choice(low_dist)
+            _, star_1_per_product_1, star_2_per_product_1, star_3_per_product_1, star_4_per_product_1, star_5_per_product_1, overall_rating_product_1, _ = dist_1
+            dist_2 = random.choice(low_dist)
+            _, star_1_per_product_2, star_2_per_product_2, star_3_per_product_2, star_4_per_product_2, star_5_per_product_2, overall_rating_product_2, _ = dist_2
+
+
+        if rating_scale_product_3_4:
+            dist_1 = random.choice(high_dist)
+            _, star_1_per_product_3, star_2_per_product_3, star_3_per_product_3, star_4_per_product_3, star_5_per_product_3, overall_rating_product_3, _ = dist_1
+            dist_2 = random.choice(high_dist)
+            _, star_1_per_product_4, star_2_per_product_4, star_3_per_product_4, star_4_per_product_4, star_5_per_product_4, overall_rating_product_4, _ = dist_2
+        else:
+            dist_1 = random.choice(low_dist)
+            _, star_1_per_product_3, star_2_per_product_3, star_3_per_product_3, star_4_per_product_3, star_5_per_product_3, overall_rating_product_3, _ = dist_1
+            dist_2 = random.choice(low_dist)
+            _, star_1_per_product_4, star_2_per_product_4, star_3_per_product_4, star_4_per_product_4, star_5_per_product_4, overall_rating_product_4, _ = dist_2
+
+        if volume_product_1_2:
+            number_of_reviews_product_1 = random.randint(60000,66000)
+            number_of_reviews_product_2 = random.randint(60000,66000)
+        else:
+            number_of_reviews_product_1 = random.randint(3000,3300)
+            number_of_reviews_product_2 = random.randint(3000,3300)
+
+        if volume_product_3_4:
+            number_of_reviews_product_3 = random.randint(60000,66000)
+            number_of_reviews_product_4 = random.randint(60000,66000)
+        else:
+            number_of_reviews_product_3 = random.randint(3000,3300)
+            number_of_reviews_product_4 = random.randint(3000,3300)
+
+        price_product_1 = random.choice([25.99, 26.99, 27.99, 28.99])
+        price_product_2 = random.choice([25.99, 26.99, 27.99, 28.99])
+
+        price_product_3 = random.choice([13.99, 14.99, 15.99, 16.99])
+        price_product_4 = random.choice([13.99, 14.99, 15.99, 16.99])
+
+
+        products = ['product1', 'product2', 'product3', 'product4']
+        for product in products:
+            with open(f'{THIS_FOLDER}/{product}/all_review_data.json', 'r') as file:
+                review_data = json.load(file)
+                if product == 'product1':
+                    product_1_ar = '0'*len(review_data)
+                if product == 'product2':
+                    product_2_ar = '0'*len(review_data)
+                if product == 'product3':
+                    product_3_ar = '0'*len(review_data)
+                if product == 'product4':
+                    product_4_ar = '0'*len(review_data)
+                
+            with open(f'{THIS_FOLDER}/{product}/top_review_data.json', 'r') as file:
+                review_data = json.load(file)
+                if product == 'product1':
+                    product_1_tr = '0'*len(review_data)
+                if product == 'product2':
+                    product_2_tr = '0'*len(review_data)
+                if product == 'product3':
+                    product_3_tr = '0'*len(review_data)
+                if product == 'product4':
+                    product_4_tr = '0'*len(review_data)
+
+        new_entry = Distribution(
+            lab_id=lab_id,
+            product_1_ar=product_1_ar,
+            product_2_ar=product_2_ar,
+            product_3_ar=product_3_ar,
+            product_4_ar=product_4_ar,
+            product_1_tr=product_1_tr,
+            product_2_tr=product_2_tr,
+            product_3_tr=product_3_tr,
+            product_4_tr=product_4_tr,
+            rating_scale_product_1_2=rating_scale_product_1_2,
+            rating_scale_product_3_4=rating_scale_product_3_4,
+            volume_product_1_2=volume_product_1_2,
+            volume_product_3_4=volume_product_3_4,
+            number_of_reviews_product_1=number_of_reviews_product_1,
+            number_of_reviews_product_2=number_of_reviews_product_2,
+            number_of_reviews_product_3=number_of_reviews_product_3,
+            number_of_reviews_product_4=number_of_reviews_product_4,
+            overall_rating_product_1=overall_rating_product_1,
+            overall_rating_product_2=overall_rating_product_2,
+            overall_rating_product_3=overall_rating_product_3,
+            overall_rating_product_4=overall_rating_product_4,
+            star_1_per_product_1=star_1_per_product_1,
+            star_2_per_product_1=star_2_per_product_1,
+            star_3_per_product_1=star_3_per_product_1,
+            star_4_per_product_1=star_4_per_product_1,
+            star_5_per_product_1=star_5_per_product_1,
+            star_1_per_product_2=star_1_per_product_2,
+            star_2_per_product_2=star_2_per_product_2,
+            star_3_per_product_2=star_3_per_product_2,
+            star_4_per_product_2=star_4_per_product_2,
+            star_5_per_product_2=star_5_per_product_2,
+            star_1_per_product_3=star_1_per_product_3,
+            star_2_per_product_3=star_2_per_product_3,
+            star_3_per_product_3=star_3_per_product_3,
+            star_4_per_product_3=star_4_per_product_3,
+            star_5_per_product_3=star_5_per_product_3,
+            star_1_per_product_4=star_1_per_product_4,
+            star_2_per_product_4=star_2_per_product_4,
+            star_3_per_product_4=star_3_per_product_4,
+            star_4_per_product_4=star_4_per_product_4,
+            star_5_per_product_4=star_5_per_product_4,
+            price_product_1=price_product_1,
+            price_product_2=price_product_2,
+            price_product_3=price_product_3,
+            price_product_4=price_product_4
+        )
+        
+        db.session.add(new_entry)
+        db.session.commit()
+        
+        return new_entry
+    
+
+
+
     
 @app.route('/actions')
 def show_actions():
@@ -122,7 +327,10 @@ def add_response():
         return jsonify({'error': str(e)}), 500
     
 
-def get_all_info(current_product):
+def get_all_info(current_product, lab_id):
+
+    distribution_data = get_distributions(lab_id)
+    print(distribution_data.price_product_1)
 
     if current_product == "product1":
         product_data = {
@@ -255,7 +463,7 @@ def serve_downloaded_page(current_product):
     lab_id = request.args.get('id')
     if lab_id is None:
         return redirect(url_for('index'))
-    product_data = get_all_info(current_product)
+    product_data = get_all_info(current_product, lab_id)
     if current_product == 'product1' or current_product == 'product2':
         return render_template('main.html', product=product_data, lab_id=lab_id, current_product=current_product, main_images=[list(item['main'].keys())[-2] for item in product_data['color_images']['initial']])
     else:

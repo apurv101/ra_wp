@@ -195,6 +195,30 @@ def get_distributions(lab_id):
             dist_2 = random.choice(low_dist)
             _, star_1_per_product_4, star_2_per_product_4, star_3_per_product_4, star_4_per_product_4, star_5_per_product_4, overall_rating_product_4, _ = dist_2
 
+        
+        star_1_per_product_1 = float(star_1_per_product_1) * 100
+        star_2_per_product_1 = float(star_2_per_product_1) * 100
+        star_3_per_product_1 = float(star_3_per_product_1) * 100
+        star_4_per_product_1 = float(star_4_per_product_1) * 100
+        star_5_per_product_1 = float(star_5_per_product_1) * 100
+        star_1_per_product_2 = float(star_1_per_product_2) * 100
+        star_2_per_product_2 = float(star_2_per_product_2) * 100
+        star_3_per_product_2 = float(star_3_per_product_2) * 100
+        star_4_per_product_2 = float(star_4_per_product_2) * 100
+        star_5_per_product_2 = float(star_5_per_product_2) * 100
+        star_1_per_product_3 = float(star_1_per_product_3) * 100
+        star_2_per_product_3 = float(star_2_per_product_3) * 100
+        star_3_per_product_3 = float(star_3_per_product_3) * 100
+        star_4_per_product_3 = float(star_4_per_product_3) * 100
+        star_5_per_product_3 = float(star_5_per_product_3) * 100
+        star_1_per_product_4 = float(star_1_per_product_4) * 100
+        star_2_per_product_4 = float(star_2_per_product_4) * 100
+        star_3_per_product_4 = float(star_3_per_product_4) * 100
+        star_4_per_product_4 = float(star_4_per_product_4) * 100
+        star_5_per_product_4 = float(star_5_per_product_4) * 100
+
+
+
         if volume_product_1_2:
             number_of_reviews_product_1 = random.randint(60000,66000)
             number_of_reviews_product_2 = random.randint(60000,66000)
@@ -328,21 +352,23 @@ def add_response():
     
 
 def get_all_info(current_product, lab_id):
+    print(current_product)
 
     distribution_data = get_distributions(lab_id)
     print(distribution_data.price_product_1)
+    print("!"*100)
 
     if current_product == "product1":
         product_data = {
             "title": "Bluetooth Headphones True Wireless Earbuds 60H Playback LED Power Display Earphones with Wireless Charging Case IPX5 Waterproof in-Ear Earbuds with Mic for TV Smart Phone Laptop Computer Sports",
-            "price": "29.73",
+            "price": str(distribution_data.price_product_1),
             "company": "Tagry",
             "primary_image": "https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SX679_.jpg",
             "thumbnails":[],
             "color_images": { 'initial': [{"hiRes":"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/41jhM7IY4uL._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/41jhM7IY4uL._AC_.jpg","main":{"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SY355_.jpg":[355,316],"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SY450_.jpg":[450,401],"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SX425_.jpg":[477,425],"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SX466_.jpg":[523,466],"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SX522_.jpg":[586,522],"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SX569_.jpg":[639,569],"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SX679_.jpg":[762,679]},"variant":"MAIN","lowRes":None,"shoppableScene":None},{"hiRes":"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/51j-a0BvycL._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/51j-a0BvycL._AC_.jpg","main":{"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SY355_.jpg":[355,355],"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SY450_.jpg":[450,450],"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SX425_.jpg":[425,425],"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SX466_.jpg":[466,466],"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SX522_.jpg":[522,522],"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SX569_.jpg":[569,569],"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SX679_.jpg":[679,679]},"variant":"PT01","lowRes":None,"shoppableScene":None},{"hiRes":"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/41gdcIgZ6NL._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/41gdcIgZ6NL._AC_.jpg","main":{"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SY355_.jpg":[355,355],"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SY450_.jpg":[450,450],"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SX425_.jpg":[425,425],"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SX466_.jpg":[466,466],"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SX522_.jpg":[522,522],"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SX569_.jpg":[569,569],"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SX679_.jpg":[679,679]},"variant":"PT02","lowRes":None,"shoppableScene":None},{"hiRes":"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/41-8BmtR0VL._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/41-8BmtR0VL._AC_.jpg","main":{"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SY355_.jpg":[355,355],"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SY450_.jpg":[450,450],"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SX425_.jpg":[425,425],"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SX466_.jpg":[466,466],"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SX522_.jpg":[522,522],"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SX569_.jpg":[569,569],"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SX679_.jpg":[679,679]},"variant":"PT03","lowRes":None,"shoppableScene":None},{"hiRes":"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/41TqJBRSlYL._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/41TqJBRSlYL._AC_.jpg","main":{"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SY355_.jpg":[355,355],"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SY450_.jpg":[450,450],"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SX425_.jpg":[425,425],"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SX466_.jpg":[466,466],"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SX522_.jpg":[522,522],"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SX569_.jpg":[569,569],"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SX679_.jpg":[679,679]},"variant":"PT04","lowRes":None,"shoppableScene":None},{"hiRes":"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/41zLZVxnZML._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/41zLZVxnZML._AC_.jpg","main":{"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SY355_.jpg":[355,355],"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SY450_.jpg":[450,450],"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SX425_.jpg":[425,425],"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SX466_.jpg":[466,466],"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SX522_.jpg":[522,522],"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SX569_.jpg":[569,569],"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SX679_.jpg":[679,679]},"variant":"PT05","lowRes":None,"shoppableScene":None},{"hiRes":"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/41vhkesQxVL._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/41vhkesQxVL._AC_.jpg","main":{"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SY355_.jpg":[355,355],"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SY450_.jpg":[450,450],"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SX425_.jpg":[425,425],"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SX466_.jpg":[466,466],"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SX522_.jpg":[522,522],"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SX569_.jpg":[569,569],"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SX679_.jpg":[679,679]},"variant":"PT06","lowRes":None,"shoppableScene":None}]},
-            "number_of_reviews": "6,834",
-            "overall_rating": "3.9",
-            "percentages": [76, 9, 10, 17, 24],
+            "number_of_reviews": str(distribution_data.number_of_reviews_product_1),
+            "overall_rating": str(distribution_data.overall_rating_product_1),
+            "percentages": [distribution_data.star_1_per_product_1, distribution_data.star_2_per_product_1, distribution_data.star_3_per_product_1, distribution_data.star_4_per_product_1, distribution_data.star_5_per_product_1],
             "attributes":[["Brand","TAGRY"],["Model Name","X08"],["Color", "Black"],["Form Factor","In Ear"],["Connectivity Technology", "Wireless"]],
             "about": [
                 "LED Power Display and 60H Playback: Dual digital LED power display outside of the case is to show the power level for charging case and earbuds. When charging for the case, the LED light will start to flash from 1 to 100. When you put earbuds into the case, then earbuds will start to be charged. 470mAh battery capacity charging case can provide extra 4 times full charging for both earbuds, each earbud can last 6H on single charging. So, you can enjoy 60H music time in total via using in turn.",
@@ -350,19 +376,21 @@ def get_all_info(current_product, lab_id):
                 "One-Step Pairing and Easy Touch Control: TAGRY X08 bluetooth earphones adopts hall switch. After first connection, these wireless earphones will connect with your device once you open the charging case, which is faster and more convenient. During using, you can touch either earbud to control the phone, such as the music switch, volume adjustment, phone calls, voice assistant, etc. No need to adjust through your mobile phones.",
                 "Ergonomic Design and Lightweight: TAGRY X08 headphones' structure is the study of thousands of people's ear canal before design. Comes with three different sizes of ear tips, our X08 are fit for most people's ear cannals. These wireless bluetooth headphones are small and light, single earbud is only 0.14oz, earbud size is 1.57*0.78*0.59in, charging case size is 2.56*2.16*1in, It’s more convenient to carry.",
                 "Superior Clear Call and Immersive Stereo Sound: These music earphones with 13mm speakers and triple-layer composite diaphragms provide powerful bass, stunning treble and clear mids. These earbuds are designed for sound and music lovers. It can support the mono mode and twin stereo mode, you can share the earbuds with your friends and families. Each earbud has a build-in microphone for phone calls. CVC noise reduction can make others hear your voice very clearly while phone calls."
-            ]
+            ],
+            "review_read_data_all": [int(a) for a in distribution_data.product_1_ar],
+            "review_read_data_top": [int(a) for a in distribution_data.product_1_tr]
         }
     elif current_product == "product2":
         product_data = {
             "title": "Wireless Earbuds Bluetooth Headphones, 40H Playtime Stereo IPX5 Waterproof Ear Buds, LED Power Display Cordless in-Ear Earphones with Microphone for iOS Andriod Cell Phone Sports",
-            "price": "21.99",
+            "price": str(distribution_data.price_product_2),
             "company": "YAQ",
             "primary_image": "https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SX679_.jpg",
             "thumbnails":[],
             "color_images": { 'initial': [{"hiRes":"https://m.media-amazon.com/images/I/61IOFpeimnL._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/41LTRytAadL._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/41LTRytAadL._AC_.jpg","main":{"https://m.media-amazon.com/images/I/61IOFpeimnL._AC_SY355_.jpg":[355,284],"https://m.media-amazon.com/images/I/61IOFpeimnL._AC_SY450_.jpg":[450,360],"https://m.media-amazon.com/images/I/61IOFpeimnL._AC_SX425_.jpg":[531,425],"https://m.media-amazon.com/images/I/61IOFpeimnL._AC_SX466_.jpg":[583,466],"https://m.media-amazon.com/images/I/61IOFpeimnL._AC_SX522_.jpg":[653,522],"https://m.media-amazon.com/images/I/61IOFpeimnL._AC_SX569_.jpg":[711,569],"https://m.media-amazon.com/images/I/61IOFpeimnL._AC_SX679_.jpg":[849,679]},"variant":"MAIN","lowRes":None,"shoppableScene":None},{"hiRes":"https://m.media-amazon.com/images/I/71xIWZ78g7L._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/51TDaI52QxL._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/51TDaI52QxL._AC_.jpg","main":{"https://m.media-amazon.com/images/I/71xIWZ78g7L._AC_SY355_.jpg":[355,284],"https://m.media-amazon.com/images/I/71xIWZ78g7L._AC_SY450_.jpg":[450,360],"https://m.media-amazon.com/images/I/71xIWZ78g7L._AC_SX425_.jpg":[531,425],"https://m.media-amazon.com/images/I/71xIWZ78g7L._AC_SX466_.jpg":[583,466],"https://m.media-amazon.com/images/I/71xIWZ78g7L._AC_SX522_.jpg":[653,522],"https://m.media-amazon.com/images/I/71xIWZ78g7L._AC_SX569_.jpg":[711,569],"https://m.media-amazon.com/images/I/71xIWZ78g7L._AC_SX679_.jpg":[849,679]},"variant":"PT01","lowRes":None,"shoppableScene":None},{"hiRes":"https://m.media-amazon.com/images/I/610EPQQXjtL._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/41gUEZUK+9L._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/41gUEZUK+9L._AC_.jpg","main":{"https://m.media-amazon.com/images/I/610EPQQXjtL._AC_SY355_.jpg":[355,284],"https://m.media-amazon.com/images/I/610EPQQXjtL._AC_SY450_.jpg":[450,360],"https://m.media-amazon.com/images/I/610EPQQXjtL._AC_SX425_.jpg":[531,425],"https://m.media-amazon.com/images/I/610EPQQXjtL._AC_SX466_.jpg":[583,466],"https://m.media-amazon.com/images/I/610EPQQXjtL._AC_SX522_.jpg":[653,522],"https://m.media-amazon.com/images/I/610EPQQXjtL._AC_SX569_.jpg":[711,569],"https://m.media-amazon.com/images/I/610EPQQXjtL._AC_SX679_.jpg":[849,679]},"variant":"PT02","lowRes":None,"shoppableScene":None},{"hiRes":"https://m.media-amazon.com/images/I/61Tg9O0VCoL._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/41IaL4UTtcL._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/41IaL4UTtcL._AC_.jpg","main":{"https://m.media-amazon.com/images/I/61Tg9O0VCoL._AC_SY355_.jpg":[355,284],"https://m.media-amazon.com/images/I/61Tg9O0VCoL._AC_SY450_.jpg":[450,360],"https://m.media-amazon.com/images/I/61Tg9O0VCoL._AC_SX425_.jpg":[531,425],"https://m.media-amazon.com/images/I/61Tg9O0VCoL._AC_SX466_.jpg":[583,466],"https://m.media-amazon.com/images/I/61Tg9O0VCoL._AC_SX522_.jpg":[653,522],"https://m.media-amazon.com/images/I/61Tg9O0VCoL._AC_SX569_.jpg":[711,569],"https://m.media-amazon.com/images/I/61Tg9O0VCoL._AC_SX679_.jpg":[849,679]},"variant":"PT03","lowRes":None,"shoppableScene":None},{"hiRes":"https://m.media-amazon.com/images/I/61Oj+b7MJTL._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/41uiGleFjuL._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/41uiGleFjuL._AC_.jpg","main":{"https://m.media-amazon.com/images/I/61Oj+b7MJTL._AC_SY355_.jpg":[355,284],"https://m.media-amazon.com/images/I/61Oj+b7MJTL._AC_SY450_.jpg":[450,360],"https://m.media-amazon.com/images/I/61Oj+b7MJTL._AC_SX425_.jpg":[531,425],"https://m.media-amazon.com/images/I/61Oj+b7MJTL._AC_SX466_.jpg":[583,466],"https://m.media-amazon.com/images/I/61Oj+b7MJTL._AC_SX522_.jpg":[653,522],"https://m.media-amazon.com/images/I/61Oj+b7MJTL._AC_SX569_.jpg":[711,569],"https://m.media-amazon.com/images/I/61Oj+b7MJTL._AC_SX679_.jpg":[849,679]},"variant":"PT04","lowRes":None,"shoppableScene":None},{"hiRes":"https://m.media-amazon.com/images/I/61jvCfPa3wL._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/41teSwpz8AL._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/41teSwpz8AL._AC_.jpg","main":{"https://m.media-amazon.com/images/I/61jvCfPa3wL._AC_SY355_.jpg":[355,284],"https://m.media-amazon.com/images/I/61jvCfPa3wL._AC_SY450_.jpg":[450,360],"https://m.media-amazon.com/images/I/61jvCfPa3wL._AC_SX425_.jpg":[531,425],"https://m.media-amazon.com/images/I/61jvCfPa3wL._AC_SX466_.jpg":[583,466],"https://m.media-amazon.com/images/I/61jvCfPa3wL._AC_SX522_.jpg":[653,522],"https://m.media-amazon.com/images/I/61jvCfPa3wL._AC_SX569_.jpg":[711,569],"https://m.media-amazon.com/images/I/61jvCfPa3wL._AC_SX679_.jpg":[849,679]},"variant":"PT05","lowRes":None,"shoppableScene":None}]},
-            "number_of_reviews": "7,034",
-            "overall_rating": "3.9",
-            "percentages": [90, 1, 3, 2, 4],
+            "number_of_reviews": str(distribution_data.number_of_reviews_product_2),
+            "overall_rating": str(distribution_data.overall_rating_product_2),
+            "percentages": [distribution_data.star_1_per_product_2, distribution_data.star_2_per_product_2, distribution_data.star_3_per_product_2, distribution_data.star_4_per_product_2, distribution_data.star_5_per_product_2],
             "attributes":[["Brand","YAQ"],["Model Name","T12 Wireless Bluetooth Earbuds"],["Color", "Black"],["Form Factor","In Ear"],["Connectivity Technology", "Wireless"]],
             "about": [
                 ">>> Long Battery Life Bluetooth Earbuds: T12 Bluetooth earphones provide 6-8 hours of continuous use per charge. The 500mAh rechargeable charging case extends the usage time to 40 hours by providing 5 additional charges. Built-in dual LED power display keeps tracking the case’s remaining power and earbuds’ charging status in real-time.",
@@ -371,19 +399,21 @@ def get_all_info(current_product, lab_id):
                 ">>> Smart Touch Control Bluetooth Earphones: Equipped with sensitive touch control panels on the left and right earbuds, you can flexibly control music playback, answer or reject calls, adjust volume, switch music and activate voice assistant, etc.",
                 ">>> IPX5 Waterproof Bluetooth Headphones: The wireless headphones use IPX5 nano-coating technology to seal the surface of both earbuds to prevent sweat or rain from penetrating, allows you to use the in-ear earphones in any weather and workout situation. The earphones supports Bluetooth for iOS/Android/Windows smart devices.",
                 ">>> Ergonomic Design Earphones: Precise calculations and many experiments were combined to design the shape of the headset. The perfect curvature and compact body weighing only 4 grams provides the ultimate in comfort by distributing the pressure in the ear canal while maintaining stability. And with 3 sizes of ear cups available, there's always one that suits you best!"
-            ]
+            ],
+            "review_read_data_all": [int(a) for a in distribution_data.product_2_ar],
+            "review_read_data_top": [int(a) for a in distribution_data.product_2_tr]
         }
     elif current_product == "product3":
         product_data = {
             "title": "by Ann Napolitano",
-            "price": "29.73",
+            "price": str(distribution_data.price_product_3),
             "company": "Hello Beautiful (Oprah's Book Club): A Novel",
             "primary_image": "https://m.media-amazon.com/images/I/91R1x+Q+YRL._SY522_.jpg",
             "thumbnails":[],
             "color_images": { 'initial': [{"hiRes":"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/41jhM7IY4uL._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/41jhM7IY4uL._AC_.jpg","main":{"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SY355_.jpg":[355,316],"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SY450_.jpg":[450,401],"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SX425_.jpg":[477,425],"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SX466_.jpg":[523,466],"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SX522_.jpg":[586,522],"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SX569_.jpg":[639,569],"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SX679_.jpg":[762,679]},"variant":"MAIN","lowRes":None,"shoppableScene":None},{"hiRes":"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/51j-a0BvycL._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/51j-a0BvycL._AC_.jpg","main":{"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SY355_.jpg":[355,355],"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SY450_.jpg":[450,450],"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SX425_.jpg":[425,425],"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SX466_.jpg":[466,466],"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SX522_.jpg":[522,522],"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SX569_.jpg":[569,569],"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SX679_.jpg":[679,679]},"variant":"PT01","lowRes":None,"shoppableScene":None},{"hiRes":"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/41gdcIgZ6NL._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/41gdcIgZ6NL._AC_.jpg","main":{"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SY355_.jpg":[355,355],"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SY450_.jpg":[450,450],"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SX425_.jpg":[425,425],"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SX466_.jpg":[466,466],"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SX522_.jpg":[522,522],"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SX569_.jpg":[569,569],"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SX679_.jpg":[679,679]},"variant":"PT02","lowRes":None,"shoppableScene":None},{"hiRes":"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/41-8BmtR0VL._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/41-8BmtR0VL._AC_.jpg","main":{"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SY355_.jpg":[355,355],"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SY450_.jpg":[450,450],"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SX425_.jpg":[425,425],"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SX466_.jpg":[466,466],"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SX522_.jpg":[522,522],"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SX569_.jpg":[569,569],"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SX679_.jpg":[679,679]},"variant":"PT03","lowRes":None,"shoppableScene":None},{"hiRes":"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/41TqJBRSlYL._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/41TqJBRSlYL._AC_.jpg","main":{"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SY355_.jpg":[355,355],"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SY450_.jpg":[450,450],"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SX425_.jpg":[425,425],"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SX466_.jpg":[466,466],"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SX522_.jpg":[522,522],"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SX569_.jpg":[569,569],"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SX679_.jpg":[679,679]},"variant":"PT04","lowRes":None,"shoppableScene":None},{"hiRes":"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/41zLZVxnZML._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/41zLZVxnZML._AC_.jpg","main":{"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SY355_.jpg":[355,355],"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SY450_.jpg":[450,450],"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SX425_.jpg":[425,425],"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SX466_.jpg":[466,466],"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SX522_.jpg":[522,522],"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SX569_.jpg":[569,569],"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SX679_.jpg":[679,679]},"variant":"PT05","lowRes":None,"shoppableScene":None},{"hiRes":"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/41vhkesQxVL._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/41vhkesQxVL._AC_.jpg","main":{"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SY355_.jpg":[355,355],"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SY450_.jpg":[450,450],"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SX425_.jpg":[425,425],"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SX466_.jpg":[466,466],"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SX522_.jpg":[522,522],"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SX569_.jpg":[569,569],"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SX679_.jpg":[679,679]},"variant":"PT06","lowRes":None,"shoppableScene":None}]},
-            "number_of_reviews": "6,834",
-            "overall_rating": "3.9",
-            "percentages": [56, 11, 12, 17, 4],
+            "number_of_reviews": str(distribution_data.number_of_reviews_product_3),
+            "overall_rating": str(distribution_data.overall_rating_product_3),
+            "percentages": [distribution_data.star_1_per_product_3, distribution_data.star_2_per_product_3, distribution_data.star_3_per_product_3, distribution_data.star_4_per_product_3, distribution_data.star_5_per_product_3],
             "attributes":[],
             "about": [
                 "NEW YORK TIMES BESTSELLER • OPRAH’S BOOK CLUB PICK • MORE THAN ONE MILLION COPIES SOLD! From the author of Dear Edward comes a “powerfully affecting” (People) family story that asks: Can love make a broken person whole?",
@@ -397,31 +427,35 @@ def get_all_info(current_product, lab_id):
 
     An exquisite homage to Louisa May Alcott’s timeless classic, Little Women, Hello Beautiful is a profoundly moving portrait of what is possible when we choose to love someone not in spite of who they are, but because of it.
                 """
-                ]
+                ],
+            "review_read_data_all": [int(a) for a in distribution_data.product_3_ar],
+            "review_read_data_top": [int(a) for a in distribution_data.product_3_tr]
         }
     elif current_product == "product4":
         product_data = {
             "title": "by James McBride",
-            "price": "29.73",
+            "price": str(distribution_data.price_product_4),
             "company": "The Heaven & Earth Grocery Store (Oprah's Book Club): A Novel",
             "primary_image": "https://m.media-amazon.com/images/I/81DjECnYLJL._SY522_.jpg",
             "thumbnails":[],
             "color_images": { 'initial': [{"hiRes":"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/41jhM7IY4uL._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/41jhM7IY4uL._AC_.jpg","main":{"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SY355_.jpg":[355,316],"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SY450_.jpg":[450,401],"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SX425_.jpg":[477,425],"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SX466_.jpg":[523,466],"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SX522_.jpg":[586,522],"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SX569_.jpg":[639,569],"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SX679_.jpg":[762,679]},"variant":"MAIN","lowRes":None,"shoppableScene":None},{"hiRes":"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/51j-a0BvycL._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/51j-a0BvycL._AC_.jpg","main":{"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SY355_.jpg":[355,355],"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SY450_.jpg":[450,450],"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SX425_.jpg":[425,425],"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SX466_.jpg":[466,466],"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SX522_.jpg":[522,522],"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SX569_.jpg":[569,569],"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SX679_.jpg":[679,679]},"variant":"PT01","lowRes":None,"shoppableScene":None},{"hiRes":"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/41gdcIgZ6NL._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/41gdcIgZ6NL._AC_.jpg","main":{"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SY355_.jpg":[355,355],"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SY450_.jpg":[450,450],"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SX425_.jpg":[425,425],"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SX466_.jpg":[466,466],"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SX522_.jpg":[522,522],"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SX569_.jpg":[569,569],"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SX679_.jpg":[679,679]},"variant":"PT02","lowRes":None,"shoppableScene":None},{"hiRes":"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/41-8BmtR0VL._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/41-8BmtR0VL._AC_.jpg","main":{"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SY355_.jpg":[355,355],"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SY450_.jpg":[450,450],"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SX425_.jpg":[425,425],"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SX466_.jpg":[466,466],"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SX522_.jpg":[522,522],"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SX569_.jpg":[569,569],"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SX679_.jpg":[679,679]},"variant":"PT03","lowRes":None,"shoppableScene":None},{"hiRes":"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/41TqJBRSlYL._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/41TqJBRSlYL._AC_.jpg","main":{"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SY355_.jpg":[355,355],"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SY450_.jpg":[450,450],"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SX425_.jpg":[425,425],"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SX466_.jpg":[466,466],"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SX522_.jpg":[522,522],"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SX569_.jpg":[569,569],"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SX679_.jpg":[679,679]},"variant":"PT04","lowRes":None,"shoppableScene":None},{"hiRes":"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/41zLZVxnZML._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/41zLZVxnZML._AC_.jpg","main":{"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SY355_.jpg":[355,355],"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SY450_.jpg":[450,450],"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SX425_.jpg":[425,425],"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SX466_.jpg":[466,466],"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SX522_.jpg":[522,522],"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SX569_.jpg":[569,569],"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SX679_.jpg":[679,679]},"variant":"PT05","lowRes":None,"shoppableScene":None},{"hiRes":"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/41vhkesQxVL._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/41vhkesQxVL._AC_.jpg","main":{"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SY355_.jpg":[355,355],"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SY450_.jpg":[450,450],"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SX425_.jpg":[425,425],"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SX466_.jpg":[466,466],"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SX522_.jpg":[522,522],"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SX569_.jpg":[569,569],"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SX679_.jpg":[679,679]},"variant":"PT06","lowRes":None,"shoppableScene":None}]},
-            "number_of_reviews": "6,834",
-            "overall_rating": "3.9",
-            "percentages": [33, 9, 17, 17, 24],
+            "number_of_reviews": str(distribution_data.number_of_reviews_product_4),
+            "overall_rating": str(distribution_data.overall_rating_product_4),
+            "percentages": [distribution_data.star_1_per_product_4, distribution_data.star_2_per_product_4, distribution_data.star_3_per_product_4, distribution_data.star_4_per_product_4, distribution_data.star_5_per_product_4],
             "attributes":[],
             "about": [
                 "From James McBride, author of the bestselling Oprah’s Book Club pick Deacon King Kong and the National Book Award–winning The Good Lord Bird, a novel about small-town secrets and the people who keep them",
                 "In 1972, when workers in Pottstown, Pennsylvania, were digging the foundations for a new development, the last thing they expected to find was a skeleton at the bottom of a well. Who the skeleton was and how it got there were two of the long-held secrets kept by the residents of Chicken Hill, the dilapidated neighborhood where immigrant Jews and African Americans lived side by side and shared ambitions and sorrows. Chicken Hill was where Moshe and Chona Ludlow lived when Moshe integrated his theater and where Chona ran the Heaven & Earth Grocery Store. When the state came looking for a deaf boy to institutionalize him, it was Chona and Nate Timblin, the Black janitor at Moshe’s theater and the unofficial leader of the Black community on Chicken Hill, who worked together to keep the boy safe.",
                 "As these characters’ stories overlap and deepen, it becomes clear how much the people who live on the margins of white, Christian America struggle and what they must do to survive. When the truth is finally revealed about what happened on Chicken Hill and the part the town’s white establishment played in it, McBride shows us that even in dark times, it is love and community—heaven and earth—that sustain us.",
                 "Bringing his masterly storytelling skills and his deep faith in humanity to The Heaven & Earth Grocery Store, James McBride has written a novel as compassionate as Deacon King Kong and as inventive as The Good Lord Bird."
-                        ]
+                        ],
+            "review_read_data_all": [int(a) for a in distribution_data.product_4_ar],
+            "review_read_data_top": [int(a) for a in distribution_data.product_4_tr]
         }
     else:
         product_data = {
             "title": "Bluetooth Headphones True Wireless Earbuds 60H Playback LED Power Display Earphones with Wireless Charging Case IPX5 Waterproof in-Ear Earbuds with Mic for TV Smart Phone Laptop Computer Sports",
-            "price": "29.73",
+            "price": str(distribution_data.price_product_4),
             "company": "Product1",
             "primary_image": "https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SX679_.jpg",
             "thumbnails":[],
@@ -437,6 +471,7 @@ def get_all_info(current_product, lab_id):
                 "Ergonomic Design and Lightweight: TAGRY X08 headphones' structure is the study of thousands of people's ear canal before design. Comes with three different sizes of ear tips, our X08 are fit for most people's ear cannals. These wireless bluetooth headphones are small and light, single earbud is only 0.14oz, earbud size is 1.57*0.78*0.59in, charging case size is 2.56*2.16*1in, It’s more convenient to carry.",
                 "Superior Clear Call and Immersive Stereo Sound: These music earphones with 13mm speakers and triple-layer composite diaphragms provide powerful bass, stunning treble and clear mids. These earbuds are designed for sound and music lovers. It can support the mono mode and twin stereo mode, you can share the earbuds with your friends and families. Each earbud has a build-in microphone for phone calls. CVC noise reduction can make others hear your voice very clearly while phone calls."
             ]
+
         }
     return product_data
 
@@ -485,11 +520,11 @@ def serve_reviews1(current_product, rate, page):
     print(request.args.get('id'))
     if lab_id is None:
         return redirect(url_for('index'))
-    product_data = get_all_info(current_product)
+    product_data = get_all_info(current_product, lab_id)
     review_data = get_all_reviews(current_product)
     filtered_reviews = [review for review in review_data if review.get('Number') == rate][(page-1)*number_of_reviews_per_page: (page)*number_of_reviews_per_page]
     randomized_filtered_reviews = [filtered_reviews[i] for i in random_orders[len(filtered_reviews)]]
-    return render_template('r32.html', current_product=current_product, lab_id=lab_id, review_clicked_records=all_review_read_data[current_product], reviews=randomized_filtered_reviews, rate=rate, page=page, product=product_data, number_of_pages=number_of_pages, list_of_review_ids = ','.join([str(r["id"]) for r in randomized_filtered_reviews]))
+    return render_template('r32.html', current_product=current_product, lab_id=lab_id, review_clicked_records=product_data["review_read_data_all"], reviews=randomized_filtered_reviews, rate=rate, page=page, product=product_data, number_of_pages=number_of_pages, list_of_review_ids = ','.join([str(r["id"]) for r in randomized_filtered_reviews]))
 
 
 @app.route('/t/<string:current_product>/0/<int:page>')
@@ -497,11 +532,11 @@ def serve_reviews_top(current_product, page):
     lab_id = request.args.get('id')
     if lab_id is None:
         return redirect(url_for('index'))
-    product_data = get_all_info(current_product)
+    product_data = get_all_info(current_product, lab_id)
     top_review_data = get_top_reviews(current_product)
     filtered_reviews = [review for review in top_review_data][(page-1)*number_of_reviews_per_page: (page)*number_of_reviews_per_page]
     randomized_filtered_reviews = [filtered_reviews[i] for i in random_orders[len(filtered_reviews)]]
-    return render_template('r32.html', current_product=current_product, lab_id=lab_id,  review_clicked_records=top_review_read_data[current_product], reviews=randomized_filtered_reviews, rate=0, page=page, product=product_data, number_of_pages=number_of_pages, list_of_review_ids = ','.join([str(r["id"]) for r in randomized_filtered_reviews]))
+    return render_template('r32.html', current_product=current_product, lab_id=lab_id,  review_clicked_records=product_data["review_read_data_top"], reviews=randomized_filtered_reviews, rate=0, page=page, product=product_data, number_of_pages=number_of_pages, list_of_review_ids = ','.join([str(r["id"]) for r in randomized_filtered_reviews]))
 
 
 @app.route('/r32_files/<path:filename>')
@@ -513,21 +548,46 @@ def serve_review_files1(filename,current_product,x):
 
 
 
+def update_distribution(lab_id, type, product, number):
+    distribution_entry = Distribution.query.filter_by(lab_id=lab_id).first()
+    if type == "all":
+        if product == "product1":
+            distribution_entry.product_1_ar = distribution_entry.product_1_ar[:number] + '1' + distribution_entry.product_1_ar[number+1:]
+        if product == "product2":
+            distribution_entry.product_2_ar = distribution_entry.product_2_ar[:number] + '1' + distribution_entry.product_2_ar[number+1:]
+        if product == "product3":
+            distribution_entry.product_3_ar = distribution_entry.product_3_ar[:number] + '1' + distribution_entry.product_3_ar[number+1:]
+        if product == "product4":
+            distribution_entry.product_4_ar = distribution_entry.product_4_ar[:number] + '1' + distribution_entry.product_4_ar[number+1:]
+
+    if type == "top":
+        if product == "product1":
+            distribution_entry.product_1_tr = distribution_entry.product_1_tr[:number] + '1' + distribution_entry.product_1_tr[number+1:]
+        if product == "product2":
+            distribution_entry.product_2_tr = distribution_entry.product_2_tr[:number] + '1' + distribution_entry.product_2_tr[number+1:]
+        if product == "product3":
+            distribution_entry.product_3_tr = distribution_entry.product_3_tr[:number] + '1' + distribution_entry.product_3_tr[number+1:]
+        if product == "product4":
+            distribution_entry.product_4_tr = distribution_entry.product_4_tr[:number] + '1' + distribution_entry.product_4_tr[number+1:]
+
+
+
 @app.route('/<string:current_product>/add_action', methods=['POST'])
 def add_action(current_product):
     # print("!"*1000)
-    product_data = get_all_info(current_product)
+    lab_id = request.form.get('lab_id')
+    product_data = get_all_info(current_product, lab_id)
     new_product_data = product_data.copy()
     percentages_str = ','.join(str(num) for num in new_product_data["percentages"])
     new_product_data["percentages"] = percentages_str
     new_product_data["product"] = current_product
-    keys_to_remove = ['company', 'primary_image', 'thumbnails', 'color_images', 'about', 'title', 'attributes']
+    keys_to_remove = ['company', 'primary_image', 'thumbnails', 'color_images', 'about', 'title', 'attributes', 'review_read_data_all', 'review_read_data_top']
 
     for key in keys_to_remove:
         new_product_data.pop(key, None)
 
     action_name = request.form.get('action_name')
-    lab_id = request.form.get('lab_id')
+    
     print(action_name)
     print(lab_id)
 
@@ -536,11 +596,13 @@ def add_action(current_product):
     # print(review_id)
     if action_name == "Clicked on a Review":
         current_rating = int(request.form.get('current_rating')) or None
-        review_id = int(request.form.get('review_id')) or None
+        # review_id = int(request.form.get('review_id')) or None
         if current_rating != 0:
-            all_review_read_data[current_product][review_id] = 1
+            update_distribution(lab_id, "all", current_product, int(request.form.get('review_id')))
         else:
-            top_review_read_data[current_product][review_id] = 1
+            update_distribution(lab_id, "top", current_product, int(request.form.get('review_id')))
+
+        
 
     
     

@@ -20,7 +20,7 @@ app = Flask(__name__)
 
 CORS(app, resources={r"*": {"origins": "*"}})
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("SQLALCHEMY_DATABASE_URI")
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('SQLALCHEMY_DATABASE_URI')
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)

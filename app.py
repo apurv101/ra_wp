@@ -149,7 +149,7 @@ class Distribution(db.Model):
 
 high_dist = []
 low_dist = []
-with open(f'distn_high.csv', 'r') as file:
+with open(f'{THIS_FOLDER}/distn_high.csv', 'r') as file:
     reader = csv.reader(file)
     for row in reader:
         high_dist.append(row)

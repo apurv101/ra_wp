@@ -561,6 +561,7 @@ def update_distribution(lab_id, type, product, number):
             distribution_entry.product_4_ar = distribution_entry.product_4_ar[:number] + '1' + distribution_entry.product_4_ar[number+1:]
 
     if type == "top":
+        print("%"*100)
         if product == "product1":
             distribution_entry.product_1_tr = distribution_entry.product_1_tr[:number] + '1' + distribution_entry.product_1_tr[number+1:]
         if product == "product2":
@@ -596,10 +597,13 @@ def add_action(current_product):
     # print(review_id)
     if action_name == "Clicked on a Review":
         current_rating = int(request.form.get('current_rating')) or None
+        print(current_rating)
+        print("^"*100)
         # review_id = int(request.form.get('review_id')) or None
-        if current_rating != 0:
+        if current_rating != 0 and current_rating is not None:
             update_distribution(lab_id, "all", current_product, int(request.form.get('review_id')))
         else:
+            print("%"*100)
             update_distribution(lab_id, "top", current_product, int(request.form.get('review_id')))
 
         

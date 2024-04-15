@@ -379,8 +379,18 @@ def get_distributions(lab_id):
 @app.route('/actions')
 def show_actions():
     # Assuming you have a function to query Action objects from the database
-    actions = Action.query.all()
-    return render_template('actions.html', actions=actions)
+
+    lab_id = request.args.get('id')
+    if lab_id is None:
+        actions = Action.query.all()
+        return render_template('actions.html', actions=actions)
+    else:
+        actions = Action.query.filter_by(lab_id=lab_id).all()
+        return render_template('actions.html', actions=actions)
+
+
+
+    
     
 
 @app.route('/add_response', methods=['POST'])

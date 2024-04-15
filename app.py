@@ -10,7 +10,7 @@ import platform
 from flask_cors import CORS
 from dotenv import load_dotenv
 import csv
-
+import pandas as pd
 
 
 from pathlib import Path
@@ -52,16 +52,16 @@ number_of_pages = 30//number_of_reviews_per_page
 
 
 
-all_review_read_data = {}
-top_review_read_data = {}
-products = ['product1', 'product2', 'product3', 'product4']
-for product in products:
-    with open(f'{THIS_FOLDER}/{product}/all_review_data.json', 'r') as file:
-        review_data = json.load(file)
-        all_review_read_data[product] = [0]*len(review_data)
-    with open(f'{THIS_FOLDER}/{product}/top_review_data.json', 'r') as file:
-        review_data = json.load(file)
-        top_review_read_data[product] = [0]*len(review_data)
+# all_review_read_data = {}
+# top_review_read_data = {}
+# products = ['product1', 'product2', 'product3', 'product4']
+# for product in products:
+#     with open(f'{THIS_FOLDER}/{product}/all_review_data.json', 'r') as file:
+#         review_data = json.load(file)
+#         all_review_read_data[product] = [0]*len(review_data)
+#     with open(f'{THIS_FOLDER}/{product}/top_review_data.json', 'r') as file:
+#         review_data = json.load(file)
+#         top_review_read_data[product] = [0]*len(review_data)
 
 
 
@@ -167,33 +167,88 @@ def get_distributions(lab_id):
     if distribution_entry:
         return distribution_entry
     else:
-        rating_scale_product_1_2 = random.choice([0, 1])
-        rating_scale_product_3_4 = random.choice([0, 1])
-        volume_product_1_2 = random.choice([0, 1])
-        volume_product_3_4 = random.choice([0, 1])
 
-        if rating_scale_product_1_2:
-            dist_1 = random.choice(high_dist)
-            _, star_1_per_product_1, star_2_per_product_1, star_3_per_product_1, star_4_per_product_1, star_5_per_product_1, overall_rating_product_1, _ = dist_1
-            dist_2 = random.choice(high_dist)
-            _, star_1_per_product_2, star_2_per_product_2, star_3_per_product_2, star_4_per_product_2, star_5_per_product_2, overall_rating_product_2, _ = dist_2
+        last_entry = Distribution.query.order_by(Distribution.id.desc()).first()
+        if last_entry:
+            dist_id = last_entry.id + 1
         else:
-            dist_1 = random.choice(low_dist)
-            _, star_1_per_product_1, star_2_per_product_1, star_3_per_product_1, star_4_per_product_1, star_5_per_product_1, overall_rating_product_1, _ = dist_1
-            dist_2 = random.choice(low_dist)
-            _, star_1_per_product_2, star_2_per_product_2, star_3_per_product_2, star_4_per_product_2, star_5_per_product_2, overall_rating_product_2, _ = dist_2
+            dist_id = 0
 
 
-        if rating_scale_product_3_4:
-            dist_1 = random.choice(high_dist)
-            _, star_1_per_product_3, star_2_per_product_3, star_3_per_product_3, star_4_per_product_3, star_5_per_product_3, overall_rating_product_3, _ = dist_1
-            dist_2 = random.choice(high_dist)
-            _, star_1_per_product_4, star_2_per_product_4, star_3_per_product_4, star_4_per_product_4, star_5_per_product_4, overall_rating_product_4, _ = dist_2
-        else:
-            dist_1 = random.choice(low_dist)
-            _, star_1_per_product_3, star_2_per_product_3, star_3_per_product_3, star_4_per_product_3, star_5_per_product_3, overall_rating_product_3, _ = dist_1
-            dist_2 = random.choice(low_dist)
-            _, star_1_per_product_4, star_2_per_product_4, star_3_per_product_4, star_4_per_product_4, star_5_per_product_4, overall_rating_product_4, _ = dist_2
+        
+        df = pd.read_csv(f'{THIS_FOLDER}/Attributes.csv')
+        dist_id = dist_id%len(df)
+
+        row = df.iloc[dist_id]
+
+
+        # Assuming 'row' is your pandas DataFrame row
+        price_product_1 = row['e1_pr']
+        number_of_reviews_product_1 = row['e1_vol']
+        star_1_per_product_1 = row['e1_s1']
+        star_2_per_product_1 = row['e1_s2']
+        star_3_per_product_1 = row['e1_s3']
+        star_4_per_product_1 = row['e1_s4']
+        star_5_per_product_1 = row['e1_s5']
+        overall_rating_product_1 = row['e1_mean']
+
+        price_product_2 = row['e2_pr']
+        number_of_reviews_product_2 = row['e2_vol']
+        star_1_per_product_2 = row['e2_s1']
+        star_2_per_product_2 = row['e2_s2']
+        star_3_per_product_2 = row['e2_s3']
+        star_4_per_product_2 = row['e2_s4']
+        star_5_per_product_2 = row['e2_s5']
+        overall_rating_product_2 = row['e2_mean']
+
+        price_product_3 = row['b1_pr']
+        number_of_reviews_product_3 = row['b1_vol']
+        star_1_per_product_3 = row['b1_s1']
+        star_2_per_product_3 = row['b1_s2']
+        star_3_per_product_3 = row['b1_s3']
+        star_4_per_product_3 = row['b1_s4']
+        star_5_per_product_3 = row['b1_s5']
+        overall_rating_product_3 = row['b1_mean']
+
+        price_product_4 = row['b2_pr']
+        number_of_reviews_product_4 = row['b2_vol']
+        star_1_per_product_4 = row['b2_s1']
+        star_2_per_product_4 = row['b2_s2']
+        star_3_per_product_4 = row['b2_s3']
+        star_4_per_product_4 = row['b2_s4']
+        star_5_per_product_4 = row['b2_s5']
+        overall_rating_product_4 = row['b2_mean']
+
+
+
+            
+        # rating_scale_product_1_2 = random.choice([0, 1])
+        # rating_scale_product_3_4 = random.choice([0, 1])
+        # volume_product_1_2 = random.choice([0, 1])
+        # volume_product_3_4 = random.choice([0, 1])
+
+        # if rating_scale_product_1_2:
+        #     dist_1 = random.choice(high_dist)
+        #     _, star_1_per_product_1, star_2_per_product_1, star_3_per_product_1, star_4_per_product_1, star_5_per_product_1, overall_rating_product_1, _ = dist_1
+        #     dist_2 = random.choice(high_dist)
+        #     _, star_1_per_product_2, star_2_per_product_2, star_3_per_product_2, star_4_per_product_2, star_5_per_product_2, overall_rating_product_2, _ = dist_2
+        # else:
+        #     dist_1 = random.choice(low_dist)
+        #     _, star_1_per_product_1, star_2_per_product_1, star_3_per_product_1, star_4_per_product_1, star_5_per_product_1, overall_rating_product_1, _ = dist_1
+        #     dist_2 = random.choice(low_dist)
+        #     _, star_1_per_product_2, star_2_per_product_2, star_3_per_product_2, star_4_per_product_2, star_5_per_product_2, overall_rating_product_2, _ = dist_2
+
+
+        # if rating_scale_product_3_4:
+        #     dist_1 = random.choice(high_dist)
+        #     _, star_1_per_product_3, star_2_per_product_3, star_3_per_product_3, star_4_per_product_3, star_5_per_product_3, overall_rating_product_3, _ = dist_1
+        #     dist_2 = random.choice(high_dist)
+        #     _, star_1_per_product_4, star_2_per_product_4, star_3_per_product_4, star_4_per_product_4, star_5_per_product_4, overall_rating_product_4, _ = dist_2
+        # else:
+        #     dist_1 = random.choice(low_dist)
+        #     _, star_1_per_product_3, star_2_per_product_3, star_3_per_product_3, star_4_per_product_3, star_5_per_product_3, overall_rating_product_3, _ = dist_1
+        #     dist_2 = random.choice(low_dist)
+        #     _, star_1_per_product_4, star_2_per_product_4, star_3_per_product_4, star_4_per_product_4, star_5_per_product_4, overall_rating_product_4, _ = dist_2
 
         
         star_1_per_product_1 = float(star_1_per_product_1) * 100
@@ -219,25 +274,25 @@ def get_distributions(lab_id):
 
 
 
-        if volume_product_1_2:
-            number_of_reviews_product_1 = random.randint(60000,66000)
-            number_of_reviews_product_2 = random.randint(60000,66000)
-        else:
-            number_of_reviews_product_1 = random.randint(3000,3300)
-            number_of_reviews_product_2 = random.randint(3000,3300)
+        # if volume_product_1_2:
+        #     number_of_reviews_product_1 = random.randint(60000,66000)
+        #     number_of_reviews_product_2 = random.randint(60000,66000)
+        # else:
+        #     number_of_reviews_product_1 = random.randint(3000,3300)
+        #     number_of_reviews_product_2 = random.randint(3000,3300)
 
-        if volume_product_3_4:
-            number_of_reviews_product_3 = random.randint(60000,66000)
-            number_of_reviews_product_4 = random.randint(60000,66000)
-        else:
-            number_of_reviews_product_3 = random.randint(3000,3300)
-            number_of_reviews_product_4 = random.randint(3000,3300)
+        # if volume_product_3_4:
+        #     number_of_reviews_product_3 = random.randint(60000,66000)
+        #     number_of_reviews_product_4 = random.randint(60000,66000)
+        # else:
+        #     number_of_reviews_product_3 = random.randint(3000,3300)
+        #     number_of_reviews_product_4 = random.randint(3000,3300)
 
-        price_product_1 = random.choice([25.99, 26.99, 27.99, 28.99])
-        price_product_2 = random.choice([25.99, 26.99, 27.99, 28.99])
+        # price_product_1 = random.choice([25.99, 26.99, 27.99])
+        # price_product_2 = random.choice([25.99, 26.99, 27.99])
 
-        price_product_3 = random.choice([13.99, 14.99, 15.99, 16.99])
-        price_product_4 = random.choice([13.99, 14.99, 15.99, 16.99])
+        # price_product_3 = random.choice([15.99, 16.99, 17.99])
+        # price_product_4 = random.choice([15.99, 16.99, 17.99])
 
 
         products = ['product1', 'product2', 'product3', 'product4']
@@ -274,10 +329,10 @@ def get_distributions(lab_id):
             product_2_tr=product_2_tr,
             product_3_tr=product_3_tr,
             product_4_tr=product_4_tr,
-            rating_scale_product_1_2=rating_scale_product_1_2,
-            rating_scale_product_3_4=rating_scale_product_3_4,
-            volume_product_1_2=volume_product_1_2,
-            volume_product_3_4=volume_product_3_4,
+            # rating_scale_product_1_2=rating_scale_product_1_2,
+            # rating_scale_product_3_4=rating_scale_product_3_4,
+            # volume_product_1_2=volume_product_1_2,
+            # volume_product_3_4=volume_product_3_4,
             number_of_reviews_product_1=number_of_reviews_product_1,
             number_of_reviews_product_2=number_of_reviews_product_2,
             number_of_reviews_product_3=number_of_reviews_product_3,
@@ -362,7 +417,7 @@ def get_all_info(current_product, lab_id):
         product_data = {
             "title": "Bluetooth Headphones True Wireless Earbuds 60H Playback LED Power Display Earphones with Wireless Charging Case IPX5 Waterproof in-Ear Earbuds with Mic for TV Smart Phone Laptop Computer Sports",
             "price": str(distribution_data.price_product_1),
-            "company": "Tagry",
+            "company": "TAGRY",
             "primary_image": "https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SX679_.jpg",
             "thumbnails":[],
             "color_images": { 'initial': [{"hiRes":"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/41jhM7IY4uL._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/41jhM7IY4uL._AC_.jpg","main":{"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SY355_.jpg":[355,316],"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SY450_.jpg":[450,401],"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SX425_.jpg":[477,425],"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SX466_.jpg":[523,466],"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SX522_.jpg":[586,522],"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SX569_.jpg":[639,569],"https://m.media-amazon.com/images/I/61uEvVoizoL._AC_SX679_.jpg":[762,679]},"variant":"MAIN","lowRes":None,"shoppableScene":None},{"hiRes":"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/51j-a0BvycL._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/51j-a0BvycL._AC_.jpg","main":{"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SY355_.jpg":[355,355],"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SY450_.jpg":[450,450],"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SX425_.jpg":[425,425],"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SX466_.jpg":[466,466],"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SX522_.jpg":[522,522],"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SX569_.jpg":[569,569],"https://m.media-amazon.com/images/I/71fDjkaD51L._AC_SX679_.jpg":[679,679]},"variant":"PT01","lowRes":None,"shoppableScene":None},{"hiRes":"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/41gdcIgZ6NL._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/41gdcIgZ6NL._AC_.jpg","main":{"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SY355_.jpg":[355,355],"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SY450_.jpg":[450,450],"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SX425_.jpg":[425,425],"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SX466_.jpg":[466,466],"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SX522_.jpg":[522,522],"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SX569_.jpg":[569,569],"https://m.media-amazon.com/images/I/71QHgA9WOSL._AC_SX679_.jpg":[679,679]},"variant":"PT02","lowRes":None,"shoppableScene":None},{"hiRes":"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/41-8BmtR0VL._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/41-8BmtR0VL._AC_.jpg","main":{"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SY355_.jpg":[355,355],"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SY450_.jpg":[450,450],"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SX425_.jpg":[425,425],"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SX466_.jpg":[466,466],"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SX522_.jpg":[522,522],"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SX569_.jpg":[569,569],"https://m.media-amazon.com/images/I/61E2gTdCPDL._AC_SX679_.jpg":[679,679]},"variant":"PT03","lowRes":None,"shoppableScene":None},{"hiRes":"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/41TqJBRSlYL._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/41TqJBRSlYL._AC_.jpg","main":{"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SY355_.jpg":[355,355],"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SY450_.jpg":[450,450],"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SX425_.jpg":[425,425],"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SX466_.jpg":[466,466],"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SX522_.jpg":[522,522],"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SX569_.jpg":[569,569],"https://m.media-amazon.com/images/I/711RMFk+V3L._AC_SX679_.jpg":[679,679]},"variant":"PT04","lowRes":None,"shoppableScene":None},{"hiRes":"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/41zLZVxnZML._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/41zLZVxnZML._AC_.jpg","main":{"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SY355_.jpg":[355,355],"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SY450_.jpg":[450,450],"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SX425_.jpg":[425,425],"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SX466_.jpg":[466,466],"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SX522_.jpg":[522,522],"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SX569_.jpg":[569,569],"https://m.media-amazon.com/images/I/61vDm+Lz5JL._AC_SX679_.jpg":[679,679]},"variant":"PT05","lowRes":None,"shoppableScene":None},{"hiRes":"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SL1500_.jpg","thumb":"https://m.media-amazon.com/images/I/41vhkesQxVL._AC_US40_.jpg","large":"https://m.media-amazon.com/images/I/41vhkesQxVL._AC_.jpg","main":{"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SY355_.jpg":[355,355],"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SY450_.jpg":[450,450],"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SX425_.jpg":[425,425],"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SX466_.jpg":[466,466],"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SX522_.jpg":[522,522],"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SX569_.jpg":[569,569],"https://m.media-amazon.com/images/I/71IVAm98LtL._AC_SX679_.jpg":[679,679]},"variant":"PT06","lowRes":None,"shoppableScene":None}]},
@@ -429,7 +484,8 @@ def get_all_info(current_product, lab_id):
                 """
                 ],
             "review_read_data_all": [int(a) for a in distribution_data.product_3_ar],
-            "review_read_data_top": [int(a) for a in distribution_data.product_3_tr]
+            "review_read_data_top": [int(a) for a in distribution_data.product_3_tr],
+            "title2": "Paperback - Large Print"
         }
     elif current_product == "product4":
         product_data = {
@@ -450,7 +506,8 @@ def get_all_info(current_product, lab_id):
                 "Bringing his masterly storytelling skills and his deep faith in humanity to The Heaven & Earth Grocery Store, James McBride has written a novel as compassionate as Deacon King Kong and as inventive as The Good Lord Bird."
                         ],
             "review_read_data_all": [int(a) for a in distribution_data.product_4_ar],
-            "review_read_data_top": [int(a) for a in distribution_data.product_4_tr]
+            "review_read_data_top": [int(a) for a in distribution_data.product_4_tr],
+            "title2": "Paperback - Large Print"
         }
     else:
         product_data = {
@@ -561,7 +618,7 @@ def update_distribution(lab_id, type, product, number):
             distribution_entry.product_4_ar = distribution_entry.product_4_ar[:number] + '1' + distribution_entry.product_4_ar[number+1:]
 
     if type == "top":
-        print("%"*100)
+        # print("%"*100)
         if product == "product1":
             distribution_entry.product_1_tr = distribution_entry.product_1_tr[:number] + '1' + distribution_entry.product_1_tr[number+1:]
         if product == "product2":
@@ -598,12 +655,12 @@ def add_action(current_product):
     if action_name == "Clicked on a Review":
         current_rating = int(request.form.get('current_rating')) or None
         print(current_rating)
-        print("^"*100)
+        # print("^"*100)
         # review_id = int(request.form.get('review_id')) or None
         if current_rating != 0 and current_rating is not None:
             update_distribution(lab_id, "all", current_product, int(request.form.get('review_id')))
         else:
-            print("%"*100)
+            # print("%"*100)
             update_distribution(lab_id, "top", current_product, int(request.form.get('review_id')))
 
         

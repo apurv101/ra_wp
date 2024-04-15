@@ -649,7 +649,7 @@ def add_action(current_product):
     percentages_str = ','.join(str(num) for num in new_product_data["percentages"])
     new_product_data["percentages"] = percentages_str
     new_product_data["product"] = current_product
-    keys_to_remove = ['company', 'primary_image', 'thumbnails', 'color_images', 'about', 'title', 'attributes', 'review_read_data_all', 'review_read_data_top']
+    keys_to_remove = ['company', 'primary_image', 'thumbnails', 'color_images', 'about', 'title', 'attributes', 'review_read_data_all', 'review_read_data_top', 'title2']
 
     for key in keys_to_remove:
         new_product_data.pop(key, None)

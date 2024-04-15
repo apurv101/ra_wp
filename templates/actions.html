@@ -27,8 +27,8 @@
         <thead>
             <tr>
                 <th>Lab ID</th>
+                <th>Product</th>
                 <th>Action Name</th>
-                <!-- <th>Title</th> -->
                 <th>Price</th>
                 <th>Percentages</th>
                 <th>Overall Rating</th>
@@ -43,6 +43,7 @@
             {% for action in actions %}
             <tr>
                 <td>{{ action.lab_id }}</td>
+                <td>{{ action.product }}</td>
                 <td>{{ action.action_name }}</td>
                 <!-- <td>{{ action.title }}</td> -->
                 <td>{{ action.price }}</td>

@@ -11,6 +11,7 @@ from flask_cors import CORS
 from dotenv import load_dotenv
 import csv
 import pandas as pd
+from sqlalchemy import asc
 
 
 from pathlib import Path
@@ -386,7 +387,7 @@ def show_actions():
         actions = Action.query.all()
         
     else:
-        actions = Action.query.filter_by(lab_id=lab_id).all()
+        actions = Action.query.filter_by(lab_id=lab_id).order_by(asc(Action.created_at)).all()
 
     # Convert UTC time to Denver time for each action
     denver_timezone = pytz.timezone('America/Phoenix')

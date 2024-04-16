@@ -79,8 +79,11 @@ class Response(db.Model):
     def __repr__(self):
         return f'<Response {self.id}>'
     
-def get_current_time():
-    return datetime.now(pytz.timezone('America/Denver'))
+def get_current_time(timezone='America/Denver'):
+    utc_now = datetime.utcnow().replace(tzinfo=pytz.utc)
+    local_timezone = pytz.timezone(timezone)
+    local_time = utc_now.astimezone(local_timezone)
+    return local_time
 
 class Action(db.Model):
     id = db.Column(db.Integer, primary_key=True)

@@ -79,11 +79,8 @@ class Response(db.Model):
     def __repr__(self):
         return f'<Response {self.id}>'
     
-def get_current_time(timezone='America/Denver'):
-    utc_now = datetime.utcnow().replace(tzinfo=pytz.utc)
-    local_timezone = pytz.timezone(timezone)
-    local_time = utc_now.astimezone(local_timezone)
-    return local_time
+def get_current_time():
+    return datetime.now()
 
 class Action(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -380,7 +377,6 @@ def get_distributions(lab_id):
 
 
 
-    
 @app.route('/actions')
 def show_actions():
     # Assuming you have a function to query Action objects from the database
@@ -388,10 +384,16 @@ def show_actions():
     lab_id = request.args.get('id')
     if lab_id is None:
         actions = Action.query.all()
-        return render_template('actions.html', actions=actions)
+        
     else:
         actions = Action.query.filter_by(lab_id=lab_id).all()
-        return render_template('actions.html', actions=actions)
+
+    # Convert UTC time to Denver time for each action
+    denver_timezone = pytz.timezone('America/Phoenix')
+    for action in actions:
+        action.created_at = action.created_at.astimezone(denver_timezone)
+
+    return render_template('actions.html', actions=actions)
 
 
 

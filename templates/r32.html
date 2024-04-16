@@ -3244,6 +3244,7 @@ if (window.ue && window.ue.uels) {
       const formData = new FormData();
             formData.append('action_name', "Review page of {{current_product}} loaded. Rating is {{rate}}. Page is {{page}}");
             formData.append('lab_id', "{{lab_id}}");
+            formData.append('other_reviews', '{{ list_of_review_ids }}');
             console.log("{{lab_id}}");
             // Make a POST request to your Flask API endpoint
             fetch('/{{current_product}}/add_action', {

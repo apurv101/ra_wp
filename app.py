@@ -79,6 +79,8 @@ class Response(db.Model):
     def __repr__(self):
         return f'<Response {self.id}>'
     
+def get_current_time():
+    return datetime.now(pytz.timezone('America/Denver'))
 
 class Action(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -93,7 +95,7 @@ class Action(db.Model):
     number_of_reviews=db.Column(db.String(80))
     review_id = db.Column(db.Integer)
     other_reviews = db.Column(db.String(80))
-    created_at = db.Column(db.DateTime, default=datetime.now(pytz.timezone('America/Denver')))
+    created_at = db.Column(db.DateTime, default=get_current_time)
 
 
 class Distribution(db.Model):

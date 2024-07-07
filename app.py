@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_template, send_file, send_from_directory, redirect, url_for
+from flask import Flask, request, jsonify, render_template, send_file, send_from_directory, redirect, url_for, abort
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 from flask_migrate import Migrate
@@ -12,6 +12,8 @@ from dotenv import load_dotenv
 import csv
 import pandas as pd
 from sqlalchemy import asc
+from sqlalchemy.orm import relationship
+
 
 
 from pathlib import Path
@@ -148,6 +150,159 @@ class Distribution(db.Model):
     price_product_4 = db.Column(db.Numeric(10, 2))
 
 
+
+
+
+
+
+
+
+#####################################################################################################################
+
+
+##################################################################################################################################
+
+
+
+
+
+
+
+
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(80), nullable=False, unique=True)
+
+
+
+class Round(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    round_number = db.Column(db.Integer, nullable=False)
+    promotion_type = db.Column(db.String(50))
+    fixed_spend = db.Column(db.Integer)
+    fixed_save = db.Column(db.Integer)
+    percentage_off = db.Column(db.Integer)
+    percentage_upto = db.Column(db.Integer)
+    user = db.relationship('User', backref=db.backref('rounds', lazy=True))
+    item_order = db.Column(db.String(255), nullable=False)
+    item_prices = db.Column(db.String(1200), nullable=False)
+
+
+class CartItem(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    round_id = db.Column(db.Integer, db.ForeignKey('round.id'), nullable=False)
+    round_number = db.Column(db.Integer, nullable=False)
+    item_id = db.Column(db.Integer, nullable=False)
+    quantity = db.Column(db.Integer, default=0, nullable=False)
+
+
+## load all the items as dictionary from dominoes_items.json
+
+with open(f'{THIS_FOLDER}/dominoes_items.json', 'r') as file:
+    food_items = json.load(file)
+
+
+
+## Pass the username, create the user and return the user_id
+## Whenever user is created, For that user, generate n rounds with random order of items that will be stored as a string. If Number of items is 13, then order could be "2-3-4-5-6-7-8-9-10-11-12-13-1" which means item 2 is shown first, then 3, then 4 and so on.
+## Also generate random prices for each item. Price for each item can be between lower range and higher range of each item. Store these prices as a string in fixed order.  For example, if prices are 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, then store them as "10-20-30-40-50-60-70-80-90-100-110-120-130"
+## For each round, generate a random promotion type and value.
+## Promotion type can be "percentage" or "fixed" or None and promotion value can be any value between 0 and 1 for percentage and any value between 0 and 100 for fixed.
+## For each round, 
+
+
+def create_user(username, number_of_rounds, number_of_items):
+    # Create a new user
+    new_user = User(username=username)
+    db.session.add(new_user)
+    db.session.commit()
+
+    print("User created")
+
+
+    # Fixed amount discount variations
+    fixed_spend_options = [30, 35, 40, 45, 50]
+    fixed_save_options = [4, 5, 6, 7, 8]
+
+    # Percentage off discount variations
+    percentage_off_options = [5, 10, 15, 20, 25]
+    percentage_upto_options = [2, 4, 6, 8, 10]
+
+    # Generate rounds for the user
+    for i in range(number_of_rounds):
+        round_number = i + 1  # Round number starts at 1
+        promotion_type = random.choice(['percentage', 'fixed', None])
+        ## If promotion type is fixed, then fixed_spend and fixed_save will be used
+        ## If promotion type is percentage, then percentage_off and percentage_upto will be used
+        if promotion_type == 'fixed':
+            fixed_spend = random.choice(fixed_spend_options)
+            fixed_save = random.choice(fixed_save_options)
+            percentage_off = None
+            percentage_upto = None
+        elif promotion_type == 'percentage':
+            percentage_off = random.choice(percentage_off_options)
+            percentage_upto = random.choice(percentage_upto_options)
+            fixed_spend = None
+            fixed_save = None
+        else:
+            fixed_spend = None
+            fixed_save = None
+            percentage_off = None
+            percentage_upto = None
+
+        
+        
+        # Generate random item order
+        item_order = list(range(1, number_of_items+1))
+        random.shuffle(item_order)
+        item_order = '-'.join(map(str, item_order))
+        
+        # Generate random prices for each item
+        # item_prices = [random.uniform(10, 100) for _ in range(number_of_items)]
+
+
+        item_prices = []
+        for item_id in range(1, number_of_items + 1):
+            item = food_items[item_id-1]
+            price = random.choice(item['price_variations'])  # Select a price randomly from the price_variations list
+            item_prices.append(price)
+
+
+        item_prices = '-'.join(f"{price:.2f}" for price in item_prices)
+
+
+        
+        # Create a new round
+        new_round = Round(user_id=new_user.id, round_number=round_number, promotion_type=promotion_type, item_order=item_order, item_prices=item_prices, fixed_spend=fixed_spend, fixed_save=fixed_save, percentage_off=percentage_off, percentage_upto=percentage_upto)
+
+        db.session.add(new_round)
+        db.session.flush()  # Flush to obtain the new_round.id for use in CartItem
+        print("Round created")
+        # Create CartItem entries for each item with quantity 0
+        for item_id in range(1, number_of_items+1):
+            cart_item = CartItem(round_id=new_round.id, round_number=round_number, quantity=0, item_id=item_id)
+            db.session.add(cart_item)
+            print("CartItem created")
+
+    db.session.commit()
+    return new_user
+
+
+
+
+
+
+
+
+########################################################################################################
+
+########################################################################################################
+
+
+#####################################################################################################################
+
+    
 
 
 high_dist = []
@@ -605,6 +760,7 @@ def serve_downloaded_page(current_product):
         return render_template('main-books.html', product=product_data, lab_id=lab_id, current_product=current_product, main_images=[list(item['main'].keys())[-2] for item in product_data['color_images']['initial']])
     
 
+
 @app.route('/main_files/<path:filename>')
 @app.route('/main/main_files/<path:filename>')
 def serve_main_files(filename):
@@ -723,6 +879,239 @@ def add_action(current_product):
     db.session.add(action)
     db.session.commit()
     return jsonify({'message': 'Action added successfully'}), 201
+
+
+
+
+########################################################################################################
+
+
+########################################################################################################
+
+
+with open('dominoes_items.json') as f:
+    food_items = json.load(f)
+
+
+
+@app.route('/<restaurant>/username/<string:username>/round_number/<round_number>')
+def serve_dominoes_page(restaurant, username, round_number):
+    ## Get from url paramaetes
+    # restaurant = request.args.get('restaurant')
+    # If round_id is 1, then check if user with username exists. If doesn't create a new user
+    user = User.query.filter_by(username=username).first()
+    print(user)
+    if not user:
+        user = create_user(username, 8, 13)
+
+    round_ = Round.query.filter_by(round_number=round_number, user_id=user.id).first()
+
+    if not round_:
+        html_content = """
+        <html>
+            <head>
+                <style>
+                    body {
+                        height: 100vh;
+                        margin: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-family: Arial, sans-serif;
+                    }
+                </style>
+            </head>
+            <body>
+                <div>Thank you for answering all the questions. You can close this screen now.</div>
+            </body>
+        </html>
+        """
+        return html_content, 404
+
+    # Process item_prices from the round
+    prices_list = round_.item_prices.split('-')
+
+    
+    order = [int(x) for x in round_.item_order.split('-')]
+    order_zero_based = [i - 1 for i in order]
+    # Arrange the elements based on the order given in order_zero_based
+    promotion_type = round_.promotion_type
+    # promotion_value = round_.promotion_value
+
+    if promotion_type == 'percentage':
+        promotion_text = f"{round_.percentage_off}% off up to ${round_.percentage_upto} on your order"
+    elif promotion_type == 'fixed':
+        promotion_text = f"Spend ${round_.fixed_spend} and save ${round_.fixed_save} on your order"
+    else:
+        promotion_text = None
+
+
+
+    
+    
+
+    # Prepare food_items for rendering
+    food_items_render = [{
+        'id': item['id'],
+        'name': item['name'],
+        'description': item['description'],
+        'price': prices_list[i],
+        'popular': item['popular'],
+        'imageURL': item['imageURL'],
+        'quantity': CartItem.query.filter_by(round_id=round_.id, item_id=item['id']).first().quantity if CartItem.query.filter_by(round_id=round_.id, item_id=item['id']).first() else 0,
+    } for i, item in enumerate(food_items)]
+
+    ordered_food_items = [food_items_render[i] for i in order_zero_based]
+
+    
+
+
+    return render_template(f'{restaurant}.html', food_items=ordered_food_items, user_id=user.id, round_id=round_.id, promotion_text=promotion_text)
+    
+
+
+
+@app.route('/cart/<int:user_id>/<int:round_id>')
+def serve_cart(user_id, round_id):
+    # Fetch round and cart items based on round_id
+    round_ = Round.query.filter_by(id=round_id, user_id=user_id).first()
+    if not round_:
+        return "Round not found", 404
+
+
+    prices_list = round_.item_prices.split('-')
+
+    order = [int(x) for x in round_.item_order.split('-')]
+    order_zero_based = [i - 1 for i in order]
+
+    promotion_type = round_.promotion_type
+
+
+    food_items_render = [{
+        'id': item['id'],
+        'name': item['name'],
+        'description': item['description'],
+        'price': prices_list[i],
+        'popular': item['popular'],
+        'imageURL': item['imageURL'],
+        'quantity': CartItem.query.filter_by(round_id=round_.id, item_id=item['id']).first().quantity if CartItem.query.filter_by(round_id=round_.id, item_id=item['id']).first() else 0,
+    } for i, item in enumerate(food_items)]
+
+
+    ordered_food_items = [food_items_render[i] for i in order_zero_based]
+
+
+    final_price = round(sum([float(item['price'])*item['quantity'] for item in ordered_food_items]),2)
+
+    print(prices_list)
+    if promotion_type == 'percentage':
+        # Assuming discount is a percentage (e.g., 0.15 for 15%)
+        discount = round_.percentage_off / 100  # Convert percentage to a fraction
+        max_discount = round_.percentage_upto  # Maximum discount allowed
+        calculated_discount = final_price * discount  # Calculate the raw discount
+        actual_discount = min(calculated_discount, max_discount)  # Ensure it does not exceed max discount
+        discounted_price = round(final_price - actual_discount, 2)
+        discount_display = f'({round_.percentage_off}% off up to ${round_.percentage_upto})'
+        discount = round(actual_discount, 2)
+
+    elif promotion_type == 'fixed':
+        if final_price >= round_.fixed_spend:
+            discount = round_.fixed_save
+            discounted_price = round(final_price - discount, 2)
+            discount_display = f'(Spend ${round_.fixed_spend} and save ${round_.fixed_save})'
+            print("HERE!!!!")
+        else:
+            # No discount if the spend requirement is not met
+            discount = 0
+            discounted_price = final_price
+            if round_.fixed_spend:
+                discount_display = f'(Spend ${round_.fixed_spend} to get ${round_.fixed_save} off)'
+            elif round_.fixed_save:
+                discount_display = f'Get ${round_.fixed_save} off on your order'
+            else:
+                discount_display = 'No discount applied'
+        # discount = round_.fixed_save
+        # discounted_price = round((final_price - discount), 2)
+        # discount_display = f'${round(discount)}'
+
+    else:
+        discount = 0
+        discounted_price = final_price
+        discount_display = None
+
+    print(discounted_price)
+
+
+    return render_template('cart.html', food_items=ordered_food_items, final_price=f'${final_price:.2f}', discount_number = discount,
+                           discount=discount_display, discounted_price=f'${discounted_price:.2f}', username=User.query.get(user_id).username, round_number=round_.round_number)
+
+
+
+
+@app.route('/cart/<int:user_id>/round/<int:round_id>/item/<int:item_id>', methods=['POST'])
+def update_item_quantity(user_id, round_id, item_id):
+    # Log incoming request for debugging
+    print("!"*100)
+    print("Received request to update item quantity.")
+    print(f"User ID: {user_id}, Round ID: {round_id}, Item ID: {item_id}")
+
+    # Fetch the 'change' key from request form
+    if 'change' not in request.form:
+        abort(400, description="Please provide the 'change' in quantity.")
+
+    quantity_change = int(request.form.get('change'))
+    # Find the cart item in the specific round
+    cart_item = CartItem.query.filter_by(round_id=round_id, item_id=item_id).first()
+
+    if cart_item:
+        # Update the quantity
+        new_quantity = cart_item.quantity + quantity_change
+        if new_quantity < 0:
+            abort(400, description="Quantity cannot be negative.")
+        cart_item.quantity = new_quantity
+        db.session.commit()
+        return jsonify({'id': item_id, 'new_quantity': cart_item.quantity}), 200
+    else:
+        # Item not found in the cart, hence add it
+        if quantity_change < 0:
+            abort(400, description="Cannot subtract from a non-existing item.")
+        new_cart_item = CartItem(round_id=round_id, item_id=item_id, quantity=quantity_change)
+        db.session.add(new_cart_item)
+        db.session.commit()
+        return jsonify({'id': item_id, 'new_quantity': new_cart_item.quantity}), 201
+    
+
+
+
+
+@app.route('/<restaurant>/<path:filename>')
+def serve_dominoes_files(restaurant, filename):
+    # Replace '/path/to/your/downloaded/page/main_files' with the actual path where the 'main_files' directory is stored
+    static_directory = f'{THIS_FOLDER}/{restaurant}_files'
+    return send_from_directory(static_directory, filename)
+
+
+
+# def load_order_data():
+#     with open('order_data.json') as f:
+#         return json.load(f)
+
+@app.route('/checkout')
+def checkout():
+    with open('dominoes_items.json') as f:
+        food_items = json.load(f)
+    # print(order_data)
+    return render_template('Checkout _ Uber Eats.html', food_items=food_items)
+
+@app.route('/Checkout _ Uber Eats_files/<path:filename>')
+# @app.route('/<restaurant>/<path:filename>')
+def checkout_files(filename):
+    # Replace '/path/to/your/downloaded/page/main_files' with the actual path where the 'main_files' directory is stored
+    static_directory = f'{THIS_FOLDER}/Checkout _ Uber Eats_files'
+    return send_from_directory(static_directory, filename)
+
+
+
 
 
 if platform.system() == "Darwin":

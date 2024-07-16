@@ -1113,6 +1113,12 @@ def checkout_files(filename):
 
 
 
+@app.route('/thankyou/username/<string:username>/round_number/<round_number>')
+def thankyou(username, round_number):
+    return render_template('thankyou.html', username=username, round_number=round_number)
+
+
+
 
 
 if platform.system() == "Darwin":

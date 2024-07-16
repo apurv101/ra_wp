@@ -889,8 +889,8 @@ def add_action(current_product):
 ########################################################################################################
 
 
-with open('dominoes_items.json') as f:
-    food_items = json.load(f)
+# with open('dominoes_items.json') as f:
+#     food_items = json.load(f)
 
 
 

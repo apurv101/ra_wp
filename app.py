@@ -901,8 +901,9 @@ def serve_dominoes_page(restaurant, username, round_number):
     # If round_id is 1, then check if user with username exists. If doesn't create a new user
     user = User.query.filter_by(username=username).first()
     print(user)
+    number_of_pages = 15
     if not user:
-        user = create_user(username, 8, 13)
+        user = create_user(username, number_of_pages, 13)
 
     round_ = Round.query.filter_by(round_number=round_number, user_id=user.id).first()
 
@@ -966,7 +967,7 @@ def serve_dominoes_page(restaurant, username, round_number):
     
 
 
-    return render_template(f'{restaurant}.html', food_items=ordered_food_items, user_id=user.id, round_id=round_.id, promotion_text=promotion_text)
+    return render_template(f'{restaurant}.html', food_items=ordered_food_items, user_id=user.id, round_id=round_.id, promotion_text=promotion_text, number_of_pages=number_of_pages)
     
 
 

@@ -967,7 +967,7 @@ def serve_dominoes_page(restaurant, username, round_number):
     
 
 
-    return render_template(f'{restaurant}.html', food_items=ordered_food_items, user_id=user.id, round_id=round_.id, promotion_text=promotion_text, number_of_pages=number_of_pages)
+    return render_template(f'{restaurant}.html', food_items=ordered_food_items, user_id=user.id, round_id=round_.id, promotion_text=promotion_text, number_of_pages=number_of_pages, round_number=int(round_number), username=username)
     
 
 

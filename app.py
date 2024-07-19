@@ -229,10 +229,22 @@ def create_user(username, number_of_rounds, number_of_items):
     percentage_off_options = [5, 10, 15, 20, 25]
     percentage_upto_options = [2, 4, 6, 8, 10]
 
+    promotion_types = [0]*5 + [1]*5 + [2]*5
+
+    # Shuffle the list in place to randomize the order
+    random.shuffle(promotion_types)
+    
+
     # Generate rounds for the user
-    for i in range(number_of_rounds):
+    for i,v in enumerate(promotion_types):
         round_number = i + 1  # Round number starts at 1
-        promotion_type = random.choice(['percentage', 'fixed', None])
+        if v == 0:
+            promotion_type = 'percentage'
+        elif v == 1:
+            promotion_type = 'fixed'
+        else:
+            promotion_type = None
+        # promotion_type = random.choice(['percentage', 'fixed', None])
         ## If promotion type is fixed, then fixed_spend and fixed_save will be used
         ## If promotion type is percentage, then percentage_off and percentage_upto will be used
         if promotion_type == 'fixed':

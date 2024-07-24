@@ -229,7 +229,7 @@ def create_user(username, number_of_rounds, number_of_items):
     percentage_off_options = [5, 10, 15, 20, 25]
     percentage_upto_options = [2, 4, 6, 8, 10]
 
-    promotion_types = [0]*5 + [1]*5 + [2]*5
+    promotion_types = [0]*3 + [1]*3 + [2]*3
 
     # Shuffle the list in place to randomize the order
     random.shuffle(promotion_types)

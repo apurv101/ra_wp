@@ -290,7 +290,7 @@ font-weight: 700;
       <ul class="ml op oq mo mp mq mr os io">
         {% for item in food_items %}
         <li data-test="123" class="ih ms mt ot ak jl gq bb">
-          <a tabindex="0" class="al ej cy d3 ou gb ov" href="#">
+          <a tabindex="0" class="al ej cy d3 ou gb ov">
             <div class="al am cc ae ak gm">
               <div class="al ej aq">
                 <div class="al ej ow am cc">
@@ -317,9 +317,11 @@ font-weight: 700;
                 </div>
               </div>
 
+              <div id="item-{{ item.id }}" class="ag n4 al ca aq n5">
+
               {% if item.quantity == 0 %}
 
-              <div class="ag n4 al ca aq n5">
+              
                 <div class="n6 n7 e6">
                   <button aria-label="Quick Add" radius="pillButtonBorderRadius" class="m6 ed db dd d3 n8 cc al ca cn af n9 e6 b1 cd k7 k8 k9 ka e7 h3" onclick="updateItemQuantity({{user_id}},{{round_id}}, {{ item.id }}, 1)">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -328,12 +330,12 @@ font-weight: 700;
                     </svg>
                   </button>
                 </div>
-              </div>
+              
 
               {% else %}
 
 
-              <div class="ag n4 al ca aq n5">
+              
                 <div class="go n7 e6">
                   <div class="td al ca cd hk n7 e6 ak s4 te e1 tf bb">
                     <button data-test="quick-add-minus" class="e6 b1 cd ca af d3 al cn gd e7 h4 hn gc tg k8">
@@ -351,9 +353,11 @@ font-weight: 700;
                     </button>
                   </div>
                 </div>
-              </div>
+              
 
               {% endif %}
+
+            </div>
 
 
             </div>
@@ -446,38 +450,50 @@ font-weight: 700;
     const formData = new FormData();
     formData.append('change', quantityChange);
 
-    // Save current scroll position
-    localStorage.setItem('scrollPosition', window.scrollY);
-
     fetch(`/cart/${userId}/round/${roundId}/item/${itemId}`, {
       method: 'POST',
       body: formData
     })
-    .then(response => {
-      if (response.ok) {
-        window.location.reload();  // Reload the page on successful API call
-        if (localStorage.getItem('scrollPosition')) {
-          window.scrollTo(0, parseInt(localStorage.getItem('scrollPosition')));
-          localStorage.removeItem('scrollPosition'); // Clear the stored scroll position
-        }
+    .then(response => response.json())
+    .then(data => {
+      const itemElement = document.getElementById(`item-${data.id}`);
+      if (data.new_quantity > 0) {
+        itemElement.innerHTML = `
+          <div class="go n7 e6">
+            <div class="td al ca cd hk n7 e6 ak s4 te e1 tf bb">
+              <button data-test="quick-add-minus" class="e6 b1 cd ca af d3 al cn gd e7 h4 hn gc tg k8" onclick="updateItemQuantity(${userId}, ${roundId}, ${itemId}, -1)">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <title>Trash can</title>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M16 1v2h5v3H3V3h5V1h8ZM5 8h14v15H5V8Z" fill="currentColor"></path>
+                </svg>
+              </button>
+              <div data-test="quick-add-quantity" class="db m6 dd ed th jh mk bd k4 b1" id="item-quantity-${data.id}">${data.new_quantity}</div>
+              <button data-test="quick-add-plus" class="e6 b1 cd ca af d3 al cn gd e7 h4 hn gc tg k8" onclick="updateItemQuantity(${userId}, ${roundId}, ${itemId}, 1)">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <title>Plus small</title>
+                  <path d="M19 10.5h-5.5V5h-3v5.5H5v3h5.5V19h3v-5.5H19v-3Z" fill="currentColor"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        `;
       } else {
-        console.error('Failed to update item quantity');  // Log or handle errors
+        itemElement.innerHTML = `
+          <div class="n6 n7 e6">
+            <button aria-label="Quick Add" radius="pillButtonBorderRadius" class="m6 ed db dd d3 n8 cc al ca cn af n9 e6 b1 cd k7 k8 k9 ka e7 h3" onclick="updateItemQuantity(${userId}, ${roundId}, ${itemId}, 1)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <title>Plus small</title>
+                <path d="M19 10.5h-5.5V5h-3v5.5H5v3h5.5V19h3v-5.5H19v-3Z" fill="currentColor"></path>
+              </svg>
+            </button>
+          </div>
+        `;
       }
     })
     .catch(error => {
       console.error('Error:', error);
     });
   }
-
-
-  window.onload = function() {
-    if (localStorage.getItem('scrollPosition')) {
-      window.scrollTo(0, parseInt(localStorage.getItem('scrollPosition')));
-      localStorage.removeItem('scrollPosition'); // Clear the stored scroll position
-    }
-  }
-
-
 </script>
 
 

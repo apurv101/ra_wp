@@ -195,6 +195,7 @@ class CartItem(db.Model):
     round_number = db.Column(db.Integer, nullable=False)
     item_id = db.Column(db.Integer, nullable=False)
     quantity = db.Column(db.Integer, default=0, nullable=False)
+    created_at = db.Column(db.DateTime, default=get_current_time)
 
 
 ## load all the items as dictionary from dominoes_items.json

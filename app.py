@@ -187,6 +187,7 @@ class Round(db.Model):
     user = db.relationship('User', backref=db.backref('rounds', lazy=True))
     item_order = db.Column(db.String(255), nullable=False)
     item_prices = db.Column(db.String(1200), nullable=False)
+    created_at = db.Column(db.DateTime, default=get_current_time)
 
 
 class CartItem(db.Model):
@@ -196,6 +197,7 @@ class CartItem(db.Model):
     item_id = db.Column(db.Integer, nullable=False)
     quantity = db.Column(db.Integer, default=0, nullable=False)
     created_at = db.Column(db.DateTime, default=get_current_time)
+    updated_at = db.Column(db.DateTime, default=get_current_time, onupdate=get_current_time)
 
 
 ## load all the items as dictionary from dominoes_items.json

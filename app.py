@@ -697,7 +697,7 @@ def get_all_info(current_product, lab_id):
                 ],
             "review_read_data_all": [int(a) for a in distribution_data.product_3_ar],
             "review_read_data_top": [int(a) for a in distribution_data.product_3_tr],
-            "random_order": list(map(int, distribution_data.random_order_3.split('-'))
+            "random_order": list(map(int, distribution_data.random_order_3.split('-')),
             "title2": "Paperback - Large Print"
         }
     elif current_product == "product4":
@@ -720,7 +720,7 @@ def get_all_info(current_product, lab_id):
                         ],
             "review_read_data_all": [int(a) for a in distribution_data.product_4_ar],
             "review_read_data_top": [int(a) for a in distribution_data.product_4_tr],
-            "random_order": list(map(int, distribution_data.random_order_4.split('-')))
+            "random_order": list(map(int, distribution_data.random_order_4.split('-'))),
             "title2": "Paperback - Large Print"
         }
     elif current_product == "product5":

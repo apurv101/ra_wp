@@ -559,7 +559,7 @@ def get_distributions(lab_id):
             random_order_2='-'.join(map(str, random_order_2)),
             random_order_3='-'.join(map(str, random_order_3)),
             random_order_4='-'.join(map(str, random_order_4)),
-            randomw_order_5='-'.join(map(str, random_order_5))
+            random_order_5='-'.join(map(str, random_order_5))
         )
         
         db.session.add(new_entry)

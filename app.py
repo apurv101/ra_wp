@@ -40,10 +40,10 @@ import os
 
 
 
-random_orders = {}
-for i in range(30):
-    random_orders[i] = random.sample(range(i), i)
-    random_orders[i] = random.sample(range(i), i)
+# random_orders = {}
+# for i in range(30):
+#     random_orders[i] = random.sample(range(i), i)
+#     random_orders[i] = random.sample(range(i), i)
 
 
 
@@ -148,7 +148,7 @@ class Distribution(db.Model):
     price_product_2 = db.Column(db.Numeric(10, 2))
     price_product_3 = db.Column(db.Numeric(10, 2))
     price_product_4 = db.Column(db.Numeric(10, 2))
-
+    
 
 
 
@@ -222,7 +222,6 @@ def create_user(username, number_of_rounds, number_of_items):
     db.session.commit()
 
     print("User created")
-
 
     # Fixed amount discount variations
     fixed_spend_options = [30, 35, 40, 45, 50]
@@ -335,7 +334,15 @@ with open(f'{THIS_FOLDER}/distn_low.csv', 'r') as file:
 
 
 def get_distributions(lab_id):
-    ### Check if lab_id in distrubtion
+
+
+    ### Create 4 new distributions
+
+
+
+
+
+
     distribution_entry = Distribution.query.filter_by(lab_id=lab_id).first()
     if distribution_entry:
         return distribution_entry
@@ -791,9 +798,18 @@ def serve_reviews1(current_product, rate, page):
     print(request.args.get('id'))
     if lab_id is None:
         return redirect(url_for('index'))
+    
+    ## here get random order from lab_id
+
+    random_orders = {}
+    for i in range(30):
+        random_orders[i] = random.sample(range(i), i)
+        random_orders[i] = random.sample(range(i), i)
+
     product_data = get_all_info(current_product, lab_id)
     review_data = get_all_reviews(current_product)
     filtered_reviews = [review for review in review_data if review.get('Number') == rate][(page-1)*number_of_reviews_per_page: (page)*number_of_reviews_per_page]
+
     randomized_filtered_reviews = [filtered_reviews[i] for i in random_orders[len(filtered_reviews)]]
     return render_template('r32.html', current_product=current_product, lab_id=lab_id, review_clicked_records=product_data["review_read_data_all"], reviews=randomized_filtered_reviews, rate=rate, page=page, product=product_data, number_of_pages=number_of_pages, list_of_review_ids = ','.join([str(r["id"]) for r in randomized_filtered_reviews]))
 
@@ -804,6 +820,13 @@ def serve_reviews_top(current_product, page):
     if lab_id is None:
         return redirect(url_for('index'))
     
+    ## here get random order from lab_id
+
+    random_orders = {}
+    for i in range(30):
+        random_orders[i] = random.sample(range(i), i)
+        random_orders[i] = random.sample(range(i), i)
+        
     product_data = get_all_info(current_product, lab_id)
     top_review_data = get_top_reviews(current_product)
     filtered_reviews = [review for review in top_review_data][(page-1)*number_of_reviews_per_page: (page)*number_of_reviews_per_page]

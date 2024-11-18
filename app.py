@@ -148,6 +148,11 @@ class Distribution(db.Model):
     price_product_2 = db.Column(db.Numeric(10, 2))
     price_product_3 = db.Column(db.Numeric(10, 2))
     price_product_4 = db.Column(db.Numeric(10, 2))
+    random_order_1 = db.Column(db.String(255))
+    random_order_2 = db.Column(db.String(255))
+    random_order_3 = db.Column(db.String(255))
+    random_order_4 = db.Column(db.String(255))
+    random_order_5 = db.Column(db.String(255))
     
 
 
@@ -336,9 +341,6 @@ with open(f'{THIS_FOLDER}/distn_low.csv', 'r') as file:
 def get_distributions(lab_id):
 
 
-    ### Create 4 new distributions
-
-
 
 
 
@@ -499,6 +501,14 @@ def get_distributions(lab_id):
                 if product == 'product4':
                     product_4_tr = '0'*len(review_data)
 
+
+        random_order_1 = random.sample(range(1, 31), 30)
+        random_order_2 = random.sample(range(1, 31), 30)
+        random_order_3 = random.sample(range(1, 31), 30)
+        random_order_4 = random.sample(range(1, 31), 30)
+        random_order_5 = random.sample(range(1, 31), 30)
+
+
         new_entry = Distribution(
             lab_id=lab_id,
             product_1_ar=product_1_ar,
@@ -544,7 +554,12 @@ def get_distributions(lab_id):
             price_product_1=price_product_1,
             price_product_2=price_product_2,
             price_product_3=price_product_3,
-            price_product_4=price_product_4
+            price_product_4=price_product_4,
+            random_order_1='-'.join(map(str, random_order_1)),
+            random_order_2='-'.join(map(str, random_order_2)),
+            random_order_3='-'.join(map(str, random_order_3)),
+            random_order_4='-'.join(map(str, random_order_4)),
+            randomw_order_5='-'.join(map(str, random_order_5))
         )
         
         db.session.add(new_entry)
@@ -628,7 +643,8 @@ def get_all_info(current_product, lab_id):
                 "Superior Clear Call and Immersive Stereo Sound: These music earphones with 13mm speakers and triple-layer composite diaphragms provide powerful bass, stunning treble and clear mids. These earbuds are designed for sound and music lovers. It can support the mono mode and twin stereo mode, you can share the earbuds with your friends and families. Each earbud has a build-in microphone for phone calls. CVC noise reduction can make others hear your voice very clearly while phone calls."
             ],
             "review_read_data_all": [int(a) for a in distribution_data.product_1_ar],
-            "review_read_data_top": [int(a) for a in distribution_data.product_1_tr]
+            "review_read_data_top": [int(a) for a in distribution_data.product_1_tr],
+            "random_order": list(map(int, distribution_data.random_order_1.split('-')))
         }
     elif current_product == "product2":
         product_data = {
@@ -651,7 +667,8 @@ def get_all_info(current_product, lab_id):
                 ">>> Ergonomic Design Earphones: Precise calculations and many experiments were combined to design the shape of the headset. The perfect curvature and compact body weighing only 4 grams provides the ultimate in comfort by distributing the pressure in the ear canal while maintaining stability. And with 3 sizes of ear cups available, there's always one that suits you best!"
             ],
             "review_read_data_all": [int(a) for a in distribution_data.product_2_ar],
-            "review_read_data_top": [int(a) for a in distribution_data.product_2_tr]
+            "review_read_data_top": [int(a) for a in distribution_data.product_2_tr],
+            "random_order": list(map(int, distribution_data.random_order_2.split('-')))
         }
     elif current_product == "product3":
         product_data = {
@@ -680,6 +697,7 @@ def get_all_info(current_product, lab_id):
                 ],
             "review_read_data_all": [int(a) for a in distribution_data.product_3_ar],
             "review_read_data_top": [int(a) for a in distribution_data.product_3_tr],
+            "random_order": list(map(int, distribution_data.random_order_3.split('-'))
             "title2": "Paperback - Large Print"
         }
     elif current_product == "product4":
@@ -702,6 +720,7 @@ def get_all_info(current_product, lab_id):
                         ],
             "review_read_data_all": [int(a) for a in distribution_data.product_4_ar],
             "review_read_data_top": [int(a) for a in distribution_data.product_4_tr],
+            "random_order": list(map(int, distribution_data.random_order_4.split('-')))
             "title2": "Paperback - Large Print"
         }
     elif current_product == "product5":
@@ -726,6 +745,7 @@ def get_all_info(current_product, lab_id):
 
         "review_read_data_all": [int(a) for a in distribution_data.product_1_ar],
         "review_read_data_top": [int(a) for a in distribution_data.product_1_tr],
+        "random_order": list(map(int, distribution_data.random_order_5.split('-')))
 
         }
     else:
@@ -801,16 +821,22 @@ def serve_reviews1(current_product, rate, page):
     
     ## here get random order from lab_id
 
-    random_orders = {}
-    for i in range(30):
-        random_orders[i] = random.sample(range(i), i)
-        random_orders[i] = random.sample(range(i), i)
+    # random_orders = {}
+    # for i in range(30):
+    #     random_orders[i] = random.sample(range(i), i)
+    #     random_orders[i] = random.sample(range(i), i)
+
 
     product_data = get_all_info(current_product, lab_id)
     review_data = get_all_reviews(current_product)
-    filtered_reviews = [review for review in review_data if review.get('Number') == rate][(page-1)*number_of_reviews_per_page: (page)*number_of_reviews_per_page]
 
-    randomized_filtered_reviews = [filtered_reviews[i] for i in random_orders[len(filtered_reviews)]]
+    random_order = product_data["random_order"]
+
+
+    filtered_reviews = [review for review in review_data if review.get('Number') == rate][(page-1)*number_of_reviews_per_page: (page)*number_of_reviews_per_page]
+    random_order_required = random_order[:len(filtered_reviews)]
+    randomized_filtered_reviews = [filtered_reviews[i] for i in random_order_required]
+    
     return render_template('r32.html', current_product=current_product, lab_id=lab_id, review_clicked_records=product_data["review_read_data_all"], reviews=randomized_filtered_reviews, rate=rate, page=page, product=product_data, number_of_pages=number_of_pages, list_of_review_ids = ','.join([str(r["id"]) for r in randomized_filtered_reviews]))
 
 
@@ -822,15 +848,15 @@ def serve_reviews_top(current_product, page):
     
     ## here get random order from lab_id
 
-    random_orders = {}
-    for i in range(30):
-        random_orders[i] = random.sample(range(i), i)
-        random_orders[i] = random.sample(range(i), i)
+    
         
     product_data = get_all_info(current_product, lab_id)
     top_review_data = get_top_reviews(current_product)
+    random_order = product_data["random_order"]
+    
     filtered_reviews = [review for review in top_review_data][(page-1)*number_of_reviews_per_page: (page)*number_of_reviews_per_page]
-    randomized_filtered_reviews = [filtered_reviews[i] for i in random_orders[len(filtered_reviews)]]
+    random_order_required = random_order[:len(filtered_reviews)]
+    randomized_filtered_reviews = [filtered_reviews[i] for i in random_order_required]
     return render_template('r32.html', current_product=current_product, lab_id=lab_id,  review_clicked_records=product_data["review_read_data_top"], reviews=randomized_filtered_reviews, rate=0, page=page, product=product_data, number_of_pages=number_of_pages, list_of_review_ids = ','.join([str(r["id"]) for r in randomized_filtered_reviews]))
 
 

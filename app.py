@@ -503,11 +503,11 @@ def get_distributions(lab_id):
                     product_4_tr = '0'*len(review_data)
 
 
-        random_order_1 = random.sample(range(0, 10), 10)
-        random_order_2 = random.sample(range(0, 10), 10)
-        random_order_3 = random.sample(range(0, 10), 10)
-        random_order_4 = random.sample(range(0, 10), 10)
-        random_order_5 = random.sample(range(0, 10), 10)
+        random_order_1 = random.sample(range(0, 30), 30)
+        random_order_2 = random.sample(range(0, 30), 30)
+        random_order_3 = random.sample(range(0, 30), 30)
+        random_order_4 = random.sample(range(0, 30), 30)
+        random_order_5 = random.sample(range(0, 30), 30)
 
 
         new_entry = Distribution(
@@ -836,11 +836,18 @@ def serve_reviews1(current_product, rate, page):
     print(random_order)
 
 
-    filtered_reviews = [review for review in review_data if review.get('Number') == rate][(page-1)*number_of_reviews_per_page: (page)*number_of_reviews_per_page]
-    random_order_required = random_order[:len(filtered_reviews)]
+    filtered_reviews = [review for review in review_data if review.get('Number') == rate]
+    # random_order_required = random_order[:len(filtered_reviews)]
+
+    ## Calculate the length of the filtered reviews, then keep only the numbers that fall in range(length of the filtered reviews)
+    random_order_required = [i for i in random_order if i < len(filtered_reviews)]
+    # print(random_order_required)
+    # len(filtered_reviews)
+    print(filtered_reviews)
     print(random_order_required)
-    len(filtered_reviews)
     randomized_filtered_reviews = [filtered_reviews[i] for i in random_order_required]
+
+    randomized_filtered_reviews = randomized_filtered_reviews[(page-1)*number_of_reviews_per_page: min(page*number_of_reviews_per_page, len(filtered_reviews))]
     
     return render_template('r32.html', current_product=current_product, lab_id=lab_id, review_clicked_records=product_data["review_read_data_all"], reviews=randomized_filtered_reviews, rate=rate, page=page, product=product_data, number_of_pages=number_of_pages, list_of_review_ids = ','.join([str(r["id"]) for r in randomized_filtered_reviews]))
 

@@ -359,7 +359,7 @@ def get_distributions(lab_id):
 
 
         
-        df = pd.read_csv(f'{THIS_FOLDER}/Attributes.csv')
+        df = pd.read_csv(f'{THIS_FOLDER}/Attributes_Nov2024.csv')
         dist_id = dist_id%len(df)
 
         row = df.iloc[dist_id]
@@ -848,8 +848,9 @@ def serve_reviews1(current_product, rate, page):
     randomized_filtered_reviews = [filtered_reviews[i] for i in random_order_required]
 
     randomized_filtered_reviews = randomized_filtered_reviews[(page-1)*number_of_reviews_per_page: min(page*number_of_reviews_per_page, len(filtered_reviews))]
+    list_of_review_ids = random_order_required[(page-1)*number_of_reviews_per_page: min(page*number_of_reviews_per_page, len(filtered_reviews))]
     
-    return render_template('r32.html', current_product=current_product, lab_id=lab_id, review_clicked_records=product_data["review_read_data_all"], reviews=randomized_filtered_reviews, rate=rate, page=page, product=product_data, number_of_pages=number_of_pages, list_of_review_ids = ','.join([str(r["id"]) for r in randomized_filtered_reviews]))
+    return render_template('r32.html', current_product=current_product, lab_id=lab_id, review_clicked_records=product_data["review_read_data_all"], reviews=randomized_filtered_reviews, rate=rate, page=page, product=product_data, number_of_pages=number_of_pages, list_of_review_ids = ','.join([str(r) for r in list_of_review_ids]))
 
 
 @app.route('/t/<string:current_product>/0/<int:page>')

@@ -47,8 +47,8 @@ import os
 
 
 
-number_of_reviews_per_page = 10
-number_of_pages = 30//number_of_reviews_per_page
+# number_of_reviews_per_page = 10
+# number_of_pages = 30//number_of_reviews_per_page
 
 
 
@@ -154,6 +154,7 @@ class Distribution(db.Model):
     random_order_3 = db.Column(db.String(255))
     random_order_4 = db.Column(db.String(255))
     random_order_5 = db.Column(db.String(255))
+    number_of_reviews_per_page = db.Column(db.Integer, default=10)
     
 
 
@@ -404,6 +405,8 @@ def get_distributions(lab_id):
 
 
 
+
+
             
         # rating_scale_product_1_2 = random.choice([0, 1])
         # rating_scale_product_3_4 = random.choice([0, 1])
@@ -510,6 +513,9 @@ def get_distributions(lab_id):
         random_order_5 = random.sample(range(0, 30), 30)
 
 
+        number_of_reviews_per_page = random.choice([3, 5, 10])
+
+
         new_entry = Distribution(
             lab_id=lab_id,
             product_1_ar=product_1_ar,
@@ -560,7 +566,8 @@ def get_distributions(lab_id):
             random_order_2='-'.join(map(str, random_order_2)),
             random_order_3='-'.join(map(str, random_order_3)),
             random_order_4='-'.join(map(str, random_order_4)),
-            random_order_5='-'.join(map(str, random_order_5))
+            random_order_5='-'.join(map(str, random_order_5)),
+            number_of_reviews_per_page=number_of_reviews_per_page
         )
         
         db.session.add(new_entry)
@@ -645,7 +652,8 @@ def get_all_info(current_product, lab_id):
             ],
             "review_read_data_all": [int(a) for a in distribution_data.product_1_ar],
             "review_read_data_top": [int(a) for a in distribution_data.product_1_tr],
-            "random_order": list(map(int, distribution_data.random_order_1.split('-')))
+            "random_order": list(map(int, distribution_data.random_order_1.split('-'))),
+            "number_of_reviews_per_page": distribution_data.number_of_reviews_per_page
         }
     elif current_product == "product2":
         product_data = {
@@ -669,7 +677,8 @@ def get_all_info(current_product, lab_id):
             ],
             "review_read_data_all": [int(a) for a in distribution_data.product_2_ar],
             "review_read_data_top": [int(a) for a in distribution_data.product_2_tr],
-            "random_order": list(map(int, distribution_data.random_order_2.split('-')))
+            "random_order": list(map(int, distribution_data.random_order_2.split('-'))),
+            "number_of_reviews_per_page": distribution_data.number_of_reviews_per_page
         }
     elif current_product == "product3":
         product_data = {
@@ -699,7 +708,8 @@ def get_all_info(current_product, lab_id):
             "review_read_data_all": [int(a) for a in distribution_data.product_3_ar],
             "review_read_data_top": [int(a) for a in distribution_data.product_3_tr],
             "random_order": list(map(int, distribution_data.random_order_3.split('-'))),
-            "title2": "Paperback - Large Print"
+            "title2": "Paperback - Large Print",
+            "number_of_reviews_per_page": distribution_data.number_of_reviews_per_page
         }
     elif current_product == "product4":
         product_data = {
@@ -722,7 +732,8 @@ def get_all_info(current_product, lab_id):
             "review_read_data_all": [int(a) for a in distribution_data.product_4_ar],
             "review_read_data_top": [int(a) for a in distribution_data.product_4_tr],
             "random_order": list(map(int, distribution_data.random_order_4.split('-'))),
-            "title2": "Paperback - Large Print"
+            "title2": "Paperback - Large Print",
+            "number_of_reviews_per_page": distribution_data.number_of_reviews_per_page
         }
     elif current_product == "product5":
         product_data = {
@@ -746,7 +757,8 @@ def get_all_info(current_product, lab_id):
 
         "review_read_data_all": [int(a) for a in distribution_data.product_1_ar],
         "review_read_data_top": [int(a) for a in distribution_data.product_1_tr],
-        "random_order": list(map(int, distribution_data.random_order_5.split('-')))
+        "random_order": list(map(int, distribution_data.random_order_5.split('-'))),
+        "number_of_reviews_per_page": distribution_data.number_of_reviews_per_page
 
         }
     else:
@@ -847,10 +859,12 @@ def serve_reviews1(current_product, rate, page):
     print(random_order_required)
     randomized_filtered_reviews = [filtered_reviews[i] for i in random_order_required]
 
+    number_of_reviews_per_page = product_data.get('number_of_reviews_per_page')
+
     randomized_filtered_reviews = randomized_filtered_reviews[(page-1)*number_of_reviews_per_page: min(page*number_of_reviews_per_page, len(filtered_reviews))]
     list_of_review_ids = random_order_required[(page-1)*number_of_reviews_per_page: min(page*number_of_reviews_per_page, len(filtered_reviews))]
     
-    return render_template('r32.html', current_product=current_product, lab_id=lab_id, review_clicked_records=product_data["review_read_data_all"], reviews=randomized_filtered_reviews, rate=rate, page=page, product=product_data, number_of_pages=number_of_pages, list_of_review_ids = ','.join([str(r) for r in list_of_review_ids]))
+    return render_template('r32.html', current_product=current_product, lab_id=lab_id, review_clicked_records=product_data["review_read_data_all"], reviews=randomized_filtered_reviews, rate=rate, page=page, product=product_data, number_of_pages=number_of_reviews_per_page*len(filtered_reviews), list_of_review_ids = ','.join([str(r) for r in list_of_review_ids]))
 
 
 @app.route('/t/<string:current_product>/0/<int:page>')
@@ -889,9 +903,10 @@ def serve_reviews_top(current_product, page):
     # random_order_required = random_order[:len(filtered_reviews)]
     random_order_required = [i for i in random_order if i < len(filtered_reviews)]
     randomized_filtered_reviews = [filtered_reviews[i] for i in random_order_required]
+    number_of_reviews_per_page = product_data.get('number_of_reviews_per_page') 
     randomized_filtered_reviews = randomized_filtered_reviews[(page-1)*number_of_reviews_per_page: min(page*number_of_reviews_per_page, len(filtered_reviews))]
     # randomized_filtered_reviews = [filtered_reviews[i] for i in random_order_required]
-    return render_template('r32.html', current_product=current_product, lab_id=lab_id,  review_clicked_records=product_data["review_read_data_top"], reviews=randomized_filtered_reviews, rate=0, page=page, product=product_data, number_of_pages=number_of_pages, list_of_review_ids = ','.join([str(r["id"]) for r in randomized_filtered_reviews]))
+    return render_template('r32.html', current_product=current_product, lab_id=lab_id,  review_clicked_records=product_data["review_read_data_top"], reviews=randomized_filtered_reviews, rate=0, page=page, product=product_data, number_of_pages=number_of_reviews_per_page*len(filtered_reviews), list_of_review_ids = ','.join([str(r["id"]) for r in randomized_filtered_reviews]))
 
 
 @app.route('/r32_files/<path:filename>')

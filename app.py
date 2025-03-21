@@ -100,6 +100,7 @@ class Action(db.Model):
     other_reviews = db.Column(db.String(80))
     random_order = db.Column(db.String(255))
     created_at = db.Column(db.DateTime, default=get_current_time)
+    number_of_reviews_per_page=db.Column(db.String(80))
 
 
 class Distribution(db.Model):

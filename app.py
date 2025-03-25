@@ -101,6 +101,7 @@ class Action(db.Model):
     random_order = db.Column(db.String(255))
     created_at = db.Column(db.DateTime, default=get_current_time)
     number_of_reviews_per_page=db.Column(db.String(80))
+    order_of_ids = db.Column(db.String(255))
 
 
 class Distribution(db.Model):
@@ -866,8 +867,8 @@ def serve_reviews1(current_product, rate, page):
     list_of_review_ids = random_order_required[(page-1)*number_of_reviews_per_page: min(page*number_of_reviews_per_page, len(filtered_reviews))]
 
     print(randomized_filtered_reviews)
-    random_order = '-'.join([str(review['id']) for review in randomized_filtered_reviews])
-    return render_template('r32.html', current_product=current_product, lab_id=lab_id, review_clicked_records=product_data["review_read_data_all"], reviews=randomized_filtered_reviews, rate=rate, page=page, product=product_data, number_of_pages=number_of_reviews_per_page*len(filtered_reviews), list_of_review_ids = ','.join([str(r) for r in list_of_review_ids]), random_order=random_order)
+    order_of_ids = '-'.join([str(review['id']) for review in randomized_filtered_reviews])
+    return render_template('r32.html', current_product=current_product, lab_id=lab_id, review_clicked_records=product_data["review_read_data_all"], reviews=randomized_filtered_reviews, rate=rate, page=page, product=product_data, number_of_pages=number_of_reviews_per_page*len(filtered_reviews), list_of_review_ids = ','.join([str(r) for r in list_of_review_ids]), order_of_ids=order_of_ids)
 
 
 @app.route('/t/<string:current_product>/0/<int:page>')
@@ -962,6 +963,7 @@ def add_action(current_product):
     action = Action(
         action_name=request.form.get('action_name'),
         review_id = request.form.get('review_id') or None,
+        order_of_ids = request.form.get('order_of_ids') or None,
         lab_id = request.form.get('lab_id'),
         other_reviews = request.form.get('other_reviews') or None,
         current_rating = request.form.get('current_rating') or None,

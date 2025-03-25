@@ -361,7 +361,7 @@ def get_distributions(lab_id):
 
 
         
-        df = pd.read_csv(f'{THIS_FOLDER}/Attributes_Nov2024.csv')
+        df = pd.read_csv(f'{THIS_FOLDER}/Attributes_Mar2025.csv')
         dist_id = dist_id%len(df)
 
         row = df.iloc[dist_id]

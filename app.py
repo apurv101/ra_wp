@@ -864,8 +864,10 @@ def serve_reviews1(current_product, rate, page):
 
     randomized_filtered_reviews = randomized_filtered_reviews[(page-1)*number_of_reviews_per_page: min(page*number_of_reviews_per_page, len(filtered_reviews))]
     list_of_review_ids = random_order_required[(page-1)*number_of_reviews_per_page: min(page*number_of_reviews_per_page, len(filtered_reviews))]
-    
-    return render_template('r32.html', current_product=current_product, lab_id=lab_id, review_clicked_records=product_data["review_read_data_all"], reviews=randomized_filtered_reviews, rate=rate, page=page, product=product_data, number_of_pages=number_of_reviews_per_page*len(filtered_reviews), list_of_review_ids = ','.join([str(r) for r in list_of_review_ids]))
+
+    print(randomized_filtered_reviews)
+    random_order = '-'.join([str(review['id']) for review in randomized_filtered_reviews])
+    return render_template('r32.html', current_product=current_product, lab_id=lab_id, review_clicked_records=product_data["review_read_data_all"], reviews=randomized_filtered_reviews, rate=rate, page=page, product=product_data, number_of_pages=number_of_reviews_per_page*len(filtered_reviews), list_of_review_ids = ','.join([str(r) for r in list_of_review_ids]), random_order=random_order)
 
 
 @app.route('/t/<string:current_product>/0/<int:page>')
@@ -881,24 +883,6 @@ def serve_reviews_top(current_product, page):
     product_data = get_all_info(current_product, lab_id)
     top_review_data = get_top_reviews(current_product)
     random_order = product_data["random_order"]
-
-    print(random_order)
-
-
-    # random_order_required = [i for i in random_order if i < len(filtered_reviews)]
-    # # print(random_order_required)
-    # # len(filtered_reviews)
-    # print(filtered_reviews)
-    # print(random_order_required)
-    # randomized_filtered_reviews = [filtered_reviews[i] for i in random_order_required]
-
-    # randomized_filtered_reviews = randomized_filtered_reviews[(page-1)*number_of_reviews_per_page: min(page*number_of_reviews_per_page, len(filtered_reviews))]
-    # list_of_review_ids = random_order_required[(page-1)*number_of_reviews_per_page: min(page*number_of_reviews_per_page, len(filtered_reviews))]
-
-
-    print(random_order)
-    
-
 
     filtered_reviews = [review for review in top_review_data]
     # random_order_required = random_order[:len(filtered_reviews)]
@@ -960,12 +944,6 @@ def add_action(current_product):
 
     action_name = request.form.get('action_name')
     
-    print(action_name)
-    print(lab_id)
-
-    # print("!"*8s00)
-    # print(current_product)
-    # print(review_id)
     if action_name == "Clicked on a Review":
         current_rating = int(request.form.get('current_rating')) or None
         print(current_rating)

@@ -2031,7 +2031,6 @@ From the United States
       
 
 
-
       {% if review.image_urls %}
         {% for image_url in review.image_urls %}
           {% if review_clicked_records[review.id] %}
@@ -3107,35 +3106,12 @@ if (window.ue && window.ue.uels) {
 <script>
         function callFlaskAPI(commentNumber) {
             console.log('here');
-            // Create an object containing form data
-            // const formData = new FormData();
-            // formData.append('html_file_name', 'example.html');
-            // formData.append('comment_number', commentNumber);
-            // formData.append('user_id', '123');
-
-            // // Make a POST request to your Flask API endpoint
-            // fetch('http://127.0.0.1:5000/add_response', {
-            //     method: 'POST',
-            //     body: formData
-            // })
-            // .then(response => {
-            //     if (!response.ok) {
-            //         throw new Error('Network response was not ok');
-            //     }
-            //     return response.json();
-            // })
-            // .then(data => {
-            //     console.log(data.message); // Log the response message
-            // })
-            // .catch(error => {
-            //     console.error('There was a problem with the fetch operation:', error);
-            // });
-
+ 
 
             const formData = new FormData();
             formData.append('action_name', "Clicked on a Review");
             formData.append('review_id', commentNumber);
-            formData.append('other_reviews', '{{ list_of_review_ids }}');
+            formData.append('other_reviews', '{{ random_order }}');
             formData.append('current_rating', {{rate}});
             formData.append('lab_id', '{{lab_id}}');
             

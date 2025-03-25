@@ -102,6 +102,7 @@ class Action(db.Model):
     created_at = db.Column(db.DateTime, default=get_current_time)
     number_of_reviews_per_page=db.Column(db.String(80))
     order_of_ids = db.Column(db.String(255))
+    order_of_all_ids = db.Column(db.String(255))
 
 
 class Distribution(db.Model):
@@ -867,14 +868,11 @@ def serve_reviews1(current_product, rate, page):
 
     order_of_all_ids = '-'.join([str(review['id']) for review in randomized_filtered_reviews])
 
-    randomized_filtered_reviews_truncated = randomized_filtered_reviews[(page-1)*number_of_reviews_per_page: min(page*number_of_reviews_per_page, len(filtered_reviews))]
+    randomized_filtered_reviews = randomized_filtered_reviews[(page-1)*number_of_reviews_per_page: min(page*number_of_reviews_per_page, len(filtered_reviews))]
     list_of_review_ids = random_order_required[(page-1)*number_of_reviews_per_page: min(page*number_of_reviews_per_page, len(filtered_reviews))]
 
-    print(randomized_filtered_reviews_truncated)
-    order_of_ids = '-'.join([str(review['id']) for review in randomized_filtered_reviews_truncated])
-
-
-    return render_template('r32.html', current_product=current_product, lab_id=lab_id, review_clicked_records=product_data["review_read_data_all"], reviews=randomized_filtered_reviews, rate=rate, page=page, product=product_data, number_of_pages=number_of_reviews_per_page*len(filtered_reviews), list_of_review_ids = ','.join([str(r) for r in list_of_review_ids]), order_of_ids=order_of_all_ids)
+    order_of_ids = '-'.join([str(review['id']) for review in randomized_filtered_reviews])
+    return render_template('r32.html', current_product=current_product, lab_id=lab_id, review_clicked_records=product_data["review_read_data_all"], reviews=randomized_filtered_reviews, rate=rate, page=page, product=product_data, number_of_pages=number_of_reviews_per_page*len(filtered_reviews), list_of_review_ids = ','.join([str(r) for r in list_of_review_ids]), order_of_ids=order_of_ids, order_of_all_ids=order_of_all_ids)
 
 
 @app.route('/t/<string:current_product>/0/<int:page>')
